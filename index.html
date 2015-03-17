@@ -1,0 +1,28 @@
+---
+layout: default
+icon: home
+---
+  <div class="ui feed post list">
+    {% for post in site.posts %}
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+            <div class="right floated date">
+             {{ post.date | date: "%b %-d, %Y" }}
+            </div>
+           <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+          </div>
+          {% if post.tags %}
+          <div class="meta">
+        <a class="tags">
+          <i class="tags icon"></i> {% for tag in post.tags %}<label class="ui label">{{tag}}</label> {% endfor %}
+        </a>
+      </div>
+      {% endif %}
+        </div>
+      </div>
+      <div class="ui divider"></div>
+    {% endfor %}
+  </div>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properities -->
+  <title>How to Setup L2TP VPN Server</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/semantic.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://discountry.github.io/tutorial/2015/02/27/How-to-Setup-L2TP-VPN-Server/">
+  <link rel="alternate" type="application/rss+xml" title="Discountry" href="http://discountry.github.io/feed.xml" />
+
+  <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/js/semantic.min.js"></script>
+
+</head>
+
+  <body>
+
+    <header class="top fixed ui inverted menu">
+
+    <a class="header item" href="/">Discountry</a>
+
+      <div class="right menu">
+      <div class="mobile item ui dropdown">
+        <i class="content icon"></i>
+        <div class="menu">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+        <a href="/feed.xml" class="item">
+          <i class="rss icon"></i> RSS
+        </a>
+        </div>
+      </div>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <a href="/feed.xml" class="item">
+          <i class="rss icon"></i> RSS
+        </a>
+      </div>
+
+</header>
+
+
+<div class="ui title segment">
+
+  <h2 class="ui header">
+  <i class=" icon"></i>
+  <div class="content">
+    How to Setup L2TP VPN Server
+    <div class="sub header">Feb 27, 2015</div>
+  </div>
+</h2>
+
+</div>
+
+    <div class="ui page grid">
+      <div class="sixteen wide column">
+        <div class="ui piled segment post container">
+
+  <article class="post content">
+    <!--more-->
+
+<h3 id="choosing-a-proper-vps-server">Choosing a proper VPS Server</h3>
+
+<ul>
+  <li><strong>Janpan</strong></li>
+  <li><a href="https://www.conoha.jp/en" title="Conoha VPS">Conoha</a></li>
+  <li><a href="http://smartvps.cn/" title="Smart VPS">Smartvps</a></li>
+  <li><strong>USA</strong></li>
+  <li><a href="https://www.digitalocean.com/" title="DO">Digitalocean</a></li>
+  <li><a href="http://aws.amazon.com/cn/" title="AWS EC2">AWS</a></li>
+</ul>
+
+<h3 id="install-ubuntu-1404-lts-server">Install Ubuntu 14.04 LTS Server</h3>
+
+<p>Not much to say here.</p>
+
+<h3 id="start-vpn-setting-up">Start VPN Setting Up</h3>
+<blockquote>
+  <p>The below VPN Tutorials is from <a href="https://raymii.org/s/tutorials/IPSEC_L2TP_vpn_with_Ubuntu_14.04.html">IPSEC L2TP VPN on Ubuntu 14.04 with OpenSwan, xl2tpd and ppp</a> by Remy van Elst</p>
+</blockquote>
+
+<h4 id="install-ppp-openswan-and-xl2tpd">Install ppp openswan and xl2tpd</h4>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apt-get install openswan xl2tpd ppp lsof</code></pre></div>
+
+<h4 id="firewall-and-sysctl">Firewall and sysctl</h4>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">iptables -t nat -A POSTROUTING -j SNAT --to-source %SERVERIP% -o eth+</code></pre></div>
+
+<p>%SERVERIP% should be relpaced by your ture server IP.
+Execute the below commands to enable kernel IP packet forwarding and disable ICP redirects.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;net.ipv4.ip_forward = 1&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.all.accept_redirects = 0&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.all.send_redirects = 0&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.default.rp_filter = 0&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.default.accept_source_route = 0&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.default.send_redirects = 0&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.icmp_ignore_bogus_error_responses = 1&quot;</span> <span class="p">|</span>  tee -a /etc/sysctl.conf</code></pre></div>
+
+<p>Set these settings for other network interfaces:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> vpn in /proc/sys/net/ipv4/conf/*<span class="p">;</span> <span class="k">do</span> <span class="nb">echo </span><span class="m">0</span> &gt; <span class="nv">$vpn</span>/accept_redirects<span class="p">;</span> <span class="nb">echo </span><span class="m">0</span> &gt; <span class="nv">$vpn</span>/send_redirects<span class="p">;</span> <span class="k">done</span></code></pre></div>
+
+<p>Apply above:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sysctl -p</code></pre></div>
+
+<p>To make sure this keeps working at boot you might want to add the following to <code>/etc/rc.local</code>:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> vpn in /proc/sys/net/ipv4/conf/*<span class="p">;</span> <span class="k">do</span> <span class="nb">echo </span><span class="m">0</span> &gt; <span class="nv">$vpn</span>/accept_redirects<span class="p">;</span> <span class="nb">echo </span><span class="m">0</span> &gt; <span class="nv">$vpn</span>/send_redirects<span class="p">;</span> <span class="k">done</span>
+iptables -t nat -A POSTROUTING -j SNAT --to-source %SERVERIP% -o eth+</code></pre></div>
+
+<h4 id="configure-openswan-ipsec">Configure Openswan (IPSEC)</h4>
+<p>Use your favorite editor to edit <code>/etc/ipsec.conf</code></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">version <span class="m">2</span> <span class="c"># conforms to second version of ipsec.conf specification</span>
+
+config setup
+    <span class="nv">dumpdir</span><span class="o">=</span>/var/run/pluto/
+    <span class="c">#in what directory should things started by setup (notably the Pluto daemon) be allowed to dump core?</span>
+
+    <span class="nv">nat_traversal</span><span class="o">=</span>yes
+    <span class="c">#whether to accept/offer to support NAT (NAPT, also known as &quot;IP Masqurade&quot;) workaround for IPsec</span>
+
+    <span class="nv">virtual_private</span><span class="o">=</span>%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v6:fd00::/8,%v6:fe80::/10
+    <span class="c">#contains the networks that are allowed as subnet= for the remote client. In other words, the address ranges that may live behind a NAT router through which a client connects.</span>
+
+    <span class="nv">protostack</span><span class="o">=</span>netkey
+    <span class="c">#decide which protocol stack is going to be used.</span>
+
+    <span class="nv">force_keepalive</span><span class="o">=</span>yes
+    <span class="nv">keep_alive</span><span class="o">=</span>60
+    <span class="c"># Send a keep-alive packet every 60 seconds.</span>
+
+conn L2TP-PSK-noNAT
+    <span class="nv">authby</span><span class="o">=</span>secret
+    <span class="c">#shared secret. Use rsasig for certificates.</span>
+
+    <span class="nv">pfs</span><span class="o">=</span>no
+    <span class="c">#Disable pfs</span>
+
+    <span class="nv">auto</span><span class="o">=</span>add
+    <span class="c">#the ipsec tunnel should be started and routes created when the ipsec daemon itself starts.</span>
+
+    <span class="nv">keyingtries</span><span class="o">=</span>3
+    <span class="c">#Only negotiate a conn. 3 times.</span>
+
+    <span class="nv">ikelifetime</span><span class="o">=</span>8h
+    <span class="nv">keylife</span><span class="o">=</span>1h
+
+    <span class="nv">ike</span><span class="o">=</span>aes256-sha1,aes128-sha1,3des-sha1
+    <span class="nv">phase2alg</span><span class="o">=</span>aes256-sha1,aes128-sha1,3des-sha1
+    <span class="c"># https://lists.openswan.org/pipermail/users/2014-April/022947.html</span>
+    <span class="c"># specifies the phase 1 encryption scheme, the hashing algorithm, and the diffie-hellman group. The modp1024 is for Diffie-Hellman 2. Why &#39;modp&#39; instead of dh? DH2 is a 1028 bit encryption algorithm that modulo&#39;s a prime number, e.g. modp1028. See RFC 5114 for details or the wiki page on diffie hellmann, if interested.</span>
+
+    <span class="nb">type</span><span class="o">=</span>transport
+    <span class="c">#because we use l2tp as tunnel protocol</span>
+
+    <span class="nv">left</span><span class="o">=</span>%SERVERIP%
+    <span class="c">#fill in server IP above</span>
+
+    <span class="nv">leftprotoport</span><span class="o">=</span>17/1701
+    <span class="nv">right</span><span class="o">=</span>%any
+    <span class="nv">rightprotoport</span><span class="o">=</span>17/%any
+
+    <span class="nv">dpddelay</span><span class="o">=</span>10
+    <span class="c"># Dead Peer Dectection (RFC 3706) keepalives delay</span>
+    <span class="nv">dpdtimeout</span><span class="o">=</span>20
+    <span class="c">#  length of time (in seconds) we will idle without hearing either an R_U_THERE poll from our peer, or an R_U_THERE_ACK reply.</span>
+    <span class="nv">dpdaction</span><span class="o">=</span>clear
+    <span class="c"># When a DPD enabled peer is declared dead, what action should be taken. clear means the eroute and SA with both be cleared.</span></code></pre></div>
+
+<h5 id="the-shared-secret">The shared secret</h5>
+<p>The shared secret is defined in the <code>/etc/ipsec.secrets</code> file. Make sure it is long and random:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">%SERVERIP%  %any:   PSK <span class="s2">&quot;69EA16F2C529E74A7D1B0FE99E69F6BDCD3E44&quot;</span></code></pre></div>
+
+<p>Yet again, replace %SERVERIP% with the IP of your server here. If you want to generate a random key you can use the following openssl command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">openssl rand -hex 30</code></pre></div>
+
+<h5 id="the-shared-secret-1">The shared secret</h5>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ipsec verify</code></pre></div>
+
+<p>My output looks like this:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Checking your system to see <span class="k">if</span> IPsec got installed and started correctly:
+Version check and ipsec on-path                                 <span class="o">[</span>OK<span class="o">]</span>
+Linux Openswan U2.6.38/K3.13.0-24-generic <span class="o">(</span>netkey<span class="o">)</span>
+Checking <span class="k">for</span> IPsec support in kernel                            <span class="o">[</span>OK<span class="o">]</span>
+ SAref kernel support                                           <span class="o">[</span>N/A<span class="o">]</span>
+ NETKEY:  Testing XFRM related proc values                      <span class="o">[</span>OK<span class="o">]</span>
+    <span class="o">[</span>OK<span class="o">]</span>
+    <span class="o">[</span>OK<span class="o">]</span>
+Checking that pluto is running                                  <span class="o">[</span>OK<span class="o">]</span>
+ Pluto listening <span class="k">for</span> IKE on udp <span class="m">500</span>                             <span class="o">[</span>OK<span class="o">]</span>
+ Pluto listening <span class="k">for</span> NAT-T on udp <span class="m">4500</span>                          <span class="o">[</span>OK<span class="o">]</span>
+Checking <span class="k">for</span> <span class="s1">&#39;ip&#39;</span> <span class="nb">command</span>                                       <span class="o">[</span>OK<span class="o">]</span>
+Checking /bin/sh is not /bin/dash                               <span class="o">[</span>WARNING<span class="o">]</span>
+Checking <span class="k">for</span> <span class="s1">&#39;iptables&#39;</span> <span class="nb">command</span>                                 <span class="o">[</span>OK<span class="o">]</span>
+Opportunistic Encryption Support                                <span class="o">[</span>DISABLED<span class="o">]</span></code></pre></div>
+
+<h4 id="configure-xl2tpd">Configure xl2tpd</h4>
+<p>Use your favorite editor to edit <code>/etc/xl2tpd/xl2tpd.conf</code></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>global<span class="o">]</span>
+ipsec <span class="nv">saref</span> <span class="o">=</span> yes
+saref <span class="nv">refinfo</span> <span class="o">=</span> 30
+
+<span class="p">;</span>debug <span class="nv">avp</span> <span class="o">=</span> yes
+<span class="p">;</span>debug <span class="nv">network</span> <span class="o">=</span> yes
+<span class="p">;</span>debug <span class="nv">state</span> <span class="o">=</span> yes
+<span class="p">;</span>debug <span class="nv">tunnel</span> <span class="o">=</span> yes
+
+<span class="o">[</span>lns default<span class="o">]</span>
+ip <span class="nv">range</span> <span class="o">=</span> 172.16.1.30-172.16.1.100
+<span class="nb">local </span><span class="nv">ip</span> <span class="o">=</span> 172.16.1.1
+refuse <span class="nv">pap</span> <span class="o">=</span> yes
+require <span class="nv">authentication</span> <span class="o">=</span> yes
+<span class="p">;</span>ppp <span class="nv">debug</span> <span class="o">=</span> yes
+<span class="nv">pppoptfile</span> <span class="o">=</span> /etc/ppp/options.xl2tpd
+length <span class="nv">bit</span> <span class="o">=</span> yes</code></pre></div>
+
+<ul>
+  <li>ip range = range of IPs to give to the connecting clients</li>
+  <li>local ip = IP of VPN server</li>
+  <li>refuse pap = refure pap authentication</li>
+  <li>ppp debug = yes when testing, no when in production</li>
+</ul>
+
+<h4 id="configuring-ppp">Configuring PPP</h4>
+<p>Use your favorite editor to edit <code>/etc/ppp/options.xl2tpd</code>,dont’t warry if the file doesn’s exist.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">require-mschap-v2
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+auth
+mtu 1200
+mru 1000
+crtscts
+hide-password
+modem
+name l2tpd
+proxyarp
+lcp-echo-interval 30
+lcp-echo-failure 4</code></pre></div>
+
+<ul>
+  <li>ms-dns = The dns to give to the client. I use googles public DNS.</li>
+  <li>proxyarp = Add an entry to this systems ARP [Address Resolution Protocol] table with the IP address of the peer and the Ethernet address of this system. This will have the effect of making the peer appear to other systems to be on the local ethernet.</li>
+  <li>name l2tpd = is used in the ppp authentication file.</li>
+</ul>
+
+<h4 id="adding-users">Adding users</h4>
+<p>Every user should be defined in the <code>/etc/ppp/chap-secrets</code> file. Below is an example file.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Secrets for authentication using CHAP</span>
+<span class="c"># client       server  secret                  IP addresses</span>
+alice          l2tpd   0F92E5FC2414101EA            *
+bob            l2tpd   DF98F09F74C06A2F             *</code></pre></div>
+
+<ul>
+  <li>client = username for the user</li>
+  <li>server = the name we define in the ppp.options file for xl2tpd</li>
+  <li>secret = password for the user</li>
+  <li>IP Addresses = leave to * for any address or define addresses from were a user can login.</li>
+</ul>
+
+<h4 id="testing-it">Testing it</h4>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">/etc/init.d/ipsec restart 
+/etc/init.d/xl2tpd restart</code></pre></div>
+
+<blockquote>
+  <p>Quote End</p>
+</blockquote>
+
+<h4 id="now-setup-your-client">Now Setup your Client</h4>
+<p><img src="http://7vzp6r.com1.z0.glb.clouddn.com/iphonevpn.jpg?imageView2/2/h/500" alt="iphone vpn setting" /></p>
+
+<ul>
+  <li>Server is your server’s actual IP Address</li>
+  <li>Secret is the PSK we set in the <code>/etc/ipsec.secrets</code></li>
+</ul>
+
+<h4 id="have-fun-now">Have Fun Now~</h4>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="ui inverted black footer vertical segment">
+  <div class="container">
+    <div class="ui stackable inverted divided page grid">
+      <div class="eight wide column">
+          <div class="ui inverted link list">
+          <li>Discountry</li>
+          <li><a href="mailto:feibilanceon@gmail.com">feibilanceon@gmail.com</a></li>
+          </div>
+      </div>
+      <div class="four wide column">
+        <h5 class="ui inverted header">Elsewhere</h5>
+        <div class="ui inverted link list">
+        
+          <li>
+            <a href="https://github.com/discountry">
+              <i class="white icon github"></i>
+              <span class="username">discountry</span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/discountifu">
+              <i class="inverted blue icon twitter"></i>
+              <span class="username">discountifu</span>
+            </a>
+          </li>
+          
+        </div>
+      </div>
+      <div class="four wide column">
+        <p class="text">&copy; Discountry's DEV Blog</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+
+  </body>
+
+</html>

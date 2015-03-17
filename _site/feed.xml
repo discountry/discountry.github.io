@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discountry</title>
+    <description>Discountry&#39;s DEV Blog</description>
+    <link>http://discountry.github.io/</link>
+    <atom:link href="http://discountry.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 17 Mar 2015 16:18:56 +0800</pubDate>
+    <lastBuildDate>Tue, 17 Mar 2015 16:18:56 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>How to get Wechat UserInfo via access_token</title>
+        <description>&lt;!--more--&gt;
+
+&lt;h3 id=&quot;without-using-oauth20-access-token-you-can-use-universal-access-token-instead-to-get-userinfo&quot;&gt;Without using &lt;code&gt;OAuth2.0 access token&lt;/code&gt;, You can use &lt;code&gt;Universal access token&lt;/code&gt; instead to get UserInfo.&lt;/h3&gt;
+
+&lt;h4 id=&quot;get-users-openid&quot;&gt;Get User’s openid&lt;/h4&gt;
+&lt;p&gt;You could get this XML when wechat user follow you or post you message.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;xml&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;ToUserName&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[gh_b629c48b653e]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ToUserName&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;FromUserName&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[ollB4jv7LA3tydjviJp5V9qTU_kA]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/FromUserName&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;CreateTime&amp;gt;&lt;/span&gt;1372307736&lt;span class=&quot;nt&quot;&gt;&amp;lt;/CreateTime&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;MsgType&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[event]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/MsgType&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Event&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[subscribe]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Event&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;EventKey&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/EventKey&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xml&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;use-your-appid-to-get-the-universal-access-token&quot;&gt;Use your appid to get the &lt;code&gt;Universal Access Token&lt;/code&gt;.&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;amp;appid=APPID&amp;amp;secret=APPSECRET
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The return result:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;access_token&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;NU7Kr6v9L9TQaqm5NE3OTPctTZx797Wxw4Snd2WL2HHBqLCiXlDVOw2l-Se0I-WmOLLniAYLAwzhbYhXNjbLc_KAA092cxkmpj5FpuqNO0IL7bB0Exz5s5qC9Umypy-rz2y441W9qgfnmNtIZWSjSQ&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;expires_in&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7200&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;use-universal-access-token--openid-to-get-the-userinfo&quot;&gt;Use &lt;code&gt;Universal Access Token&lt;/code&gt; &amp;amp; &lt;code&gt;openid&lt;/code&gt; to get the UserInfo&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&amp;amp;openid=OPENID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The return result:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;subscribe&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;openid&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;oLVPpjqs2Bhvz*******vTYAX4GLc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;nickname&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Discountry&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;sex&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;language&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;zh_CN&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;city&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;北京&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;province&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;北京&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;country&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;中国&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;headimgurl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://wx.qlogo.cn/mmopen/JcDicrZBlREhnNXZRudod9PmibRkIs5K2f1tUQ7lFjC63pYHaXGxNDgMzjGDEuvzYZbFOqtUXaxSdoZG6iane5ko9H30krIbzGv/0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;subscribe_time&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1386160805&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The basic idea quoted from &lt;a href=&quot;http://www.cnblogs.com/txw1958/p/weixin76-user-info.html&quot;&gt;Fangbei&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Sun, 08 Mar 2015 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/tutorial/2015/03/08/How-to-get-Wechat-userinfo/</link>
+        <guid isPermaLink="true">http://discountry.github.io/tutorial/2015/03/08/How-to-get-Wechat-userinfo/</guid>
+        
+        <category>Wechat</category>
+        
+        
+        <category>tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Setup L2TP VPN Server</title>
+        <description>&lt;!--more--&gt;
+
+&lt;h3 id=&quot;choosing-a-proper-vps-server&quot;&gt;Choosing a proper VPS Server&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Janpan&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.conoha.jp/en&quot; title=&quot;Conoha VPS&quot;&gt;Conoha&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://smartvps.cn/&quot; title=&quot;Smart VPS&quot;&gt;Smartvps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;USA&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/&quot; title=&quot;DO&quot;&gt;Digitalocean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://aws.amazon.com/cn/&quot; title=&quot;AWS EC2&quot;&gt;AWS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;install-ubuntu-1404-lts-server&quot;&gt;Install Ubuntu 14.04 LTS Server&lt;/h3&gt;
+
+&lt;p&gt;Not much to say here.&lt;/p&gt;
+
+&lt;h3 id=&quot;start-vpn-setting-up&quot;&gt;Start VPN Setting Up&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The below VPN Tutorials is from &lt;a href=&quot;https://raymii.org/s/tutorials/IPSEC_L2TP_vpn_with_Ubuntu_14.04.html&quot;&gt;IPSEC L2TP VPN on Ubuntu 14.04 with OpenSwan, xl2tpd and ppp&lt;/a&gt; by Remy van Elst&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;install-ppp-openswan-and-xl2tpd&quot;&gt;Install ppp openswan and xl2tpd&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;apt-get install openswan xl2tpd ppp lsof&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;firewall-and-sysctl&quot;&gt;Firewall and sysctl&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;iptables -t nat -A POSTROUTING -j SNAT --to-source %SERVERIP% -o eth+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;%SERVERIP% should be relpaced by your ture server IP.
+Execute the below commands to enable kernel IP packet forwarding and disable ICP redirects.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.ip_forward = 1&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.conf.all.accept_redirects = 0&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.conf.all.send_redirects = 0&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.conf.default.rp_filter = 0&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.conf.default.accept_source_route = 0&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.conf.default.send_redirects = 0&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;net.ipv4.icmp_ignore_bogus_error_responses = 1&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  tee -a /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Set these settings for other network interfaces:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; vpn in /proc/sys/net/ipv4/conf/*&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/accept_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/send_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Apply above:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To make sure this keeps working at boot you might want to add the following to &lt;code&gt;/etc/rc.local&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; vpn in /proc/sys/net/ipv4/conf/*&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/accept_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/send_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+iptables -t nat -A POSTROUTING -j SNAT --to-source %SERVERIP% -o eth+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;configure-openswan-ipsec&quot;&gt;Configure Openswan (IPSEC)&lt;/h4&gt;
+&lt;p&gt;Use your favorite editor to edit &lt;code&gt;/etc/ipsec.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;version &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# conforms to second version of ipsec.conf specification&lt;/span&gt;
+
+config setup
+    &lt;span class=&quot;nv&quot;&gt;dumpdir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/var/run/pluto/
+    &lt;span class=&quot;c&quot;&gt;#in what directory should things started by setup (notably the Pluto daemon) be allowed to dump core?&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;nat_traversal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yes
+    &lt;span class=&quot;c&quot;&gt;#whether to accept/offer to support NAT (NAPT, also known as &amp;quot;IP Masqurade&amp;quot;) workaround for IPsec&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;virtual_private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v6:fd00::/8,%v6:fe80::/10
+    &lt;span class=&quot;c&quot;&gt;#contains the networks that are allowed as subnet= for the remote client. In other words, the address ranges that may live behind a NAT router through which a client connects.&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;protostack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;netkey
+    &lt;span class=&quot;c&quot;&gt;#decide which protocol stack is going to be used.&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;force_keepalive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yes
+    &lt;span class=&quot;nv&quot;&gt;keep_alive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;60
+    &lt;span class=&quot;c&quot;&gt;# Send a keep-alive packet every 60 seconds.&lt;/span&gt;
+
+conn L2TP-PSK-noNAT
+    &lt;span class=&quot;nv&quot;&gt;authby&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;secret
+    &lt;span class=&quot;c&quot;&gt;#shared secret. Use rsasig for certificates.&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;pfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;no
+    &lt;span class=&quot;c&quot;&gt;#Disable pfs&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;add
+    &lt;span class=&quot;c&quot;&gt;#the ipsec tunnel should be started and routes created when the ipsec daemon itself starts.&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;keyingtries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3
+    &lt;span class=&quot;c&quot;&gt;#Only negotiate a conn. 3 times.&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;ikelifetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8h
+    &lt;span class=&quot;nv&quot;&gt;keylife&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1h
+
+    &lt;span class=&quot;nv&quot;&gt;ike&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aes256-sha1,aes128-sha1,3des-sha1
+    &lt;span class=&quot;nv&quot;&gt;phase2alg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aes256-sha1,aes128-sha1,3des-sha1
+    &lt;span class=&quot;c&quot;&gt;# https://lists.openswan.org/pipermail/users/2014-April/022947.html&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# specifies the phase 1 encryption scheme, the hashing algorithm, and the diffie-hellman group. The modp1024 is for Diffie-Hellman 2. Why &amp;#39;modp&amp;#39; instead of dh? DH2 is a 1028 bit encryption algorithm that modulo&amp;#39;s a prime number, e.g. modp1028. See RFC 5114 for details or the wiki page on diffie hellmann, if interested.&lt;/span&gt;
+
+    &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;transport
+    &lt;span class=&quot;c&quot;&gt;#because we use l2tp as tunnel protocol&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%SERVERIP%
+    &lt;span class=&quot;c&quot;&gt;#fill in server IP above&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;leftprotoport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;17/1701
+    &lt;span class=&quot;nv&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%any
+    &lt;span class=&quot;nv&quot;&gt;rightprotoport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;17/%any
+
+    &lt;span class=&quot;nv&quot;&gt;dpddelay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10
+    &lt;span class=&quot;c&quot;&gt;# Dead Peer Dectection (RFC 3706) keepalives delay&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;dpdtimeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;20
+    &lt;span class=&quot;c&quot;&gt;#  length of time (in seconds) we will idle without hearing either an R_U_THERE poll from our peer, or an R_U_THERE_ACK reply.&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;dpdaction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clear
+    &lt;span class=&quot;c&quot;&gt;# When a DPD enabled peer is declared dead, what action should be taken. clear means the eroute and SA with both be cleared.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;the-shared-secret&quot;&gt;The shared secret&lt;/h5&gt;
+&lt;p&gt;The shared secret is defined in the &lt;code&gt;/etc/ipsec.secrets&lt;/code&gt; file. Make sure it is long and random:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;%SERVERIP%  %any:   PSK &lt;span class=&quot;s2&quot;&gt;&amp;quot;69EA16F2C529E74A7D1B0FE99E69F6BDCD3E44&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Yet again, replace %SERVERIP% with the IP of your server here. If you want to generate a random key you can use the following openssl command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;openssl rand -hex 30&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;the-shared-secret-1&quot;&gt;The shared secret&lt;/h5&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ipsec verify&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;My output looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Checking your system to see &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; IPsec got installed and started correctly:
+Version check and ipsec on-path                                 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Linux Openswan U2.6.38/K3.13.0-24-generic &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;netkey&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Checking &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; IPsec support in kernel                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ SAref kernel support                                           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;N/A&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ NETKEY:  Testing XFRM related proc values                      &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Checking that pluto is running                                  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ Pluto listening &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; IKE on udp &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;                             &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ Pluto listening &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; NAT-T on udp &lt;span class=&quot;m&quot;&gt;4500&lt;/span&gt;                          &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Checking &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;ip&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt;                                       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Checking /bin/sh is not /bin/dash                               &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;WARNING&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Checking &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;iptables&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt;                                 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+Opportunistic Encryption Support                                &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;DISABLED&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;configure-xl2tpd&quot;&gt;Configure xl2tpd&lt;/h4&gt;
+&lt;p&gt;Use your favorite editor to edit &lt;code&gt;/etc/xl2tpd/xl2tpd.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;global&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ipsec &lt;span class=&quot;nv&quot;&gt;saref&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+saref &lt;span class=&quot;nv&quot;&gt;refinfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 30
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;debug &lt;span class=&quot;nv&quot;&gt;avp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;debug &lt;span class=&quot;nv&quot;&gt;network&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;debug &lt;span class=&quot;nv&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;debug &lt;span class=&quot;nv&quot;&gt;tunnel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;lns default&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ip &lt;span class=&quot;nv&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 172.16.1.30-172.16.1.100
+&lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 172.16.1.1
+refuse &lt;span class=&quot;nv&quot;&gt;pap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+require &lt;span class=&quot;nv&quot;&gt;authentication&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;ppp &lt;span class=&quot;nv&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;nv&quot;&gt;pppoptfile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /etc/ppp/options.xl2tpd
+length &lt;span class=&quot;nv&quot;&gt;bit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ip range = range of IPs to give to the connecting clients&lt;/li&gt;
+  &lt;li&gt;local ip = IP of VPN server&lt;/li&gt;
+  &lt;li&gt;refuse pap = refure pap authentication&lt;/li&gt;
+  &lt;li&gt;ppp debug = yes when testing, no when in production&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;configuring-ppp&quot;&gt;Configuring PPP&lt;/h4&gt;
+&lt;p&gt;Use your favorite editor to edit &lt;code&gt;/etc/ppp/options.xl2tpd&lt;/code&gt;,dont’t warry if the file doesn’s exist.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;require-mschap-v2
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+auth
+mtu 1200
+mru 1000
+crtscts
+hide-password
+modem
+name l2tpd
+proxyarp
+lcp-echo-interval 30
+lcp-echo-failure 4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ms-dns = The dns to give to the client. I use googles public DNS.&lt;/li&gt;
+  &lt;li&gt;proxyarp = Add an entry to this systems ARP [Address Resolution Protocol] table with the IP address of the peer and the Ethernet address of this system. This will have the effect of making the peer appear to other systems to be on the local ethernet.&lt;/li&gt;
+  &lt;li&gt;name l2tpd = is used in the ppp authentication file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;adding-users&quot;&gt;Adding users&lt;/h4&gt;
+&lt;p&gt;Every user should be defined in the &lt;code&gt;/etc/ppp/chap-secrets&lt;/code&gt; file. Below is an example file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Secrets for authentication using CHAP&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# client       server  secret                  IP addresses&lt;/span&gt;
+alice          l2tpd   0F92E5FC2414101EA            *
+bob            l2tpd   DF98F09F74C06A2F             *&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;client = username for the user&lt;/li&gt;
+  &lt;li&gt;server = the name we define in the ppp.options file for xl2tpd&lt;/li&gt;
+  &lt;li&gt;secret = password for the user&lt;/li&gt;
+  &lt;li&gt;IP Addresses = leave to * for any address or define addresses from were a user can login.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;testing-it&quot;&gt;Testing it&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/etc/init.d/ipsec restart 
+/etc/init.d/xl2tpd restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Quote End&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;now-setup-your-client&quot;&gt;Now Setup your Client&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://7vzp6r.com1.z0.glb.clouddn.com/iphonevpn.jpg?imageView2/2/h/500&quot; alt=&quot;iphone vpn setting&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Server is your server’s actual IP Address&lt;/li&gt;
+  &lt;li&gt;Secret is the PSK we set in the &lt;code&gt;/etc/ipsec.secrets&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;have-fun-now&quot;&gt;Have Fun Now~&lt;/h4&gt;
+
+</description>
+        <pubDate>Fri, 27 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/tutorial/2015/02/27/How-to-Setup-L2TP-VPN-Server/</link>
+        <guid isPermaLink="true">http://discountry.github.io/tutorial/2015/02/27/How-to-Setup-L2TP-VPN-Server/</guid>
+        
+        <category>VPN</category>
+        
+        
+        <category>tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>jQuery like AngularJS $HTTP Functions</title>
+        <description>&lt;!--more--&gt;
+
+&lt;h3 id=&quot;provide-jquery-like-angularjs-http-functions&quot;&gt;Provide jQuery like AngularJS http functions&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;emulatorApp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$httpProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Use x-www-form-urlencoded Content-Type&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$httpProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;application/x-www-form-urlencoded;charset=utf-8&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+  &lt;span class=&quot;cm&quot;&gt;/**&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;   * The workhorse; converts an object to x-www-form-urlencoded serialization.&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;   * @param {Object} obj&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;   * @return {String}&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;   */&lt;/span&gt; 
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fullSubName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;subValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;fullSubName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;[&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fullSubName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subName&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;subValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;fullSubName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;[&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fullSubName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;=&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+ 
+  &lt;span class=&quot;c1&quot;&gt;// Override $http service&amp;#39;s default transformRequest&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$httpProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transformRequest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;[object File]&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;optionController&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;{$service.options.name}&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;{$service.options.description}&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 31 Jan 2015 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/snipptes/2015/01/31/jQuery-like-AngularJS-$http/</link>
+        <guid isPermaLink="true">http://discountry.github.io/snipptes/2015/01/31/jQuery-like-AngularJS-$http/</guid>
+        
+        <category>AngularJS</category>
+        
+        
+        <category>snipptes</category>
+        
+      </item>
+    
+      <item>
+        <title>Start testing CKAN</title>
+        <description>&lt;p&gt;First of all you’ll need to config everything right in your production.ini or development.ini of your CKAN site.&lt;/p&gt;
+
+&lt;p&gt;Follow the guide here &lt;a href=&quot;http://docs.ckan.org/en/latest/maintaining/installing/install-from-source.html&quot;&gt;Installing CKAN from Source&lt;/a&gt; and build Python virtual environment for you site.&lt;/p&gt;
+
+&lt;p&gt;Then you can get your hands dirty.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-a-sysadmin-user&quot;&gt;1.Creating a sysadmin user&lt;/h3&gt;
+&lt;p&gt;You should run these command in your ckan directory.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/lib/ckan/default/src/ckan&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you can use your &lt;code&gt;development.ini&lt;/code&gt; or &lt;code&gt;production.ini&lt;/code&gt; file to do your magic.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;paster sysadmin add &lt;span class=&quot;s1&quot;&gt;&amp;#39;whoami&amp;#39;&lt;/span&gt; -c /etc/ckan/default/production.ini
+or
+paster sysadmin add &lt;span class=&quot;s1&quot;&gt;&amp;#39;whoami&amp;#39;&lt;/span&gt; -c /etc/ckan/default/development.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;creating-test-data&quot;&gt;2.Creating test data&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;paster create-test-data -c /etc/ckan/default/production.ini
+or
+paster create-test-data -c /etc/ckan/default/development.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;config-file&quot;&gt;3.Config file&lt;/h3&gt;
+&lt;p&gt;You can customize your CKAN site by changing default setting here.
+For example, to change the title of your site you would find the &lt;code&gt;ckan.site_title&lt;/code&gt; line in your config file and edit it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ckan.site_title&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Yuqian&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s CKAN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And another example you can also choose your default language in the config file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ckan.locale_default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;zh_CN &lt;span class=&quot;c&quot;&gt;#For default interface in Chinese.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 17 Sep 2014 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/ckan/2014/09/17/start-testing-ckan/</link>
+        <guid isPermaLink="true">http://discountry.github.io/ckan/2014/09/17/start-testing-ckan/</guid>
+        
+        <category>testing</category>
+        
+        
+        <category>ckan</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Install CKAN on Ubuntu Server 12.04</title>
+        <description>&lt;p&gt;This is the note I write here based on my own practices.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;1.Install Ubuntu Server in a virtual machine.&lt;/p&gt;
+
+&lt;p&gt;Ⅰ.Install CKAN packages&lt;/p&gt;
+
+&lt;p&gt;2.Update Ubuntu’s package index.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;3.Download CKAN required packages.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo apt-get install -y nginx apache2 libapache2-mod-wsgi libpq5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;4.Download the CKAN package.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; wget http://packaging.ckan.org/python-ckan_2.2_amd64.deb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;5.Then install the package.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo dpkg -i python-ckan_2.2_amd63.deb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ⅱ.Install PostgreSQL &amp;amp; Solr&lt;/p&gt;
+
+&lt;p&gt;1.Install PostgreSQL and Slor.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo apt-get install -y postgresql solr-jetty&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2.Setup Solr
+edit the config file(/etc/default/jetty) and change the following variables:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;NO_START&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;            &lt;span class=&quot;c&quot;&gt;# (line 4)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;JETTY_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;127.0.0.1  &lt;span class=&quot;c&quot;&gt;# (line 15)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;JETTY_PORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8983&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;# (line 18)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib/jvm/java-6-openjdk-amd64/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Start the jetty server:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo service jetty start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Replace the default &lt;code&gt;schema.xml&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; sudo service jetty restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Change the &lt;a href=&quot;http://docs.ckan.org/en/latest/maintaining/configuration.html#solr-url&quot;&gt;solr_url&lt;/a&gt; setting in CKAN config file&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;solr_url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://127.0.0.1:8983/solr&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;3.Setup a PostgreSQL databse&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo -u postgres createuser -S -D -R -P ckan_default
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; sudo -u postgres createdb -O ckan_default ckan_default -E utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember to enter a password for later use.&lt;/p&gt;
+
+&lt;p&gt;Then edit the &lt;a href=&quot;http://docs.ckan.org/en/latest/maintaining/configuration.html#sqlalchemy-url&quot;&gt;sqlalchemy.url&lt;/a&gt; option in /etc/ckan/default/production.ini set the password you have entered.&lt;/p&gt;
+
+&lt;p&gt;4.Initialize CKAN database by running this command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo ckan db init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;5.Restart Apache and Nginx.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo service apache2 restart
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; sudo service nginx restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;6.Everything’s done.visit your localhost.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost&quot;&gt;localhost&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 14 Sep 2014 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/ubuntu/ckan/2014/09/14/how-to-install-ckan-on-ubuntu-server-1204/</link>
+        <guid isPermaLink="true">http://discountry.github.io/ubuntu/ckan/2014/09/14/how-to-install-ckan-on-ubuntu-server-1204/</guid>
+        
+        <category>Guide</category>
+        
+        
+        <category>ubuntu</category>
+        
+        <category>ckan</category>
+        
+      </item>
+    
+      <item>
+        <title>Chinese-Character-pattern</title>
+        <description>&lt;p&gt;I found this useful php code snippet on the internet.&lt;br /&gt;
+And post here for future use and remind.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;checkChineseCharater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;preg_match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/^[\x{4e00}-\x{9fa5}]+$/u&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;gist here:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/a91c3004dbdbfe8805d4.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/snippet/2014/08/31/chinesecharacterpattern/</link>
+        <guid isPermaLink="true">http://discountry.github.io/snippet/2014/08/31/chinesecharacterpattern/</guid>
+        
+        <category>php</category>
+        
+        <category>snippet</category>
+        
+        <category>preg</category>
+        
+        
+        <category>snippet</category>
+        
+      </item>
+    
+      <item>
+        <title>Semantic UI</title>
+        <description>&lt;p&gt;Semantic is a UI Component library implemented using a set of specifications designed around natural language.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://semantic.ruchope.org/&quot;&gt;&lt;img src=&quot;http://t.williamgates.net/image-AC43_54008744.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I Translated this UI Kit 4 months ago. The whole world is using BootStrap now, I’ve got a little kind of bored.So this very tastey Semantic UI come in to my eyes.&lt;br /&gt;
+I’m fond of this and hope you enjoy too :)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Aug 2014 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/project/2014/08/29/semantic-ui/</link>
+        <guid isPermaLink="true">http://discountry.github.io/project/2014/08/29/semantic-ui/</guid>
+        
+        <category>UI Framework</category>
+        
+        <category>Translate Project</category>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Begin to post on Github</title>
+        <description>&lt;p&gt;This is the first post I write here.
+Congratulations for my jekyll Blog.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Aug 2014 00:00:00 +0800</pubDate>
+        <link>http://discountry.github.io/blog/2014/08/28/begin-to-post-on-github/</link>
+        <guid isPermaLink="true">http://discountry.github.io/blog/2014/08/28/begin-to-post-on-github/</guid>
+        
+        <category>emotion</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

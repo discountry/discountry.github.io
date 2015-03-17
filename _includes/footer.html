@@ -1,0 +1,37 @@
+<footer class="ui inverted black footer vertical segment">
+  <div class="container">
+    <div class="ui stackable inverted divided page grid">
+      <div class="eight wide column">
+          <div class="ui inverted link list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          </div>
+      </div>
+      <div class="four wide column">
+        <h5 class="ui inverted header">Elsewhere</h5>
+        <div class="ui inverted link list">
+        {% if site.github_username %}
+          <li>
+            <a href="https://github.com/{{ site.github_username }}">
+              <i class="white icon github"></i>
+              <span class="username">{{ site.github_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <i class="inverted blue icon twitter"></i>
+              <span class="username">{{ site.twitter_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+        </div>
+      </div>
+      <div class="four wide column">
+        <p class="text">&copy; {{ site.description }}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>

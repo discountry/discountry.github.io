@@ -1,0 +1,78 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$spacing-unit:     30px;
+
+/*
+* Basic
+*/
+.title.segment {
+    padding-top: 4em;
+    padding-bottom: 2em;
+    border-radius: 0em;
+}
+
+.post.list {
+    margin-top: 2em !important;
+}
+
+.post.content {
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+}
+
+.post.container {
+    margin-top: 2em !important;
+}
+
+.right.floated.date {
+  float: right !important;
+}
+
+.footer.vertical.segment {
+ margin-top: 5em;
+ padding: 4em 0em 5em;
+}
+
+.menu .right.menu > .mobile.item {
+  display: none;
+}
+/*******************************
+          Responsive
+*******************************/
+
+/* Mobile Only */
+@media only screen and (max-width : 768px) {
+
+  .menu .right.menu > .item {
+    display: none;
+  }
+
+  .menu .right.menu > .mobile.item {
+    display: block;
+  }
+  .menu .right.menu > .mobile.item .menu {
+    left: auto;
+    right: 0em;
+  }
+
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "syntax-highlighting"
+;
