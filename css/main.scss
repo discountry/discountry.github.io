@@ -49,7 +49,7 @@ $spacing-unit:     30px;
 *******************************/
 
 /* Mobile Only */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
 
   .menu .right.menu > .item {
     display: none;
@@ -62,6 +62,14 @@ $spacing-unit:     30px;
     left: auto;
     right: 0em;
   }
+
+  .ui.page.grid {
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: none !important;
+  margin-right: none !important;
+}
 
 }
 
