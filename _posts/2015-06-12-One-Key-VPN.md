@@ -6,6 +6,7 @@ categories: ['snippets']
 tags: ['vpn']
 ---
 <!--more-->
+
 {%highlight bash%}
 #!/bin/sh
 #    Setup Simple IPSec/L2TP VPN server for Ubuntu and Debian
