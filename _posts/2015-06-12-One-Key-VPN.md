@@ -348,4 +348,5 @@ echo "If you plan to keep the VPN server generated with this script on the inter
 
 sleep 1
 exit 0
+
 {% endhighlight %}
