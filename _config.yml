@@ -10,3 +10,6 @@ github_username:  discountry
 # Build settings
 permalink: pretty
 markdown: kramdown
+
+#Pagination
+paginate: 5

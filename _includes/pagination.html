@@ -1,0 +1,14 @@
+<!-- Pagination links -->
+<div class="ui pagination menu">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous item">Previous</a>
+  {% else %}
+    <span class="disabled item">Previous</span>
+  {% endif %}
+  <span class="page_number item">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next item">Next</a>
+  {% else %}
+    <span class="disabled item">Next</span>
+  {% endif %}
+</div>
