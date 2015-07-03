@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-<div class="ui main text container">
+
 
   	<h1 class="ui header">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+  	<span>{{ post.date | date: "%b %-d, %Y" }}</span>
 
     {{ content }}
 
     <a href="#top"><p style="text-align: right;"><i class="arrow up icon"></i>Back To Top</p></a>
-    
-</div>
+
+
 
 
