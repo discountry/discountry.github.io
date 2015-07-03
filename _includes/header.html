@@ -2,26 +2,31 @@
     <div class="ui container">
       <div href="#" class="header item">
         <img class="logo" src="/images/logo.png">
-        Project Name
+        {{ site.title }}
       </div>
-      <a href="#" class="item">Home</a>
-      <a href="#" class="ui simple dropdown item">
-        Dropdown <i class="dropdown icon"></i>
+      <a href="{{ site.baseurl }}/" class="item">Home</a>
+      <div class="right menu">
+      <div class="mobile item ui dropdown">
+        <i class="content icon"></i>
         <div class="menu">
-          <div class="item">Link Item</div>
-          <div class="item">Link Item</div>
-          <div class="divider"></div>
-          <div class="header">Header Item</div>
-          <div class="item">
-            <i class="dropdown icon"></i>
-            Sub Menu
-            <div class="menu">
-              <div class="item">Link Item</div>
-              <div class="item">Link Item</div>
-            </div>
-          </div>
-          <div class="item">Link Item</div>
+          {% for page in site.pages %}
+          {% if page.title %}
+          <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
+          <i class="rss icon"></i> RSS
+        </a>
         </div>
-      </a>
+      </div>
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
+          <i class="rss icon"></i> RSS
+        </a>
+      </div>
     </div>
   </div>
