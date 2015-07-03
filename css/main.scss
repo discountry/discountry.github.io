@@ -29,28 +29,15 @@ body {
     margin-top: 7em;
   }
 
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+
 .title.segment {
     padding-top: 4em;
     padding-bottom: 2em;
     border-radius: 0em;
-}
-
-.post.content {
-    margin-bottom: 2em;
-
-}
-
-.post.container {
-    margin-top: -2em !important;
-}
-
-.right.floated.date {
-  float: right !important;
-}
-
-.footer.vertical.segment {
- margin-top: 5em;
- padding: 4em 0em 5em;
 }
 
 .menu .right.menu > .mobile.item {
