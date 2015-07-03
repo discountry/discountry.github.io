@@ -12,4 +12,4 @@ permalink: pretty
 markdown: kramdown
 
 #Pagination
-paginate: 5
+paginate: 6
