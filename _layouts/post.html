@@ -3,11 +3,12 @@ layout: default
 ---
 <div class="ui main text container">
 
-  <article class="post content">
   	<h1 class="ui header">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+
     {{ content }}
-  </article>
+
+    <a href="#top"><p class="right floated"><i class="arrow up icon"></i>Back To Top</p></a>
 
 </div>
 
-<a href="#top"><p style="text-align: right;"><i class="arrow up icon"></i>Back To Top</p></a>
+
