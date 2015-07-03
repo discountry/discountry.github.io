@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="ui divided items">
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   <div class="item">
     <div class="content">
       <a class="header" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
