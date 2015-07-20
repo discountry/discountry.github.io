@@ -40,9 +40,6 @@ body {
     border-radius: 0em;
 }
 
-.mobile.icon.item {
-  display: none;
-}
 /*******************************
           Responsive
 *******************************/
@@ -57,9 +54,19 @@ body {
   .mobile.item {
     display: block;
   }
+  
   .mobile.item > .menu {
     left: auto;
     right: 0em;
+  }
+
+}
+
+/* Other Devices */
+@media only screen and (min-width : 768px) {
+    
+  .mobile.item {
+    display: none !important;
   }
 
 }
