@@ -40,7 +40,7 @@ body {
     border-radius: 0em;
 }
 
-.menu .right.menu > .mobile.item {
+.menu > .mobile.item {
   display: none;
 }
 /*******************************
@@ -54,10 +54,10 @@ body {
     display: none;
   }
 
-  .menu .right.menu > .mobile.item {
+  .menu > .mobile.item {
     display: block;
   }
-  .menu .right.menu > .mobile.item .menu {
+  .menu > .mobile.item .menu {
     left: auto;
     right: 0em;
   }
