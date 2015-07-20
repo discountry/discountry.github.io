@@ -6,7 +6,16 @@
       </a>
       <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
       <div class="right menu">
-      <div class="mobile ui dropdown icon item">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
+          <i class="rss icon"></i> RSS
+        </a>
+      </div>
+      <div class="mobile right floated ui dropdown icon item">
         <i class="content icon"></i>
         <div class="menu">
           {% for page in site.pages %}
@@ -18,15 +27,6 @@
           <i class="rss icon"></i> RSS
         </a>
         </div>
-      </div>
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
-          <i class="rss icon"></i> RSS
-        </a>
       </div>
     </div>
   </div>
