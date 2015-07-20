@@ -40,7 +40,7 @@ body {
     border-radius: 0em;
 }
 
-.mobile.item {
+.mobile .item {
   display: none;
 }
 /*******************************
@@ -50,14 +50,14 @@ body {
 /* Mobile Only */
 @media only screen and (max-width : 767px) {
 
-  .right.menu {
+  .right .menu {
     display: none;
   }
 
-  .mobile.item {
+  .mobile .item {
     display: block;
   }
-  .mobile.item .menu {
+  .mobile .item > .menu {
     left: auto;
     right: 0em;
   }
