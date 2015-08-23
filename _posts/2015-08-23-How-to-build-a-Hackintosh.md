@@ -23,9 +23,9 @@ tags: ['Mac','Hackintosh']
 
 **OSX Installer Maker**
 
-* [MyHack](http://myhack.sojugarden.com/)
-* [TransMac](http://www.acutesystems.com/scrtm.htm)
-* [UniBeast](http://www.tonymacx86.com/downloads.php?do=file&id=253)
+* [MyHack](http://myhack.sojugarden.com/) (version < OSX 10.9)
+* [TransMac](http://www.acutesystems.com/scrtm.htm) (On Windows)
+* [UniBeast](http://www.tonymacx86.com/downloads.php?do=file&id=253) (On Mac)
 
 **Kext Installer**
 
