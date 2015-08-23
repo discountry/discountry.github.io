@@ -7,8 +7,6 @@ tags: ['Mac','Hackintosh']
 ---
 <!-- more -->
 
-## How to build a Hackintosh
-
 ### Resources you may need
 
 * [威锋](http://bbs.feng.com/thread-htm-fid-102.html)
