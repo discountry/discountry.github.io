@@ -38,6 +38,8 @@ tags: ['Mac','Hackintosh']
 * FakeSMC.kext
 * VoodooPS2Controller.kext
 
+> You can install them by MultiBeast or myhack or Vietnam Tool. 
+
 **Guides that may help**
 
 * [UniBeast: Install OS X Yosemite on Any Supported Intel-based PC](http://www.tonymacx86.com/yosemite-desktop-guides/143976-unibeast-install-os-x-yosemite-any-supported-intel-based-pc.html) (Install Yosemite)
