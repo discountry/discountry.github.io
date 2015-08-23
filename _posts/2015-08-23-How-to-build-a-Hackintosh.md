@@ -43,5 +43,14 @@ tags: ['Mac','Hackintosh']
 * [UniBeast: Install OS X Yosemite on Any Supported Intel-based PC](http://www.tonymacx86.com/yosemite-desktop-guides/143976-unibeast-install-os-x-yosemite-any-supported-intel-based-pc.html) (Install Yosemite)
 * [myHack Guide](http://myhack.sojugarden.com/guide/) (Install Mavericks)
 
+### My Experiences
+
+* [Mavericks on Acer 4750G](http://bbs.pcbeta.com/viewthread-1434394-1-1.html)
+* [Yosemite DP5 on MSI GS70](http://bbs.pcbeta.com/viewthread-1543869-1-1.html)
+* [Yosemite 10.10.5 on MSI GS70](http://bbs.pcbeta.com/viewthread-1634829-1-1.html)
+	* [Yosemite 10.10.5 on MSI GS70 Install Dependencies](http://pan.baidu.com/s/1dDoBdEL)
+
+
+
 
 
