@@ -6,6 +6,7 @@ categories: ['tutorial']
 tags: ['Mac','Hackintosh']
 ---
 <!-- more -->
+
 ## How to build a Hackintosh
 
 ### Resources you may need
