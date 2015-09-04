@@ -28,13 +28,13 @@ mv composer.phar /usr/local/bin/composer
 
 Install `yo` and `generator-thinkphp` [Read more about Yeoman](http://yeoman.io/)
 
-```
+{%highlight bash%}
 npm install -g yo generator-thinkphp
-```
+{% endhighlight %}
 
 Make a new directory, and `cd` into it:
 
-```
+{%highlight bash%}
 mkdir my-new-project && cd $_
 ```
 
