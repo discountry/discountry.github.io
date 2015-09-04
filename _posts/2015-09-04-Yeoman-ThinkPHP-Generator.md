@@ -102,7 +102,7 @@ Produces `app/Home/View/index.html`:
 {%highlight html%}
 <extend name="base" />
 <block name="content">
-	<<h1>Index</h1>
+	<h1>Index</h1>
 </block>
 {% endhighlight %}
 
