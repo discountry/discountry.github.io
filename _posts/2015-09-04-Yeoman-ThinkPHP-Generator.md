@@ -20,10 +20,10 @@ A lot of TODOs still waiting for me. **:P**
 
 Install `Composer` [Read more about composer](https://getcomposer.org/)
 
-```
+{%highlight bash%}
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-```
+{% endhighlight %}
 
 
 Install `yo` and `generator-thinkphp` [Read more about Yeoman](http://yeoman.io/)
