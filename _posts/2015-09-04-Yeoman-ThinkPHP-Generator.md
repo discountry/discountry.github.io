@@ -67,7 +67,9 @@ yo thinkphp
 
 Generates a controller and view for your app. Command like 
 
-`yo thinkphp:controller [classedName] [spaceName]`.
+{%highlight bash%}
+yo thinkphp:controller [classedName] [spaceName]
+{% endhighlight %}
 
 **The `classedName` is required value, without it will get error.**
 
