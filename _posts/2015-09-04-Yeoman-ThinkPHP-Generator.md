@@ -19,6 +19,7 @@ A lot of TODOs still waiting for me. **:P**
 ##Usage
 
 Install `Composer` [Read more about composer](https://getcomposer.org/)
+
 ```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
@@ -26,16 +27,19 @@ mv composer.phar /usr/local/bin/composer
 
 
 Install `yo` and `generator-thinkphp` [Read more about Yeoman](http://yeoman.io/)
+
 ```
 npm install -g yo generator-thinkphp
 ```
 
 Make a new directory, and `cd` into it:
+
 ```
 mkdir my-new-project && cd $_
 ```
 
 Run `yo thinkphp` to init your project, and follow the steps:
+
 ```
 yo thinkphp
 ```
@@ -54,6 +58,7 @@ Available generators:
 Create a new project using [ThinkPHP](https://github.com/liu21st/thinkphp) and using [Composer](https://getcomposer.org/).
 
 Example:
+
 ```bash
 yo thinkphp
 ```
@@ -67,11 +72,13 @@ Generates a controller and view for your app. Command like `yo thinkphp:controll
 **The default `spaceName` is `Home` and it's optional.**
 
 Example:
+
 ```bash
 yo thinkphp:controller Index Home
 ```
 
 Produces `app/Home/Controller/IndexController.class.php`:
+
 ```php
 <?php
 namespace Home\Controller;
@@ -100,11 +107,13 @@ Produces `app/Home/View/index.html`:
 Much like Controller generator, it generates a plain model for your Project.
 
 Example:
+
 ```bash
 yo thinkphp:model User Home
 ```
 
 Produces `app/Home/Model/UserModel.class.php`:
+
 ```php
 <?php
 namespace Home\Model;
@@ -121,6 +130,7 @@ class UserModel extends Model {
 Create a new namespace folder for you app.
 
 Example:
+
 ```bash
 yo thinkphp:space Admin
 ```
