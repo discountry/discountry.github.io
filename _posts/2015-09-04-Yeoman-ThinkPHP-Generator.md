@@ -36,13 +36,13 @@ Make a new directory, and `cd` into it:
 
 {%highlight bash%}
 mkdir my-new-project && cd $_
-```
+{% endhighlight %}
 
 Run `yo thinkphp` to init your project, and follow the steps:
 
-```
+{%highlight bash%}
 yo thinkphp
-```
+{% endhighlight %}
 
 ## Generators
 
@@ -59,9 +59,9 @@ Create a new project using [ThinkPHP](https://github.com/liu21st/thinkphp) and u
 
 Example:
 
-```bash
+{%highlight bash%}
 yo thinkphp
-```
+{% endhighlight %}
 
 ### Controller
 
@@ -73,13 +73,13 @@ Generates a controller and view for your app. Command like `yo thinkphp:controll
 
 Example:
 
-```bash
+{%highlight bash%}
 yo thinkphp:controller Index Home
-```
+{% endhighlight %}
 
 Produces `app/Home/Controller/IndexController.class.php`:
 
-```php
+{%highlight php%}
 <?php
 namespace Home\Controller;
 use Think\Controller;
@@ -91,16 +91,16 @@ class IndexController extends Controller {
     }
 
 }
-```
+{% endhighlight %}
 
 Produces `app/Home/View/index.html`:
 
-```html
+{%highlight html%}
 <extend name="base" />
 <block name="content">
 	<<h1>Index</h1>
 </block>
-```
+{% endhighlight %}
 
 ### Model
 
@@ -108,13 +108,13 @@ Much like Controller generator, it generates a plain model for your Project.
 
 Example:
 
-```bash
+{%highlight bash%}
 yo thinkphp:model User Home
-```
+{% endhighlight %}
 
 Produces `app/Home/Model/UserModel.class.php`:
 
-```php
+{%highlight php%}
 <?php
 namespace Home\Model;
 use Think\Model;
@@ -123,7 +123,7 @@ class UserModel extends Model {
     protected $tableName = 'User'; 
 
 }
-```
+{% endhighlight %}
 
 ### Space
 
@@ -131,9 +131,9 @@ Create a new namespace folder for you app.
 
 Example:
 
-```bash
+{%highlight bash%}
 yo thinkphp:space Admin
-```
+{% endhighlight %}
 
 Produces `app/Admin` folder and default files in your project.
 
