@@ -65,7 +65,9 @@ yo thinkphp
 
 ### Controller
 
-Generates a controller and view for your app. Command like `yo thinkphp:controller [classedName] [spaceName]`.
+Generates a controller and view for your app. Command like 
+
+`yo thinkphp:controller [classedName] [spaceName]`.
 
 **The `classedName` is required value, without it will get error.**
 
