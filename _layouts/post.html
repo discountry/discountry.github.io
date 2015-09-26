@@ -4,7 +4,7 @@ layout: default
 
 
   	<h1 class="ui header">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-  	<span>{{ page.date | date: "%b %-d, %Y" }}</span>
+  	<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
 
     {{ content }}
 
