@@ -5,6 +5,7 @@ published: True
 categories: ['snippets']
 tags: ['javascript']
 ---
+Just in case.
 
 {%highlight js%}
 
