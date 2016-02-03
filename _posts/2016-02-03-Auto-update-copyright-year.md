@@ -6,7 +6,7 @@ categories: ['snippets']
 tags: ['javascript']
 ---
 
-{% hightlight js %}
+{%highlight js%}
 
 document.write(new Date().getFullYear());
 
