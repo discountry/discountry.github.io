@@ -205,3 +205,6 @@ class UsersController extends Controller
 ## 9.Test your server now!
 
 We are almost done.Now you need to test the server you've just set up.We can use tools like [PostMan](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop) to emulate requests to your server.
+![GET from Server]({{ site.url }}/images/get.png)
+![Oauth2]({{ site.url }}/images/oauth.png)
+![Token test]({{ site.url }}/images/test.png)
