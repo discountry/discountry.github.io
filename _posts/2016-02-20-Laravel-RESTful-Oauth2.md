@@ -47,7 +47,7 @@ laravel new restful
 
 {% endhighlight %}
 
-## 4.And this lines to the aliases array:
+### And this lines to the aliases array:
 
 {%highlight php%}
 
@@ -61,7 +61,7 @@ laravel new restful
 
 {% endhighlight %}
 
-## 5.Add new `$middleware` & `$routeMiddleware` in your `app/Http/Kernel.php` file.
+## 4.Add new `$middleware` & `$routeMiddleware` in your `app/Http/Kernel.php` file.
 
 {%highlight php%}
 
@@ -81,7 +81,7 @@ laravel new restful
 
 {% endhighlight %}
 
-## 6.Run `php artisan vendor:publish` and `php artisan migrate` in your project folder.
+## 5.Run `php artisan vendor:publish` and `php artisan migrate` in your project folder.
 
 ### Add the following settings in you `.env` file:
 
@@ -117,7 +117,7 @@ API_DEFAULT_FORMAT=json
 
 {% endhighlight %}
 
-## 7.Now is your `routes.php` file.
+## 6.Now is your `routes.php` file.
 
 {%highlight php%}
 
@@ -162,7 +162,7 @@ $api->version('v1', ['middleware' => 'api.auth'] , function ($api) {
 
 {% endhighlight %}
 
-## 8.You'll need a client to make your oauth2 server runs.
+## 7.You'll need a client to make your oauth2 server runs.
 
 In the database find the `oauth_client` s Table , insert new record to it ,or you can use the following SQL code in phpMyAdmin:
 
@@ -173,7 +173,7 @@ INSERT INTO `oauth_clients` (`id`, `secret`, `name`, `created_at`, `updated_at`)
 
 {% endhighlight %}
 
-## 9.Edit your Api Controllers.
+## 8.Edit your Api Controllers.
 
 You can add models named Book,Post,User as you like,here is an example:
 
