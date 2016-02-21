@@ -164,7 +164,7 @@ $api->version('v1', ['middleware' => 'api.auth'] , function ($api) {
 
 ## 8.You'll need a client to make your oauth2 server runs.
 
-in the database find the oauth_client s Table , insert new record to it ,or you can use the following SQL code in phpMyAdmin:
+In the database find the `oauth_client` s Table , insert new record to it ,or you can use the following SQL code in phpMyAdmin:
 
 {%highlight sql%}
 
