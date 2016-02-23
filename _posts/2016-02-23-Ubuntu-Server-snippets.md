@@ -3,8 +3,11 @@ layout: post
 title: Ubuntu Server snippets
 published: True
 categories: ['snippets']
+tags: ['bash']
 ---
 
+**Code highlighter with New syntax**
+<!--more-->
 ```bash
 #Kill SSH Login user
 pkill -kill -t pts/*
