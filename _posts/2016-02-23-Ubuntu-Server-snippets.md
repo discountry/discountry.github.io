@@ -10,7 +10,7 @@ tags: ['bash']
 
 <!--more-->
 
-```bash
+```bash lineno
 #Kill SSH Login user
 pkill -kill -t pts/*
 
