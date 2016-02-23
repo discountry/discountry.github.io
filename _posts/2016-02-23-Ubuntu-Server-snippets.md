@@ -6,15 +6,17 @@ categories: ['']
 ---
 
 {%highlight bash%}
-//Kill SSH Login user
+#Kill SSH Login user
 pkill -kill -t pts/*
-//Screen cheat list 
+
+#Screen cheat list 
 screen -S <name>
 screen <command>
 screen -ls
 Ctrl+a d
 Ctrl+a k
-//Show sessions
+
+#Show sessions
 ps
 last
 {%endhighlight%}
