@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu Server snippets
 published: True
-categories: ['']
+categories: ['snippets']
 ---
 
 {%highlight bash%}
