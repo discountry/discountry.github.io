@@ -5,7 +5,7 @@ published: True
 categories: ['snippets']
 ---
 
-{%highlight bash%}
+```bash
 #Kill SSH Login user
 pkill -kill -t pts/*
 
@@ -19,4 +19,4 @@ Ctrl+a k
 #Show sessions
 ps
 last
-{%endhighlight%}
+```
