@@ -17,5 +17,4 @@ highlighter: rouge
 paginate: 6
 
 #Markdown Settings
-redcarpet:
-  extensions: []
+
