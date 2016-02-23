@@ -14,4 +14,7 @@ screen <command>
 screen -ls
 Ctrl+a d
 Ctrl+a k
+//Show sessions
+ps
+last
 {%endhighlight%}
