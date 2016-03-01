@@ -18,11 +18,11 @@ But when you are facing a complex business, and of course Wechat itself has many
 
 **Here is mine plan**
 
-* Chat Robot
-* Weather report
-* News
-* Hearthstone cards search
-* Send to Kindle service
++ Chat Robot
++ Weather report
++ News
++ Hearthstone cards search
++ Send to Kindle service
 
 ## Find out your frameworks
 
