@@ -11,6 +11,7 @@ tags: ['php','wechat']
 What kind of services you're planning to offer?The third party Wechat Official Account Service just like the service that 10086/10010 offer you via text messages.
 But Wechat is better,because you can interact with your subscribers by various multimedia messages ***including image/voice/video/article and etc.***
 Wechat also has a built-in micro-browser,you can also send links to your users and do the rest on your website.Generally,There are two ways to serve your customers.
+
 1. Reply to your subscribers multi-media messages.
 2. Send links and guide your customers to your website.
 
