@@ -5,7 +5,7 @@ published: True
 categories: ['tutorial']
 tags: ['php','wechat']
 ---
-<a href="{{ site.url }}/images/wechat-dev.png" data-lightbox="wechat-set" data-title="Dev Wechat">![Dev Wechat]({{ site.url }}/images/wechat-dev.png)</a>
+<a href="{{ site.url }}/images/wechat-dev.jpg" data-lightbox="wechat-set" data-title="Dev Wechat">![Dev Wechat]({{ site.url }}/images/wechat-dev.jpg)</a>
 
 <!--more-->
 
