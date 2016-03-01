@@ -12,15 +12,15 @@ tags: ['php','wechat']
 
 What kind of services you're planning to offer?The third party Wechat Official Account Service just like the service that 10086/10010 offer you via text messages.
 
-But Wechat is better,because you can interact with your subscribers by various multimedia messages ***including image/voice/video/article and etc.***
+But Wechat is better,because you can interact with your subscribers by various multimedia messages. ***including image/voice/video/article and etc.***
 
 Wechat also has a built-in micro-browser,you can also send links to your users and do the rest on your website.Generally,There are two ways to serve your customers.
 
 1. Reply to your subscribers multi-media messages.
 2. Send links and guide your customers to your website.
 
-My advice is try to make everything happen in Wechat chatting activity.Because loading a web page/filling a form/press the submit button/and then go back to Wechat.This sounds annoying
-.
+My advice is try to make everything happen in Wechat chatting activity.Because loading a web page/filling a form/press the submit button/and then go back to Wechat.This sounds annoying.
+
 When you open and close the browser in Wechat,it broke the normal interaction between Wechat and a human.
 
 And of course Wechat itself has many limitations.When you are facing a complex business,it's allowable to use web pages to get things done.
@@ -82,7 +82,9 @@ Finally,scripts for recording log or sending email may helpful.
 
 ## 5.Test out your service
 
-Before you deliver your service to your subscribers,you need to test them by yourself.[Postman](https://www.getpostman.com/) is very helpful for testing POST/GET API services.It also works on your localhost.
+Before you deliver your service to your subscribers,you need to test them by yourself.
+
+[Postman](https://www.getpostman.com/) is very helpful for testing POST/GET API services.It also works on your localhost.
 
 You can post an XML data in request body to your service URL and see if it responses fine.
 
