@@ -16,8 +16,8 @@ Wechat also has a built-in micro-browser,you can also send links to your users a
 1. Reply to your subscribers multi-media messages.
 2. Send links and guide your customers to your website.
 
-My advice is try to make everything happen in Wechat chatting activity.Because loading a web page/filling a form/press the submit button/and then go back to Wechat.This sounds annoying.When you open and close the browser in Wechat,it broke the normal interaction between Wechat and a human.
-
+My advice is try to make everything happen in Wechat chatting activity.Because loading a web page/filling a form/press the submit button/and then go back to Wechat.This sounds annoying.
+When you open and close the browser in Wechat,it broke the normal interaction between Wechat and a human.
 But when you are facing a complex business, and of course Wechat itself has many limitations,it's allowable to use web pages to get things done.
 
 **Here is mine plan**
