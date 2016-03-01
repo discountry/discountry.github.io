@@ -5,7 +5,7 @@ published: True
 categories: ['tutorial']
 tags: ['php','wechat']
 ---
-
+<!--more-->
 ## Draw up your plan
 
 What kind of services you're planning to offer?The third party Wechat Official Account Service just like the service that 10086/10010 offer you via text messages.
