@@ -1,7 +1,7 @@
 <div class="ui fixed inverted menu">
     <div class="ui container">
       <a href="{{ site.baseurl }}/" class="header item">
-        <img class="logo" src="{{ site.logo }}">
+        <img class="logo" src="{{ site.logo | prepend: site.imageurl }}">
         {{ site.title }}
       </a>
       <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
