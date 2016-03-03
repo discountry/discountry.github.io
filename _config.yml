@@ -1,10 +1,11 @@
 # Site settings
 title: Discountry
-logo: /images/book.png
+logo: book.png
 email: feibilanceon@gmail.com
 description: Discountry's DEV Blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://discountry.github.io" # the base hostname & protocol for your site
+imageurl: "http://discountry.github.io/images/"
 twitter_username: discountifu
 github_username:  discountry
 
