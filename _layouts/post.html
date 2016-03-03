@@ -5,9 +5,11 @@ layout: default
 
   	<h1 class="ui header">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
   	<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
+  	{% if page.image %}
 	  	<p><a href="{{ page.image | prepend: site.imageurl }}" data-lightbox="page.title" data-title="{{ page.image }}">
 	  		<img class="ui fluid image" src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}">
 	  	</a></p>
+	{% endif %}
 
     	{{ content }}
 
