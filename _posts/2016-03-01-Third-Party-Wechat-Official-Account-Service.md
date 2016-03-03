@@ -7,11 +7,11 @@ categories: ['tutorial']
 tags: ['php','wechat']
 ---
 
-<!--more-->
-
 ## 1.Draw up your plan
 
 What kind of services you're planning to offer?The third party Wechat Official Account Service just like the service that 10086/10010 offer you via text messages.
+
+<!--more-->
 
 But Wechat is better,because you can interact with your subscribers by various multimedia messages. ***including image/voice/video/article and etc.***
 
