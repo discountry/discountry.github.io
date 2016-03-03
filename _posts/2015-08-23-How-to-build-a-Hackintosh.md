@@ -5,7 +5,7 @@ published : true
 categories: ['tutorial']
 tags: ['Mac','Hackintosh']
 ---
-<!-- more -->
+
 
 ### Resources you may need
 
@@ -13,6 +13,8 @@ tags: ['Mac','Hackintosh']
 * [PCBeta](http://bbs.pcbeta.com/forum.php?gid=86)
 * [tonymacx86](http://www.tonymacx86.com)
 * [Hackintosh](http://www.hackintosh.com)
+
+<!-- more -->
 
 ### Software you may need to know
 
