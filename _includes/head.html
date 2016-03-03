@@ -7,7 +7,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" /> 
 　<meta property="og:type" content="{% if page.layout %}{{ page.layout }}{% else %}article{% endif %}"/> 
 　<meta property="og:url" content="{% if page.url %}{{ page.url | prepend: site.baseurl }}{% else %}{{ site.url }}{% endif %}" /> 
-　<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl }}{% else %}{{ site.logo | prepend: site.baseurl }}{% endif %}" /> 
+　<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.imageurl }}{% else %}{{ site.logo | prepend: site.imageurl }}{% endif %}" /> 
 　<meta property="og:site_name" content="{{ site.title }}" /> 
 　<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <!-- Site Properities -->
