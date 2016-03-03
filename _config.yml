@@ -1,6 +1,6 @@
 # Site settings
 title: Discountry
-logo: book
+logo: /images/book.png
 email: feibilanceon@gmail.com
 description: Discountry's DEV Blog
 baseurl: "" # the subpath of your site, e.g. /blog/
