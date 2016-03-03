@@ -1,8 +1,11 @@
-<head>
+<head xmlns:og="http://ogp.me/ns#">
   <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Site Properities -->
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <!-- Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" /> 
 　<meta property="og:type" content="{% if page.layout %}{{ page.layout }}{% else %}article{% endif %}"/> 
@@ -10,10 +13,7 @@
 　<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.imageurl }}{% else %}{{ site.logo | prepend: site.imageurl }}{% endif %}" /> 
 　<meta property="og:site_name" content="{{ site.title }}" /> 
 　<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <!-- Site Properities -->
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
+　
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
   <link  rel="stylesheet" type="text/css"  href="{{ "/css/semantic.min.css" | prepend: site.baseurl }}">
