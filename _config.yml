@@ -10,6 +10,7 @@ twitter_username: discountifu
 github_username:  discountry
 
 # Build settings
+excerpt_separator: <!--more-->
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
