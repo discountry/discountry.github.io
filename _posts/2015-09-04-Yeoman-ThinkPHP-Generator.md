@@ -5,9 +5,10 @@ published: True
 categories: ['project']
 tags: ['thinkphp', 'yeoman']
 ---
-<!-- more -->
 
 I've be planning to work on this project for a long time. Laravel has a feature `php artisan` which is very helpful for developers. I really want to add the "generator" feature for [ThinkPHP](https://github.com/liu21st/thinkphp). which is a very popular framework in China.
+
+<!-- more -->
 
 Finally, this yeoman-thinkphp generator came out. It's just a preview version of my idea but it's really cool and somehow helpful for your development with ThinkPHP.
 
