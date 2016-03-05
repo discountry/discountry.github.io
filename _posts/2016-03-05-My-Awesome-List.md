@@ -27,11 +27,11 @@ This is a list of my favourite things.
 ## App
 
 * [Grid diary](http://griddiaryapp.com/zh/)
-* ZAKER
-* Feedly
-* Octopage
-* Serverauditor
-* B612
+* [ZAKER](http://www.myzaker.com/index.html)
+* [Feedly](https://feedly.com/)
+* [Octopage](https://twitter.com/octopage)
+* [Serverauditor](https://serverauditor.com/)
+* [B612](https://itunes.apple.com/cn/app/b612-yong-xin-zi-pai/id904209370)
 * One key VPN
 * Betternet
 
@@ -41,9 +41,9 @@ This is a list of my favourite things.
 * Adobe Audition
 * Adobe After Effect
 * Adobe Photoshop
-* Sublime Text
-* Coda 2
-* FL Studio
+* [Sublime Text](http://www.sublimetext.com/)
+* [Coda 2](https://www.panic.com/coda/)
+* [FL Studio](http://www.image-line.com/flstudio/)
 * Unlead VideoStudio
 * Final Cut Pro X
 * Logic Pro
@@ -61,14 +61,13 @@ This is a list of my favourite things.
 
 * Github
 * Stackoverfolw
-* UISDC
-* PCbeta
-* 稀土掘金
-* OSchina
-* W3school
-* Read far
-* PPT Store
-* API Store
+* [UISDC](http://www.uisdc.com/)
+* [PCbeta](http://bbs.pcbeta.com/)
+* [稀土掘金](http://gold.avosapps.com/)
+* [OSchina](http://www.oschina.net/)
+* [W3school](http://www.runoob.com/)
+* [PPT Store](http://www.pptstore.net/)
+* [API Store](http://apistore.baidu.com/)
 
 ## For Dev
 
@@ -89,11 +88,11 @@ This is a list of my favourite things.
 * Coding.net
 * Digital Ocean
 * Wamp
-* guzzle http
+* guzzlehttp
 
 ## Book
 
-* 读远
-* kancloud
-* Gitbook
-* Vdisk
+* [Read far](http://readcolor.com/)
+* [kancloud](http://www.kancloud.cn/explore)
+* [Gitbook](https://www.gitbook.com/explore)
+* [Vdisk](http://vdisk.weibo.com/search/?sortby=download)
