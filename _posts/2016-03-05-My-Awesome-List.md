@@ -12,15 +12,17 @@ This is a list of my favourite things.
 
 ## Game
 
-* War3
-* Hitman
-* Assassin's Creed
-* Witcher
-* The Elder Scrolls
-* World of War
-* Hearthstone
-* Diablo
-* Watch Dog
+
+* [War3](http://us.blizzard.com/en-us/games/war3/)
+* [Hitman](https://hitman.com/)
+* [Assassin's Creed](assassinscreed.ubi.com/en-us/home/)
+* [Witcher](thewitcher.com/witcher3)
+* [The Elder Scrolls](www.elderscrolls.com/skyrim/)
+* [World of War](http://www.battlenet.com.cn/wow/zh/)
+* [Hearthstone](http://hs.blizzard.cn/checksite.html)
+* [Diablo](http://d3.blizzard.cn/)
+* [Watch Dog](watchdogs.ubisoft.com/watchdogs/en-us/home/)
+
 
 ## App
 
