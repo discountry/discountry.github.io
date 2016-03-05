@@ -15,9 +15,9 @@ This is a list of my favourite things.
 
 * [War3](http://us.blizzard.com/en-us/games/war3/)
 * [Hitman](https://hitman.com/)
-* [Assassin's Creed](assassinscreed.ubi.com/en-us/home/)
-* [Witcher](thewitcher.com/witcher3)
-* [The Elder Scrolls](www.elderscrolls.com/skyrim/)
+* [Assassin's Creed](http://assassinscreed.ubi.com/en-us/home/)
+* [Witcher](http://thewitcher.com/witcher3)
+* [The Elder Scrolls](http://www.elderscrolls.com/skyrim/)
 * [World of War](http://www.battlenet.com.cn/wow/zh/)
 * [Hearthstone](http://hs.blizzard.cn/checksite.html)
 * [Diablo](http://d3.blizzard.cn/)
@@ -26,7 +26,7 @@ This is a list of my favourite things.
 
 ## App
 
-* Grid diary
+* [Grid diary](http://griddiaryapp.com/zh/)
 * ZAKER
 * Feedly
 * Octopage
