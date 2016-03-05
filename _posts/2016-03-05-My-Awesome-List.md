@@ -73,22 +73,27 @@ This is a list of my favourite things.
 
 * Ubuntu
 * LAPM
-* PHP
-* Wordpress
-* Joomla
-* Drupal
-* Omeka
-* Thinkphp
-* Bootstrap
-* Semantic UI
-* jekyll
-* Easy Wechat
-* Laravel
-* Yeoman
-* Coding.net
-* Digital Ocean
 * Wamp
-* guzzlehttp
+* PHP
+* Yeoman
+* CMS
+  * Wordpress
+  * jekyll
+  * Joomla
+  * Drupal
+  * Omeka
+* Frontend Framework
+  * Bootstrap
+  * Semantic UI
+* PHP Framework
+  * Thinkphp
+  * Laravel
+* Paas
+  * Coding.net
+  * Digital Ocean
+* Composer Packages
+  * guzzlehttp
+  * Easy Wechat
 
 ## Book
 
