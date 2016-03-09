@@ -8,6 +8,8 @@ tags: ['ios']
 
 >forked from [@tangqiaoboy](https://gist.github.com/tangqiaoboy)
 
+<!--more-->
+
 # 编程语言
  - Swift
  - Objective-C
