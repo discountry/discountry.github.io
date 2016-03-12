@@ -1,4 +1,0 @@
----
-title: docker
-layout: post
----
