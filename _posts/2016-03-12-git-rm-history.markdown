@@ -8,7 +8,10 @@ tags: ['bash']
 
 **Remove Git Histoy:**
 
+<!--more-->
+
+
 ```bash
 git filter-branch -f --tree-filter 'rm -rf XXXXXXX' HEAD
-2 git push origin --force
+git push origin --force
 ```
