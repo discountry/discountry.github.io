@@ -8,6 +8,7 @@ tags: ['tutorial']
 
 > [DaoCloud](https://www.daocloud.io) is an Docker Service Provider. This tutorial helps you to set up an [Wordpress](http://wordpress.org) blog on DaoCloud with persistent storage.
 
+<!--more-->
 
 ### 1.Register & Login to your Dashboard.
 
