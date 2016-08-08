@@ -6,7 +6,7 @@ categories: ['tutorial']
 tags: ['Code Editor','Version Control','Opensource']
 ---
 
-> [一个人做网站需要掌握哪些知识？](https://www.zhihu.com/question/19696149)
+> **一个人做网站需要掌握哪些知识？**
 
 <!--more-->
 
