@@ -91,6 +91,8 @@ tags: ['Code Editor','Version Control','Opensource']
 
 ### 5. 学习开发框架
 
+> 现在你对你的网站有了更高的要求，现有的开源系统已经无法满足你，那么你就需要手动开发一个，从无到有开发一个网站当然很困难，好在我们已经有了许多成熟的开发框架，就好像你写作文帮你列好提纲一样，帮助你快速开发。
+
 * [Laravel](https://laravel.com/) PHP语言的Web开发框架
 * [Express](http://expressjs.com/zh-cn/) Nodejs语言的Web开发框架
 * [Django](https://www.djangoproject.com/) Python语言的Web开发框架
