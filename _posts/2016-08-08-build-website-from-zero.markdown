@@ -96,3 +96,10 @@ tags: ['Code Editor','Version Control','Opensource']
 * [Laravel](https://laravel.com/) PHP语言的Web开发框架
 * [Express](http://expressjs.com/zh-cn/) Nodejs语言的Web开发框架
 * [Django](https://www.djangoproject.com/) Python语言的Web开发框架
+
+### 6. 其他建站教程
+
+* [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
+* [在SAE上搭建Wordpress博客](http://www.zhangbingliang.com/2532.html)
+* [Wordpress官方免费创建博客](https://zh-cn.wordpress.com/)
+* [阿里云：建站需要什么](https://help.aliyun.com/knowledge_detail/39784.html)
