@@ -8,6 +8,10 @@ tags: ['frontend','list']
 
 ### What is a frontend developer?
 
+> 总而言之前端工程师就是运用HTML/CSS/JavaScript等Web技术，在工作中配合设计师实现用户界面，和后端工程师进行数据对接，完成Web应用开发。
+
+* [前端工程师是做什么的？](https://www.h5jun.com/post/to-be-a-good-frontend-engineer)
+
 <!--more-->
 
 ### Development Tools
@@ -160,5 +164,24 @@ tags: ['frontend','list']
 * [Front-end Developer HandBook](https://www.gitbook.com/book/dwqs/frontenddevhandbook/)
 * [Front-end Database](https://leohxj.gitbooks.io/front-end-database/)
 * [Frontend Notebook](https://li-xinyang.gitbooks.io/frontend-notebook/)
+
+### Recommended Books
+
+* Basic
+    - [深入浅出HTML与CSS、XHTML](https://book.douban.com/subject/1799652/)
+    - [HTML & CSS设计与构建网站](https://book.douban.com/subject/21338365/)
+    - [Pro Git中文版](http://iissnan.com/progit/)
+    - [鸟哥的linux私房菜](https://book.douban.com/subject/4889838/)
+* Intermediate
+    - [Head First HTML5 Programming](https://book.douban.com/subject/19894872/)
+    - [JavaScript权威指南](https://book.douban.com/subject/10546125/)
+    - [JavaScript语言精粹](https://book.douban.com/subject/3590768/)
+    - [JavaScript & jQuery交互式Web前端开发](https://www.amazon.cn/JavaScript-jQuery%E4%BA%A4%E4%BA%92%E5%BC%8FWeb%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E8%BE%BE%E5%85%8B%E7%89%B9/dp/B010L41T5O/)
+    - [深入浅出Ajax](https://book.douban.com/subject/3136781/)
+* Advanced
+    - [JavaScript高级程序设计](https://book.douban.com/subject/10546125/)
+    - [HTML5高级程序设计](http://book.douban.com/subject/5402708/)
+    - [CSS权威指南](https://book.douban.com/subject/2308234/)
+    - [深入浅出Node.js](http://book.douban.com/subject/25768396/)
 
 
