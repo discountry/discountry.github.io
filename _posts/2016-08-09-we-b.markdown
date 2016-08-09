@@ -1,9 +1,0 @@
----
-layout: post
-title: we b
-published: True
-categories: ['snippets','']
-tags: ['bash']
----
-
-<!--more-->
