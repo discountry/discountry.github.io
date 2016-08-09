@@ -49,7 +49,7 @@ tags: ['frontend','list']
 
 > 预览和调试必不可少，编写前端代码的大部分时间都是在编辑器和浏览器之间切来切去。
 
-[Chrome Dev Tools](http://wiki.jikexueyuan.com/project/chrome-devtools/overview.html) 谷歌浏览器开发工具，想要预览调试你的前端页面必须在这里啦
+* [Chrome Dev Tools](http://wiki.jikexueyuan.com/project/chrome-devtools/overview.html) 谷歌浏览器开发工具，想要预览调试你的前端页面必须在这里啦
 
 ### Basic Knowledge
 
