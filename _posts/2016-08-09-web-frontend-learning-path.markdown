@@ -27,11 +27,15 @@ tags: ['frontend','list']
 
 #### Coding Tools
 
+> 工欲善其事，必先利其器。可以用的编辑器和IDE有很多，在这里我只推荐最棒的两个。
+
 * [Sublime text](https://www.sublimetext.com/) 最性感的编辑器，搭配插件各种好用
     - [配置和使用方法](https://www.zybuluo.com/king/note/47271)
 * [Webstorm](https://www.jetbrains.com/webstorm/) 功能强大，学生可以免费用的前端开发IDE
 
 #### Manage Tools
+
+> 不光要学会写代码，也要学会管理你的代码。在工作中你可能会遇到需要自己部署代码的情况；不停地修改迭代重构，当然也需要你掌握版本控制软件。
 
 * Linux 你需要学会在命令行打开移动复制文件等最基本的操作
     - [Linux最常用的20条命令](http://blog.csdn.net/ljianhui/article/details/11100625)
@@ -40,6 +44,8 @@ tags: ['frontend','list']
     - [猴子都能懂的Git入门](http://backlogtool.com/git-guide/cn/)
 
 ### Test Tools
+
+> 预览和调试必不可少，编写前端代码的大部分时间都是在编辑器和浏览器之间切来切去。
 
 [Chrome Dev Tools](http://wiki.jikexueyuan.com/project/chrome-devtools/overview.html) 谷歌浏览器开发工具，想要预览调试你的前端页面必须在这里啦
 
