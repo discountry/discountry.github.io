@@ -1,0 +1,168 @@
+作者：余博伦
+链接：https://www.zhihu.com/question/29231884/answer/43674970
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+转载请提前沟通，商业网站/营销公众号等需支付报酬，违者追究法律责任
+#2016/03/15 更新googlehosts地址
+#2015/06/10 更新书单，更新排版
+#2015/06/09 增加资源推荐条目
+#2015/05/21 更新资源推荐列表
+#2015/04/22 补充说明、重新排版
+#2015/04/19 更新百度经验失效链接
+===========================
+本回答包含了主流Web开发所需的大部分知识，不仅仅局限于Web前端，希望初学者能够对Web开发的每个环节都有所涉猎，这将为你在将来专精于前端或者后端的学习中打好坚实的基础，在实际工作中也能和同事更好的合作与沟通
+有些人可能会质疑本回答包含的内容是不是太多了，学起来是不是太困难了，不过个人认为前端至少得会点PHP，只会写网页的话连个网站也搭不起来，很难获得满足成就感之类的
+而且也无需望而却步，本回答提及的教学网站都很好玩，前端框架都很漂亮，建站系统都很酷炫，相信聪明又上进的你会乐在其中的
+===========================
+我最初入门的时候也没用两个月，我也不是计算机专业，在这里依据个人经验简单介绍一下入门方法。
+啊，为什么先说这个，因为你如果真的只会“一丁点”是没有任何希望找到实习或者工作的。所以至少需要达到会“一点”的程度。
+===========================
+你可能需要掌握的知识清单
+#脚本语言
+HTML
+CSS
+JS
+PHP
+#框架
+JQuery
+Bootstrap
+ThinkPHP
+#操作系统
+Linux(Ubuntu/Debian)
+#数据库
+MySQL
+#Web服务器
+Apache
+#命令行工具
+Bash
+Git
+===========================
+一、编程入门（耗时1天）
+首先假设题主是有编程基础的，如果对自己这点C的基础也不自信的话，可以到：
+Anybody can learn
+这里来玩一下编程小游戏，全部通关之后就会对编程有一个比较具体全面的了解，也能掌握一些写代码的基本技巧。
+二、Web开发入门（耗时3天）
+之后你需要系统学习一下Web编程的知识，比如在这里：
+w3school 在线教程
+HTML/JavaScript/CSS/PHP/JQuery/HTML5/CSS3/Ajax/TCP/IP 啥的全部都一字不落地看过去，里面的每一个示例全部都亲自动手尝试一下，务必用手打，别复制粘贴。当然如果你不喜欢这个网站，还有：
+w3cschool菜鸟教程
+学习编程 | Codecademy
+http://www.w3schools.com/
+当然如果你英语好会翻墙也可以很轻松地Google到很多优秀的国外编程学习网站。
+Bento(Bento | Learn to code the way professional programmers do)
+Udemy(Online Courses)
+iLoveCoding(I LOVE CODING)
+三、开发及运行环境（耗时5天）
+你需要至少掌握Linux/Winserver其中一种Web服务器的配置方法，我们先说简单的
+WampServer, the web development platform on Windows
+WAMP是Windows下一款十分傻瓜化的PHP Web服务配置软件，在官方网站上下载好安装包后按照指示不停点下一步就会安装好了，具体的流程不再赘述，因为网络上实在是能找到太多教程了。
+http://jingyan.baidu.com/search?word=wamp+%E5%AE%89%E8%A3%85
+之后你需要了解
+如何配置vhost
+如何设置php.ini/httpd.conf/.htaccess等常用配置文件
+配置php.ini
+PHP: php.ini 核心配置选项说明
+更进一步的
+Apache配置(httpd.conf/vhosts/modules/.htaccess)
+Documentation: Apache HTTP Server
+学习使用MySQL，事实上学会一些图形化的数据库管理软件就好了，比如最有名的Navicat
+Navicat GUI | 支持 MySQL、MariaDB、SQL Server、SQLite、Oracle 和 PostgreSQL 的数据库管理
+假如使用WAMP只需用好它自带的PHPMyAdmin
+phpMyAdmin
+友好的图形界面，用起来比Excel还好用
+接下来说LAMP：
+首先你得会装Linux，推荐Ubuntu server，或者实在依赖图形界面装一个Ubuntu Desktop也未尝不可。具体直接安装还是装虚拟机自行决定。
+http://jingyan.baidu.com/search?word=%E5%AE%89%E8%A3%85%20ubuntu%20server
+之后就是安装LAMP，具体的安装配置方法网上也有太多太多教程了。
+Ubuntu下安装LAMP及phpmyadmin
+要是有需求也可以熟悉一下linux的命令行操作，Github上最近新出了一篇特别棒的教程：
+jlevy/the-art-of-command-line · GitHub
+搞定了运行环境之后可以尝试着写一个Hello World的小程序了
+Sublime Text: The text editor you'll fall in love with
+号称全世界最性感的编辑器Sublime Text，Web开发在大多数情况下不需要用到IDE，一个编辑器足矣，如果不太清楚怎么使用的话可以看这一篇
+Set Up Your Editor
+如果是Mac推荐
+Coda
+Coda2，这款编辑器更是神器啊，一旦用上了就会爱得不得了。
+如何在Mac上优雅的开发PHP项目？ - 余博伦的回答
+四、尝试建站系统（7天）
+WordPress › China 简体中文
+Joomla! The CMS Trusted By Millions for their Websites
+Discuz! 官方站-PHP 开源论坛
+织梦CMS 官方网站
+以上无一不是国内外的建站神器，这段时间的学习尝试会让你颇有成就感，只需分分钟的配置安装，一个功能健全，界面华美的网站就建成啦～各个建站系统的具体安装教程请自行百度之，也是多得不能再多了。
+http://jingyan.baidu.com/search?word=%E5%AE%89%E8%A3%85wordpress
+会配置安装和基本使用之后，可以尝试着看一下各个系统的开发文档，或者直接看看源码，不求能看明白什么，每看一点都是积累。
+五、尝试开发框架（21天）
+PHP框架
+ThinkPHP框架
+CSS框架
+Bootstrap · The world's most popular mobile-first and responsive front-end framework.
+JS框架
+jQuery
+Thinkphp/Bootstrap/JQuery无一不是大名鼎鼎，文档都非常详细，网络上相关资源异常丰富，顺着官网的文档和网络上的一些教程，试着自己开发一些小的Web网站或者应用吧，等你能够独立完成一个前端界面美观的留言板或者博客程序之后这一关就算过了。
+学习顺序是：
+先去官网读文档
+再去搜索教程学习
+再去观摩别人用这些框架写的作品
+最后自己动手创造
+六、发现与提升
+GitHub · Build software better, together.
+Stack Overflow
+开源中国 - 找到您想要的开源项目，分享和交流
+知乎也算吧
+在各大开源平台和问答平台上多看看多混混，了解一下最新流行的技术，尝试部署修改一下别人的作品，尝试发布共享自己的作品，多请教请教大神之类的，学习无处不在。
+===========================
+如何找工作
+周伯通招聘 - 最靠谱的移动互联网招聘社区
+拉勾网-最专业的互联网招聘平台
+各类互联网招聘网站实在是太多了
+php/前端/移动开发这些岗位都可以尝试投简历
+如何找公司
+应聘难度从易到难为：
+非互联网公司但有Web开发需求的<互联网小型创业公司<知名网站、应用<BAT
+如何写简历
+公司招码农基本不看学历，介于咱们是半路出家的新手，BAT就不考虑了，重点考虑一些小型创业公司或者非互联网企业但是有Web开发需求的
+简历里不要说热爱工作，心态乐观一类的废话
+掌握的技术别说精通要说熟悉
+直接上干货，把你所有开发过的作品全都罗列出来，能够在线上访问的最好
+最后补充一下英语优势之类的
+再推荐一个特别火的Github项目
+geekcompany/ResumeSample · GitHub
+里面有各式程序员简历模板
+经验之谈！前端工程师的简历到底要怎么写？
+===========================
+资源推荐
+介紹 | Web Developer Learning Resource 網頁開發學習資源
+Mozilla 开发者网络 非常优秀的Web学习社区
+编程书籍 Safari - Everyone deserves a remarkable career.
+Web开发初学者指引(English) Jimmy Li | Web Developer
+编程速成 Learn X in Y Minutes: Scenic Programming Language Tours
+免费Bootstrap模板UseBootstrap
+Github前端资源集合dypsilon/frontend-dev-bookmarks · GitHub
+神站！前端各类资源集合Coding Resources
+Flat UI 前端框架
+Semantic UI 前端框架中文官方网站
+广场 - 看云 各类在线文档，持续更新
+===========================
+书籍推荐
+大部分是我自己看过的书，没有排名先后
+HTML & CSS设计与构建网站 (豆瓣)
+Head First HTML与CSS、XHTML（中文版） (豆瓣)
+HTML5高级程序设计 (豆瓣)
+Head First PHP & MySQL（中文版） (豆瓣)
+PHP和MySQL Web开发(原书第4版) (豆瓣)
+PHP之道（中文版）
+JavaScript高级程序设计（第3版） (豆瓣)
+基于MVC的JavaScript Web富应用开发 (豆瓣)
+Pro Git (豆瓣)
+===========================
+其他
+百度到一篇有关前端工程师的不错的博文
+如何成为一名优秀的web前端工程师（前端攻城师）？
+谷歌出品的Web基础知识，内容十分详尽，不过需要翻墙浏览，里面介绍了很多最前沿的技术，可以帮你搭建最轻松的Web开发环境和依赖。
+Web Fundamentals
+袄，忘记了，你们大多数人可能都上不了谷歌
+Google Hosts
+我就好人做到底了
