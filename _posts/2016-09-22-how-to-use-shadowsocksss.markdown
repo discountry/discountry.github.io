@@ -8,7 +8,7 @@ tags: ['shadowsocks']
 
 ## Quick User Guide
 
-1. Get your configure info from shadowsocks service provider.
+1.Get your configure info from shadowsocks service provider.
 
 Remember these four things:
 
@@ -21,13 +21,13 @@ Remember these four things:
 
 <!--more-->
 
-2. Fill in the blanks on your client software.
+2.Fill in the blanks on your client software.
 
 Just type the four things we'd mentioned above into your mobile App or Desktop Software.
 
 <a href="{{ site.url }}/images/shadowsocks.png" data-lightbox="daocloud-set" data-title="shadowsocks">![shadowsocks]({{ site.url }}/images/shadowsocks.png)</a>
 
-3. Setup your client.
+3.Setup your client.
 
 Click the `Start` or `Open` button or something like that on your client software.
 And now you are free to go anywhere on the Internet.
