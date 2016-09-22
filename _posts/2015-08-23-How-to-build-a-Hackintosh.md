@@ -15,7 +15,7 @@ tags: ['Mac','Hackintosh']
 * [Hackintosh](http://www.hackintosh.com)
 
 
-<!-- more -->
+<!--more-->
 
 
 ### Software you may need to know
