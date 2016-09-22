@@ -57,4 +57,4 @@ And now you are free to go anywhere on the Internet.
 ## Useful Links
 
 * [iShadowsocks](http://www.ishadowsocks.org/)
-* [Free accound for test](http://www.ishadowsocks.org/#free)
+* [Free accounts for test](http://www.ishadowsocks.org/#free)
