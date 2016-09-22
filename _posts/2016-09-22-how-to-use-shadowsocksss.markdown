@@ -19,6 +19,8 @@ Remember these four things:
 
 <a href="{{ site.url }}/images/ss-info.png" data-lightbox="daocloud-set" data-title="ss-info">![ss-info]({{ site.url }}/images/ss-info.png)</a>
 
+<!--more-->
+
 2. Fill in the blanks on your client software.
 
 Just type the four things we'd mentioned above into your mobile App or Desktop Software.
@@ -31,8 +33,6 @@ Click the `Start` or `Open` button or something like that on your client softwar
 And now you are free to go anywhere on the Internet.
 
 <a href="{{ site.url }}/images/open-ss.png" data-lightbox="daocloud-set" data-title="open-ss">![open-ss]({{ site.url }}/images/open-ss.png)</a>
-
-<!--more-->
 
 ## Tutorials
 
