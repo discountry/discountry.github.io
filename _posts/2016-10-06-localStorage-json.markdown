@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to use shadowsocks(ss)
+title: localStorage store JSON
 published: True
 categories: ['snippets']
 tags: ['js', 'html5']
