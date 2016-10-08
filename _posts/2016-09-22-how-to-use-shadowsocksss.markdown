@@ -49,12 +49,15 @@ And now you are free to go anywhere on the Internet.
 
 * [Shadowsocks-windows](https://github.com/shadowsocks/shadowsocks-windows)
     - [How to wiki on Github](https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
-* [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
+* [ShadowsocksX-NG for Mac](https://github.com/shadowsocks/ShadowsocksX-NG)
     - [Download from Github Releases](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
 * [Shadowrocket on IOS](https://itunes.apple.com/cn/app/shadowrocket/id932747118) **6¥**
     - [User Guide](https://ii-i.org/archives/859)
 * [Wingy on IOS](https://itunes.apple.com/cn/app/id1148026741) **Free**
     - [Tutorials](https://www.wingy.site/)
+* [shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android)
+    - [Download](https://github.com/shadowsocks/shadowsocks-android/releases)
+* [shadowsocks-qt5 for Linux](https://github.com/shadowsocks/shadowsocks-qt5)
 
 ## Useful Links
 
