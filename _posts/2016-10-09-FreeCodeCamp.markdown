@@ -32,7 +32,7 @@ tags: ['freecodecamp']
 
 * [Codecademy/Treehouse/FreeCodeCamp 结合学习计划](https://github.com/LawlietBlack/Learning-Order)
 
-> Codecademy/Treehouse/FreeCodeCamp都是非常优秀的在线学习资源，这个Repo分析了三个平台的优略，并制定了三个平台相互协同利用的学习计划，取长补短，非常值得参考。
+> Codecademy/Treehouse/FreeCodeCamp都是非常优秀的在线学习资源，这个Repo分析了三个平台的优劣，并制定了三个平台相互协同利用的学习计划，取长补短，非常值得参考。
 
 * [h4r1m4u FCC 前端题目答案](https://github.com/h4r1m4u/freecodecamp-solutions)
 
