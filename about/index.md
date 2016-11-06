@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-This is discountry's personal Dev blog. Powered by [Jekyll](https://jekyllrb.com/).
+## This is discountry's personal Dev blog. Powered by [Jekyll](https://jekyllrb.com/).
 
 ### Theme Dependencies
 
