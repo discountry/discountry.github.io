@@ -55,7 +55,7 @@ Shadowsocks支持包括电脑手机路由器在内所有的系统和所有的设
 
 如果你想要使用5¥包用一年，每天500MB流量的Shadowsocks服务，欢迎选用[THWorld-帮你打开新世界的大门](https://thworld.net)。
 
-注册邀请码获取请加支付宝群：
+获取注册邀请码请用支付鸨手机App扫码支付5元，我会将邀请码发送给你：
 
-<a href="{{ site.url }}/images/ss-12.jpg" data-lightbox="shadowsocks-set" data-title="ss-12">![ss-12]({{ site.url }}/images/ss-12.jpg)</a>
+<a href="{{ site.url }}/images/ss-13.jpg" data-lightbox="shadowsocks-set" data-title="ss-13">![ss-13]({{ site.url }}/images/ss-13.jpg)</a>
 
