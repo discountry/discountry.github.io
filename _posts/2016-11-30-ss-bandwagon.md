@@ -42,7 +42,7 @@ tags: ['shadowsocks']
 
 到这一步Shadowsocks的服务器就部署完毕了，接下来是下载客户端并填写配置，然后你就可以无拘无束地畅游互联网啦！
 
-<a href="{{ site.url }}/images/ss-11.png" data-lightbox="shadowsocks-set" data-title="ss-11">![ss-11]({{ site.url }}/images/ss-11.png)</a>
+<a href="{{ site.url }}/images/ss-11.jpg" data-lightbox="shadowsocks-set" data-title="ss-11">![ss-11]({{ site.url }}/images/ss-11.jpg)</a>
 
 你可以直接点击[这个链接](http://pan.baidu.com/s/1miFbopU)下载Windows上Shadowsocks的最新版本。你也可以阅读更加详细的[使用说明](https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)。
 
@@ -57,5 +57,5 @@ Shadowsocks支持包括电脑手机路由器在内所有的系统和所有的设
 
 注册邀请码获取请加支付宝群：
 
-<a href="{{ site.url }}/images/ss-12.png" data-lightbox="shadowsocks-set" data-title="ss-12">![ss-12]({{ site.url }}/images/ss-12.png)</a>
+<a href="{{ site.url }}/images/ss-12.jpg" data-lightbox="shadowsocks-set" data-title="ss-12">![ss-12]({{ site.url }}/images/ss-12.jpg)</a>
 
