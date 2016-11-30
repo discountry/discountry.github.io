@@ -57,5 +57,5 @@ Shadowsocks支持包括电脑手机路由器在内所有的系统和所有的设
 
 获取注册邀请码请用支付鸨手机App扫码支付5元，我会将邀请码发送给你：
 
-<a href="{{ site.url }}/images/ss-13.jpg" data-lightbox="shadowsocks-set" data-title="ss-13">![ss-13]({{ site.url }}/images/ss-13.jpg)</a>
+<a href="{{ site.url }}/images/ss-13.png" data-lightbox="shadowsocks-set" data-title="ss-13">![ss-13]({{ site.url }}/images/ss-13.png)</a>
 
