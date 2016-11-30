@@ -30,7 +30,7 @@ tags: ['shadowsocks']
 
 `bandwagonhost`支持支付宝付款，对中国用户非常友好，打开你的手机支付宝扫码就可以完成付款了，扫完码之后不要关闭页面，等待网页自动跳转。
 
-<a href="{{ site.url }}/images/ss-7.png" data-lightbox="shadowsocks-set" data-title="ss-7">![ss-7]({{ site.url }}/images/ss-7.png)</a>
+<a href="{{ site.url }}/images/ss-7.jpg" data-lightbox="shadowsocks-set" data-title="ss-7">![ss-7]({{ site.url }}/images/ss-7.jpg)</a>
 
 #### 3.在[服务页面](https://bwh1.net/clientarea.php?action=products)你可以看到自己刚刚购买的VPS主机，点击进入控制面板根据流程操作。
 
