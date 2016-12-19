@@ -53,9 +53,4 @@ Shadowsocks支持包括电脑手机路由器在内所有的系统和所有的设
 * [How to use shadowsocks(ss)](https://discountry.github.io/tutorials/2016/09/22/how-to-use-shadowsocksss/)
 * [Shadowsocks User Guide](https://discountry.github.io/tutorial/2016/11/30/Shadowsocks-userguide/)
 
-如果你想要使用5¥包用一年（看清楚是一整年袄），每天500MB流量的Shadowsocks服务，欢迎选用[THWorld-帮你打开新世界的大门](https://thworld.net)。
-
-获取注册邀请码请用支付鸨手机App扫码支付5元，我会将邀请码发送给你：
-
-<a href="{{ site.url }}/images/ss-13.png" data-lightbox="shadowsocks-set" data-title="ss-13">![ss-13]({{ site.url }}/images/ss-13.png)</a>
 
