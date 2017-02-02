@@ -8,7 +8,7 @@ tags: ['php']
 
 You may get a integer overflow bug if you're using `strtotime` on a 32bit server.
 
-This is called [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem).
+This is called [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem) problem.
 
 The UNIX timestamp will reach the integer variable limit on 32bit OS at *19 January 2038*.
 
