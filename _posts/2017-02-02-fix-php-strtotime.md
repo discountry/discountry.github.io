@@ -40,6 +40,7 @@ class DateHelper{
         $interval = $date1->diff($date2);
         $days = $interval->format('%r%a days');
         $days = intval($days);
+        //Using this method you need to install php-bcmath module
         return bcmul($days, 24*3600);
     }
 }
