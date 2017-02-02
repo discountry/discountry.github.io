@@ -17,6 +17,7 @@ However we can fix this bug by using a customized function:
 <!--more-->
 
 ```php
+<?php
 class DateHelper{
     
     /**
