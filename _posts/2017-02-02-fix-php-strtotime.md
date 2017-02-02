@@ -6,7 +6,7 @@ categories: ['snippets']
 tags: ['php']
 ---
 
-You may get a integer overflow bug if you're using `strtotime` on a 32bit server.
+You may get an integer overflow bug if you're using `strtotime` on a 32bit server.
 
 This is called [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem) problem.
 
