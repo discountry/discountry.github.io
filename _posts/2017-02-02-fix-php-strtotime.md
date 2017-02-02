@@ -10,7 +10,7 @@ You may get an integer overflow bug if you're using `strtotime` on a 32bit serve
 
 This is called [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem) problem.
 
-The UNIX timestamp will reach the int variable limit on 32bit OS at *19 January 2038*.
+The UNIX timestamp will reach the int variable limitation on 32bit OS at *19 January 2038*.
 
 However we can fix this bug by using a customized function:
 
