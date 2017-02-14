@@ -18,7 +18,7 @@ date: "2017-02-15 00:39"
 
 3.403
 
-> get the window's height and set the lock number equal to that value.
+> get the window's height and set the lock numbers equal to that value.
 
 ```js
 $(window).height;
