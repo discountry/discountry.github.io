@@ -26,7 +26,7 @@ $(window).height;
 
 4.Use css `transform`
 
-`transform` includes two classes named `scale` & `rotate`
+`transform` includes two attributes named `scale` & `rotate`
 
 *example:*
 
