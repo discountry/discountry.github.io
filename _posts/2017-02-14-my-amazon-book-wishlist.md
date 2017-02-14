@@ -21,7 +21,7 @@ You could inspect HTML content to find out why this snippet would work.
 
 **Here goes the book list:**
 
-#### Programming
+### Programming
 
 * [黑客攻防技术宝典:Web实战篇(第2版) (图灵程序设计丛书 99)](https://www.amazon.cn/dp/B00CBBJYQC/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=2VB7LY8ZQRQVF&coliid=I3LA1IR6VWK5GA)
 * [程序员面试金典（第5版）](https://www.amazon.cn/dp/B00M2DL35O/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=2VB7LY8ZQRQVF&coliid=I1UPXGT3Y67GR7)
@@ -74,7 +74,7 @@ You could inspect HTML content to find out why this snippet would work.
 * [算法导论(原书第3版)](https://www.amazon.cn/dp/B00AK7BYJY/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=3K9YKUKRVD9CJ&coliid=II7LH6A2ZLBB7)
 * [计算机程序的构造和解释(原书第2版)](https://www.amazon.cn/dp/B0011AP7RY/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=3K9YKUKRVD9CJ&coliid=I3ESDG644MOWT7)
 
-#### Fictions
+### Fictions
 
 * [曾国藩家书（李鸿章校勘，随文夹注版） (慢读系列)](https://www.amazon.cn/dp/B01BKB2IPM/ref=wl_it_dp_o_pd_nS_ttl?_encoding=UTF8&colid=3K9YKUKRVD9CJ&coliid=I14X1RRSIZMNRJ)
 * [神的九十亿个名字 (读客全球顶级畅销小说文库 35)](https://www.amazon.cn/dp/B014DAN6VC/ref=wl_it_dp_o_pd_nS_ttl?_encoding=UTF8&colid=2VB7LY8ZQRQVF&coliid=I3OEA3IVOXDL2S)
@@ -93,7 +93,7 @@ You could inspect HTML content to find out why this snippet would work.
 * [千禧年系列（龙文身的女孩、玩火的女孩、直捣蜂窝的女孩，三部曲）](https://www.amazon.cn/dp/B01M6BMIMP/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=2VB7LY8ZQRQVF&coliid=I15967REP9U6I5)
 * [新媒体营销圣经：引诱，引诱，引诱，出击！(公号狗跪读！硅谷大神，亲笔力作，彻底讲透新媒体！近百个全球经典新媒体案例实解！全中国5000万新媒体运营者、自媒体人、企业营销、品牌策划的从业必读权威读本！)](https://www.amazon.cn/dp/B01GLCZ1HW/ref=wl_it_dp_o_pd_nS_ttl?_encoding=UTF8&colid=2VB7LY8ZQRQVF&coliid=I17YH6VEDSSP8G)
 
-#### DIY
+### DIY
 
 * [30天自制操作系统 (图灵程序设计丛书 10)](https://www.amazon.cn/dp/B00ALPRMFU/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=NQ8IRHAPJFJC&coliid=I1XFX4NW1IMS15)
 * [自制搜索引擎](https://www.amazon.cn/dp/B019CRHPWC/ref=wl_it_dp_o_pd_nS_ttl?_encoding=UTF8&colid=NQ8IRHAPJFJC&coliid=I34EFRLFOVMI0Z)
