@@ -6,17 +6,17 @@ date: "2017-02-15 00:39"
 
 ## IFE Answers
 
-1. umbrella
+1.umbrella
 
 > Use your imagination, you could even draw three lines to pass this task.
 
 <!--more-->
 
-2. base64
+2.base64
 
 > Use `Ctrl+A` select all page you will say a encrypted string, use **online decrypt tools** to decode this string to get the next task url.
 
-3. 403
+3.403
 
 > get the window's height and set the lock number equal to that value.
 
@@ -24,7 +24,7 @@ date: "2017-02-15 00:39"
 $(window).height;
 ```
 
-4. Use css `transform`
+4.Use css `transform`
 
 ```css
 {
@@ -43,7 +43,7 @@ transform: scale(-1,1) rotate(20deg);
 }
 ```
 
-5. Follow the question orders.
+5.Follow the question orders.
 
 ```js
 ball.at(82, 46, ball => ball.turnRight())
