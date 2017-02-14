@@ -12,7 +12,7 @@ So I use two lines JavaScript to convert them into markdown:
 
 ```js
 list = $$('h5 a')
-list.forEach(function(link){console.log('* ['+link.innerText+']' +'(' +link.href+')')})
+list.forEach(function(link){console.log('* ['+link.innerText+']' + '('+link.href+')')})
 ```
 
 <!--more-->
