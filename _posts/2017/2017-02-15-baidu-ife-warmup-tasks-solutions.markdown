@@ -69,6 +69,10 @@ ball.at(82, 46, ball => ball.turnBack())
 var right = (x,y) => ball.at(x, y, ball => ball.turnRight())
 var left = (x,y) => ball.at(x, y, ball => ball.turnLeft())
 var back = (x,y) => ball.at(x, y, ball => ball.turnBack())
+//Then just call
+right(82,46)
+left(82,138)
+back(82,46)
 ```
 
 <!--
