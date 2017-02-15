@@ -20,15 +20,11 @@ As an front-end developer who often write technical articles on github, I found 
 
 <!--more-->
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-	- [Installation](#installation)
-	- [Packages & Theme](#packages-theme)
-	- [Hack on the init script](#hack-on-the-init-script)
-	- [Blog settings](#blog-settings)
-	- [Using Atom](#using-atom)
-
-<!-- /TOC -->
+- [Installation](#installation)
+- [Packages & Theme](#packages-theme)
+- [Hack on the init script](#hack-on-the-init-script)
+- [Blog settings](#blog-settings)
+- [Using Atom](#using-atom)
 
 I have to declare my demands at first:
 
