@@ -55,7 +55,7 @@ You can find your init script here:
 
 ![1](https://ooo.0o0.ooo/2017/02/15/58a3ec534d9f3.png)
 
-Add there code in your file:
+Add these code to your file:
 
 ```coffee
 atom.workspace.observeTextEditors (editor) ->

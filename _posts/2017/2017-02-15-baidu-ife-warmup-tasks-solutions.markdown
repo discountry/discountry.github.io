@@ -14,7 +14,7 @@ date: "2017-02-15 00:39"
 
 2.base64
 
-> Use `Ctrl+A` select all page you will see a encrypted string, use **online decrypt tools** to decode this string to get the next task url.
+> Use `Ctrl+A` select whole page you will see a encrypted string, use **online decrypt tools** to decode this string to get the next task url.
 
 3.403
 
