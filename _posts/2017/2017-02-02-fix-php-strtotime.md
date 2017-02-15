@@ -8,18 +8,18 @@ tags: ['php']
 
 You may get an integer overflow bug if you're using `strtotime` on a 32bit server.
 
-This is called [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem) problem.
+This was the [Y2K38](https://en.wikipedia.org/wiki/Year_2038_problem) problem.
 
 The UNIX timestamp will reach the int variable limitation on 32bit OS at *19 January 2038*.
 
-However we can fix this bug by using a customized function:
+However, we can fix this bug by using a customized function:
 
 <!--more-->
 
 ```php
 <?php
 class DateHelper{
-    
+
     /**
      * 在32位操作系统下，超过 2038-01-19 03:14:07 ，会溢出
      * @param unknown $time
@@ -28,7 +28,7 @@ class DateHelper{
     public static function strtotimeUnsafe($time){
         return strtotime($time);
     }
-    
+
     /**
      * 安全的方式
      * @param unknown $time
