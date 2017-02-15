@@ -16,7 +16,7 @@ Including:
 * [Mou](http://25.io/mou/)
 * [Ulysses](https://ulyssesapp.com/)
 
-As an front-end developer who often write technical articles on github, I found that the best writing editor for me is [Atom](https://atom.io/).
+As a front-end developer who often write technical articles on github, I found that the best writing editor for me is [Atom](https://atom.io/).
 
 <!--more-->
 
@@ -39,7 +39,7 @@ If you are a developer like me, the following guide may works for you too.
 
 **Download from here: [Atom](https://atom.io/)**
 
-Download the installer accroding to your platform. Atom supports all the operating system including Windows/OSX/Linux.
+Download the installer accroding to your platform. Atom supports all the operating systems including Windows/OSX/Linux.
 
 ![2017-02-15_13-43-01](https://ooo.0o0.ooo/2017/02/15/58a3eac1ec055.png)
 
