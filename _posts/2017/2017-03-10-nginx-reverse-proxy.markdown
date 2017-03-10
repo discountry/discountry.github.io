@@ -57,7 +57,7 @@ server
     listen 80;
     server_name YOUR.OWN.DOMAIN.URL;
     location / {
-        proxy_pass http://THE.SITE.URL.YOU.WANT.TO.PROXY/;
+        proxy_pass http://THE.SITE.URL.YOU.WANT.TO.DELEGAGE/;
         proxy_redirect off;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -86,7 +86,7 @@ server
     server_name YOUR.OWN.DOMAIN.URL;
 
     location / {
-        proxy_pass https://THE.SITE.URL.YOU.WANT.TO.PROXY/;
+        proxy_pass https://THE.SITE.URL.YOU.WANT.TO.DELEGAGE/;
         proxy_redirect off;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -143,7 +143,7 @@ server
     ssl_prefer_server_ciphers on;
 
     location / {
-        proxy_pass https://THE.SITE.URL.YOU.WANT.TO.PROXY;
+        proxy_pass https://THE.SITE.URL.YOU.WANT.TO.DELEGAGE;
         proxy_redirect off;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
