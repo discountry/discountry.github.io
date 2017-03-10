@@ -4,11 +4,16 @@ title: "How to set up Nginx reverse proxy for Blocked Websites"
 date: "2017-03-10 23:55"
 categories: ['tutorial']
 tags: ['linux', 'nginx']
+published: True
 ---
 
 Today I'll guide you the set up an nginx server to host mirrors for blocked websites.
 
 So you can visit them freely in restricted areas.
+
+You'll need a server that can access those blocked websites as well as can be accessed by your local machine.
+
+If you haven't got one, follow the very first step of [this former tutorial](/tutorials/2016/11/30/ss-bandwagon/).
 
 <!--more-->
 
