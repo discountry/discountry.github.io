@@ -43,7 +43,7 @@ Then go to your [account setting page](https://travis-ci.org/profile). And open 
 
 Add a new `.travis.yml` file on the root of your project.
 
-```yaml
+```yml
 language: ruby
 rvm: 2.2
 install: bundle install
