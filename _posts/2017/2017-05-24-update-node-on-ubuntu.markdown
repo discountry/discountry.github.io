@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Update nodejs & npm on Ubuntu"
-date: "2017-03-10 23:55"
+date: "2017-05-24 12:59"
 categories: ['snippet']
 tags: ['nodejs', 'ubuntu']
 published: True
