@@ -6,6 +6,7 @@
       </a>
       <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
       <div class="right menu">
+        <a class="item" href="{{ "/react" | prepend: site.baseurl }}">React 文档</a>
         {% for page in site.pages %}
           {% if page.title %}
           <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
