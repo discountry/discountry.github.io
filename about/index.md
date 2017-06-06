@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about
+title: About
 ---
 
 ## This is discountry's personal Dev blog. Powered by [Jekyll](https://jekyllrb.com/).
