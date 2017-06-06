@@ -18,6 +18,7 @@
       <div class="mobile right floated ui dropdown icon item">
         <i class="content icon"></i>
         <div class="menu">
+          <a class="item" href="{{ "/react" | prepend: site.baseurl }}">React 文档</a>
           {% for page in site.pages %}
           {% if page.title %}
           <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
