@@ -30,10 +30,10 @@ published: True
 
 ## 操作流程
 
-1.通过TextNow申请到一个临时的美国电话号码，用于接收 Google Voice 发来的验证码。
+1.通过 TextNow 申请到一个临时的美国电话号码，用于接收 Google Voice 发来的验证码。
 
 2.用你的 Google 账号登录 Google Voice 进行初始化的操作，并申请 Google Voice 提供的电话号码。
 
 3.Google Voice 申请号码时可能会频繁出错，你需要用类似[鼠大侠](http://www.shudaxia.com/)的鼠标点击器来帮你不停地发起请求。亲测在北京时间0点左右的成功率较高。
 
-4.申请成功后你的美国号码仍然有被收回的可能性，保持号码激活的办法就是一直使用它，当然你可能没有那么多的美刀，也没有可以通话的美国朋友，你可以选择 IFTTT 上面的一个自动脚本 [Keep Google Voice Active IFTTT](https://ifttt.com/applets/131839p-keep-google-voice-active) 它可以每个月在固定的时候自动拨打你的 Google Voice 号码，以保证你的号码处于活跃状态。
+4.申请成功后你的美国号码仍然有被收回的可能性，保持号码激活的办法就是一直使用它，当然你可能没有那么多的美刀，也没有可以通话的美国朋友，你可以选择 IFTTT 上面的一个 [Keep Google Voice Active IFTTT](https://ifttt.com/applets/131839p-keep-google-voice-active) 自动脚本。它可以每个月在固定的时候自动拨打你的 Google Voice 号码，以保证你的号码处于活跃状态。
