@@ -14,7 +14,7 @@ tags: ['shadowsocks']
 
 <a href="{{ site.url }}/images/ss-1.png" data-lightbox="shadowsocks-set" data-title="ss-1">![ss-1]({{ site.url }}/images/ss-1.png)</a>
 
-#### 2.打开[购买链接](https://bwh1.net/cart.php?a=confproduct&i=0)之后选择合适的付款方案并根据流程操作
+#### 2.打开[购买链接](https://bandwagonhost.com/aff.php?aff=10472)之后选择合适的付款方案并根据流程操作
 
 <a href="{{ site.url }}/images/ss-2.png" data-lightbox="shadowsocks-set" data-title="ss-2">![ss-2]({{ site.url }}/images/ss-2.png)</a>
 
