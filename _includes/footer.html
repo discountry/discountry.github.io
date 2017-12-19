@@ -11,7 +11,7 @@
         <h5 class="ui inverted header">Elsewhere</h5>
         <div class="ui inverted link list">
         {% if site.github_username %}
-          <li>
+          <li class="item">
             <a href="https://github.com/{{ site.github_username }}">
               <i class="big inverted icon github"></i>
               <span class="username">{{ site.github_username }}</span>
@@ -19,7 +19,7 @@
           </li>
           {% endif %}
           {% if site.twitter_username %}
-          <li>
+          <li class="item">
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <i class="big inverted blue icon twitter"></i>
               <span class="username">{{ site.twitter_username }}</span>
@@ -27,7 +27,7 @@
           </li>
           {% endif %}
           {% if site.wordpress_site %}
-          <li>
+          <li class="item">
             <a href="{{ site.wordpress_site }}">
               <i class="big inverted blue icon wordpress"></i>
               <span class="username">Blog</span>
