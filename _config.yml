@@ -8,6 +8,7 @@ url: "https://discountry.github.io" # the base hostname & protocol for your site
 imageurl: "https://discountry.github.io/images/"
 twitter_username: discountifu
 github_username:  discountry
+wordpress_site: "https://yubolun.com"
 
 # Build settings
 excerpt_separator: <!--more-->
