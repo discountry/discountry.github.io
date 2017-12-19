@@ -112,7 +112,7 @@ Follow the command-line interactions you'll get two ssh key files `id_rsa` & `id
 
 * Upload the `id_rsa.pub` on your GitHub repo settings at `https://github.com/<your_name>/<your_repo>/settings/keys`
 
-* Go to `https://circleci.com/gh/you/test-repo/edit#ssh` on CircleCI and add the private key `id_rsa` that you just created. Enter `github.com` in the **Hostname** field and press the submit button.
+* Go to `https://circleci.com/gh/<your_name>/<your_repo>/edit#ssh` on CircleCI and add the private key `id_rsa` that you just created. Enter `github.com` in the **Hostname** field and press the submit button.
 
 **Add ssh key to your config file**
 
