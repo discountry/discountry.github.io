@@ -120,8 +120,8 @@ Use `add_ssh_keys` to set the ssh key you've just added to enable it when runnin
 
 ```yml
 - add_ssh_keys:
-          fingerprints:
-            - "xx:xx:xx:xx:11:22:33:44:55:66:77:88:99:xx:xx:xx"
+    fingerprints:
+      - "xx:xx:xx:xx:11:22:33:44:55:66:77:88:99:xx:xx:xx"
 ```
 
 ### 5.Write `deploy.sh` shell scripts
