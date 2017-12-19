@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:og="http://ogp.me/ns#">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
+
+  <div class="ui main text container">
+    {% include ads.html %}
     
-	<div class="ui main text container">
-		{{ content }}
+    {{ content }}
+  </div>
 
-		{% include ads.html %}
-    	</div>
+  {% include footer.html %}
 
-	
-
-    {% include footer.html %}
-
-  </body>
+</body>
 
 </html>
