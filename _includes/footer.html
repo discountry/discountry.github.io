@@ -13,7 +13,7 @@
         {% if site.github_username %}
           <li>
             <a href="https://github.com/{{ site.github_username }}">
-              <i class="inverted icon github"></i>
+              <i class="big inverted icon github"></i>
               <span class="username">{{ site.github_username }}</span>
             </a>
           </li>
@@ -21,8 +21,16 @@
           {% if site.twitter_username %}
           <li>
             <a href="https://twitter.com/{{ site.twitter_username }}">
-              <i class="inverted blue icon twitter"></i>
+              <i class="big inverted blue icon twitter"></i>
               <span class="username">{{ site.twitter_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.wordpress_site %}
+          <li>
+            <a href="{{ site.wordpress_site }}">
+              <i class="big inverted blue icon wordpress"></i>
+              <span class="username">Blog</span>
             </a>
           </li>
           {% endif %}
