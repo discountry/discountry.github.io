@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Books & Courses
+order: 0
 ---
 
 Here are my free opensource e-books:

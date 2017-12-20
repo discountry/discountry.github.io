@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+order: 1
 ---
 
 ## This is discountry's personal Dev blog. Powered by [Jekyll](https://jekyllrb.com/).
