@@ -1,86 +1,41 @@
 <footer class="ui inverted vertical footer segment">
-  <div class="container">
-      <ul class="ui horizontal inverted small divided link list">
+  <div class="ui center aligned container">
+      <div class="ui horizontal inverted small divided link list">
           {% if site.github_username %}
-          <li class="item">
+          <div class="item">
             <a href="https://github.com/{{ site.github_username }}">
               <i class="big inverted icon github"></i>
               <span class="username">GitHub</span>
             </a>
-          </li>
-          {% endif %}
-          {% if site.twitter_username %}
-          <li class="item">
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <i class="big inverted blue icon twitter"></i>
-              <span class="username">Twitter</span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.wordpress_site %}
-          <li class="item">
-            <a href="{{ site.wordpress_site }}">
-              <i class="big grey icon wordpress"></i>
-              <span class="username">Blog</span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.codepen_username %}
-          <li class="item">
-            <a href="https://codepen.io/{{ site.codepen_username }}">
-              <i class="big purple icon codepen"></i>
-              <span class="username">Codepen</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-        <div class="ui inverted section divider"></div>
-        <p>&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.description }}</p>
-    <div class="ui stackable inverted divided page grid">
-      <div class="twelve wide column">
-          <div class="ui inverted link list">
-          <li>&copy; {{ site.description }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           </div>
-      </div>
-      <div class="four wide column">
-        <h5 class="ui inverted header">Elsewhere</h5>
-        <div class="ui inverted link list">
-        {% if site.github_username %}
-          <li class="item">
-            <a href="https://github.com/{{ site.github_username }}">
-              <i class="big inverted icon github"></i>
-              <span class="username">GitHub</span>
-            </a>
-          </li>
           {% endif %}
           {% if site.twitter_username %}
-          <li class="item">
+          <div class="item">
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <i class="big inverted blue icon twitter"></i>
               <span class="username">Twitter</span>
             </a>
-          </li>
+          </div>
           {% endif %}
           {% if site.wordpress_site %}
-          <li class="item">
+          <div class="item">
             <a href="{{ site.wordpress_site }}">
               <i class="big grey icon wordpress"></i>
               <span class="username">Blog</span>
             </a>
-          </li>
+          </div>
           {% endif %}
           {% if site.codepen_username %}
-          <li class="item">
+          <div class="item">
             <a href="https://codepen.io/{{ site.codepen_username }}">
               <i class="big purple icon codepen"></i>
               <span class="username">Codepen</span>
             </a>
-          </li>
+          </div>
           {% endif %}
-        </div>
-      </div>
     </div>
+    <div class="ui inverted section divider"></div>
+    <p>&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.description }}</p>
   </div>
 </footer>
 
