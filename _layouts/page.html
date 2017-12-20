@@ -2,6 +2,8 @@
 layout: default
 ---
 
-<h1 class="ui header">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+<h1 class="ui header">
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+</h1>
 
-    {{ content }}
+{{ content }}
