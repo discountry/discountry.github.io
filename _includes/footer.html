@@ -17,6 +17,14 @@
             </a>
           </div>
           {% endif %}
+          {% if site.weibo_id %}
+          <div class="item">
+            <a href="https://weibo.com/u/{{ site.weibo_id }}">
+              <i class="big red icon weibo"></i>
+              <span class="username">Weibo</span>
+            </a>
+          </div>
+          {% endif %}
           {% if site.wordpress_site %}
           <div class="item">
             <a href="{{ site.wordpress_site }}">
