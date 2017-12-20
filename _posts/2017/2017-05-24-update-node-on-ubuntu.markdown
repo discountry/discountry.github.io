@@ -9,6 +9,8 @@ published: True
 
 Just use `nvm` and do not try other methods.
 
+<!--more-->
+
 ```bash
 apt install nodejs-legacy npm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
