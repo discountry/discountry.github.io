@@ -20,63 +20,63 @@ First let's use the quickest method! You even need not to know how to code. You 
 
 1.Register your free community account on [DaoCloud signup](https://account.daocloud.io/signup).
 
-<a href="{{ site.url }}/images/daocloud-signup.png" data-lightbox="owncloud-set" data-title="daocloud-signup">![daocloud-signup]({{ site.url }}/images/daocloud-signup.png)</a>
+![daocloud-signup]({{ site.url }}/images/daocloud-signup.png)
 
 2.Create your MySQL service at [DaoCloud services](https://dashboard.daocloud.io/services).
 
-<a href="{{ site.url }}/images/daocloud-mysql-1.png" data-lightbox="owncloud-set" data-title="daocloud-mysql-1">![daocloud-mysql-1]({{ site.url }}/images/daocloud-mysql-1.png)</a>
+![daocloud-mysql-1]({{ site.url }}/images/daocloud-mysql-1.png)
 
-<a href="{{ site.url }}/images/daocloud-mysql-2.png" data-lightbox="owncloud-set" data-title="daocloud-mysql-2">![daocloud-mysql-2]({{ site.url }}/images/daocloud-mysql-2.png)</a>
+![daocloud-mysql-2]({{ site.url }}/images/daocloud-mysql-2.png)
 
-<a href="{{ site.url }}/images/daocloud-mysql-3.png" data-lightbox="owncloud-set" data-title="daocloud-mysql-3">![daocloud-mysql-3]({{ site.url }}/images/daocloud-mysql-3.png)</a>
+![daocloud-mysql-3]({{ site.url }}/images/daocloud-mysql-3.png)
 
-<a href="{{ site.url }}/images/daocloud-mysql-4.png" data-lightbox="owncloud-set" data-title="daocloud-mysql-4">![daocloud-mysql-4]({{ site.url }}/images/daocloud-mysql-4.png)</a>
+![daocloud-mysql-4]({{ site.url }}/images/daocloud-mysql-4.png)
 
 3.Create your Volume at [DaoCloud volumes](https://dashboard.daocloud.io/volumes).
 
-<a href="{{ site.url }}/images/daocloud-volume-1.png" data-lightbox="owncloud-set" data-title="daocloud-volume-1">![daocloud-volume-1]({{ site.url }}/images/daocloud-volume-1.png)</a>
+![daocloud-volume-1]({{ site.url }}/images/daocloud-volume-1.png)
 
-<a href="{{ site.url }}/images/daocloud-volume-2.png" data-lightbox="owncloud-set" data-title="daocloud-volume-2">![daocloud-volume-2]({{ site.url }}/images/daocloud-volume-2.png)</a>
+![daocloud-volume-2]({{ site.url }}/images/daocloud-volume-2.png)
 
 4.Get your owncloud Docker image at [daocloud.io/library/owncloud](https://dashboard.daocloud.io/packages/5e14eddc-fbd7-47e9-a4a1-d9dddd13a0fb).
 
-<a href="{{ site.url }}/images/daocloud-image-1.png" data-lightbox="owncloud-set" data-title="daocloud-image-1">![daocloud-image-1]({{ site.url }}/images/daocloud-image-1.png)</a>
+![daocloud-image-1]({{ site.url }}/images/daocloud-image-1.png)
 
 **Important!** Remember to choose the latest version.
 
-<a href="{{ site.url }}/images/owncloud-version.png" data-lightbox="owncloud-set" data-title="owncloud-version">![owncloud-version]({{ site.url }}/images/owncloud-version.png)</a>
+![owncloud-version]({{ site.url }}/images/owncloud-version.png)
 
 5.Set up owncloud step by step.
 
-<a href="{{ site.url }}/images/daocloud-owncloud-1.png" data-lightbox="owncloud-set" data-title="daocloud-owncloud-1">![daocloud-owncloud-1]({{ site.url }}/images/daocloud-owncloud-1.png)</a>
+![daocloud-owncloud-1]({{ site.url }}/images/daocloud-owncloud-1.png)
 
 Bind MySQL.
 
-<a href="{{ site.url }}/images/bind-mysql.png" data-lightbox="owncloud-set" data-title="bind-mysql">![bind-mysql]({{ site.url }}/images/bind-mysql.png)</a>
+![bind-mysql]({{ site.url }}/images/bind-mysql.png)
 
 Bind Volume.Remember set the path to `/var/www/html/data`(This is where your cloud files stored).
 
-<a href="{{ site.url }}/images/bind-volume-1.png" data-lightbox="owncloud-set" data-title="bind-volume-1">![bind-volume-1]({{ site.url }}/images/bind-volume-1.png)</a>
+![bind-volume-1]({{ site.url }}/images/bind-volume-1.png)
 
-<a href="{{ site.url }}/images/bind-volume-2.png" data-lightbox="owncloud-set" data-title="bind-volume-2">![bind-volume-2]({{ site.url }}/images/bind-volume-2.png)</a>
+![bind-volume-2]({{ site.url }}/images/bind-volume-2.png)
 
 Click `Deploy NOW` button and wait for the process.
 
-<a href="{{ site.url }}/images/daocloud-process.png" data-lightbox="owncloud-set" data-title="daocloud-process">![daocloud-process]({{ site.url }}/images/daocloud-process.png)</a>
+![daocloud-process]({{ site.url }}/images/daocloud-process.png)
 
 6.Open your owncloud App in your browser.
 
-<a href="{{ site.url }}/images/daocloud-info.png" data-lightbox="owncloud-set" data-title="daocloud-info">![daocloud-info]({{ site.url }}/images/daocloud-info.png)</a>
+![daocloud-info]({{ site.url }}/images/daocloud-info.png)
 
 7.Setting up admin account & mysql connection for your owncloud.
 
-<a href="{{ site.url }}/images/daocloud-dbinfo.png" data-lightbox="owncloud-set" data-title="daocloud-dbinfo">![daocloud-dbinfo]({{ site.url }}/images/daocloud-dbinfo.png)</a>
+![daocloud-dbinfo]({{ site.url }}/images/daocloud-dbinfo.png)
 
-<a href="{{ site.url }}/images/owncloud-install.png" data-lightbox="owncloud-set" data-title="owncloud-install">![owncloud-install]({{ site.url }}/images/owncloud-install.png)</a>
+![owncloud-install]({{ site.url }}/images/owncloud-install.png)
 
 8.Start enjoying your owncloud!
 
-<a href="{{ site.url }}/images/owncloud-landing.png" data-lightbox="owncloud-set" data-title="owncloud-landing">![owncloud-landing]({{ site.url }}/images/owncloud-landing.png)</a>
+![owncloud-landing]({{ site.url }}/images/owncloud-landing.png)
 
 ## Setting up owncloud on your Ubuntu Server and share with your dudes.
 

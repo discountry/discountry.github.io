@@ -17,7 +17,7 @@ Remember these four things:
 * Port number (8388 or some numbers)
 * Password
 
-<a href="{{ site.url }}/images/ss-info.png" data-lightbox="daocloud-set" data-title="ss-info">![ss-info]({{ site.url }}/images/ss-info.png)</a>
+![ss-info]({{ site.url }}/images/ss-info.png)
 
 
 <!--more-->
@@ -27,14 +27,14 @@ Remember these four things:
 
 Just type the four things we'd mentioned above into your mobile App or Desktop Software.
 
-<a href="{{ site.url }}/images/shadowsocks.png" data-lightbox="daocloud-set" data-title="shadowsocks">![shadowsocks]({{ site.url }}/images/shadowsocks.png)</a>
+![shadowsocks]({{ site.url }}/images/shadowsocks.png)
 
 3.Setup your client.
 
 Click the `Start` or `Open` button or something like that on your client software.
 And now you are free to go anywhere on the Internet.
 
-<a href="{{ site.url }}/images/open-ss.png" data-lightbox="daocloud-set" data-title="open-ss">![open-ss]({{ site.url }}/images/open-ss.png)</a>
+![open-ss]({{ site.url }}/images/open-ss.png)
 
 ## Tutorials
 
