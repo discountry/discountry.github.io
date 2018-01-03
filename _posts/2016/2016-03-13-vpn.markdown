@@ -57,8 +57,7 @@ I'm trying to open your mind.
 ### Router
 
 * [freedom-routes](https://github.com/sabersalv/freedom-routes)
-* [chnroutes](https://github.com/fivesheep/chnroutes)
-* 
+* [chnroutes](https://github.com/fivesheep/chnroutes) 
 
 
 ### Ansible playbooks
