@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Alipay face-to-face QR Code Pay php sdk using guide"
+title: "支付宝当面付 php sdk 使用教程"
 date: "2017-05-30 13:59"
 categories: ['tutorial']
 tags: ['alipay', 'php']
