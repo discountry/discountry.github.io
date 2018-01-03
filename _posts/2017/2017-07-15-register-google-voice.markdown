@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Register your Google Voice American Phone Number"
+title: "如何通过 Google Voice 注册美国电话号码"
 date: "2017-07-15 00:25"
 categories: ['tutorial']
 tags: ['google']
