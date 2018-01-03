@@ -42,7 +42,6 @@ And now you are free to go anywhere on the Internet.
 
 ## Service Providers
 
-* [THWorld](https://thworld.net) **Free**
 * [Shadowsocks](https://shadowsocks.com/) **Choose your own plan**
 
 ## Clients
