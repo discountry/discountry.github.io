@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "支付宝异步回调接口验签"
+title: "支付宝异步通知接口验签"
 date: "2018-01-04 02:01"
 categories: ['snippet']
 tags: ['alipay', 'php']
