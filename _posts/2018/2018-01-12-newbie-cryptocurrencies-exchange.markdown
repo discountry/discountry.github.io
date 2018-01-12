@@ -30,7 +30,7 @@ published: True
 
 如果你只是想兑换不同类型的加密货币，而不是深入交易，还可以选择：
 
-* [Changelly](https://changelly.com)
+* [Changelly](https://changelly.com/?ref_id=7105b2a34cc8)
 * [ShapeShift](https://shapeshift.io)
 
 这里你可以直接把一种加密货币转换为另一种并存入自己的钱包。想了解其他交易市场的还可以查看网站 [BestBitcoinExchange](https://www.bestbitcoinexchange.io/) 参考。
