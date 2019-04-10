@@ -181,16 +181,6 @@ var app = new Vue({
 
 另外注意到，上述的示例当中，我们都使用到了一个叫做 [navigator.hardwareConcurrency](https://developer.mozilla.org/zh-CN/docs/Web/API/NavigatorConcurrentHardware) 的 Web API，通过这个 API 我们能够获取到 CPU 的核心数，事实上还有很多其他非常强大有用的 [Web API](https://developer.mozilla.org/en-US/docs/Web/API) ，感兴趣的同学可以自行查阅研究一下。
 
-#### 写在后面
-
-今天份的挖矿之旅到此结束，同学们应该或多或少都有一些收获。区块链元年开始，比特币大行其道，从小就怀揣着一个致富梦想的我，自然也不能免俗，稍微小尝试了一下。这几天也有计划总结下最近的心得体会分享给大家，吸取了真金白银的教训，让大家少走一些弯路，少踩一些坑，感兴趣的同学可以持续关注。
-
-如果你对交易加密货币感兴趣，可以微信搜索 **yunote** 或者 **余博伦** 关注我的微信公众号 【余博伦】回复关键字 **btc** 获取我的专属邀请链接。
-
-我的分享会同步发布在我的微信公众号以及博客 [种草先生](https://yubolun.com/)。
-
-然后不忘初心想要交流学习前端开发的同学欢迎加入QQ群 [从零学习前端开发](https://jq.qq.com/?_wv=1027&k=5SSQqDV) 群号码：591950591 验证问题是 JavaScript 题目哟~
-
 #### 示例
 
 * [Coinhive Simple UI Miner](https://codepen.io/discountry/pen/PERMwj?editors=1010)
