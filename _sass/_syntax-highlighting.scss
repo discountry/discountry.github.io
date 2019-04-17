@@ -20,6 +20,7 @@ code {
 pre code {
     padding: 0;
     background: none;
+    border: none;
     font-size: 13px;
     white-space: pre;
     white-space: pre-wrap;
@@ -31,7 +32,7 @@ pre code {
     background: $color00;
     border-radius: 5px;
     line-height: 20px;
-    padding: 10px;
+    padding: 5px 10px;
     margin: 1.4rem 0;
     font-family: 'Menlo', 'Source Code Pro', serif;
 
