@@ -20,7 +20,6 @@ code {
 pre code {
     padding: 0;
     background: none;
-    border: none;
     font-size: 13px;
     white-space: pre;
     white-space: pre-wrap;
@@ -38,7 +37,6 @@ pre code {
 
     pre code {
         color: $color01;
-        border: none !important;
     }
 
     .c  { color: $color02; }
