@@ -60,7 +60,6 @@ Coinhive 的使用非常简单，你无须明白加密货币或区块链的原�
 在这里，我就试着用最熟悉的 React 编写了一个简单的可以实时显示挖矿进度的应用：
 
 ```js
-
     class Miner extends React.Component {
       constructor(props) {
         super(props)
