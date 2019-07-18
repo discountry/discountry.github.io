@@ -50,7 +50,7 @@ tags: ['shadowsocks']
 
 Shadowsocks支持包括电脑手机路由器在内所有的系统和所有的设备。如果你需要在别的平台使用Shadowsocks，可以查看我之前发布的两篇：
 
-* [How to use shadowsocks(ss)](https://discountry.github.io/tutorials/2016/09/22/how-to-use-shadowsocksss/)
-* [Shadowsocks User Guide](https://discountry.github.io/tutorial/2016/11/30/Shadowsocks-userguide/)
+* [How to use shadowsocks(ss)](/tutorials/2016/09/22/how-to-use-shadowsocksss/)
+* [Shadowsocks User Guide](/tutorial/2016/11/30/Shadowsocks-userguide/)
 
 
