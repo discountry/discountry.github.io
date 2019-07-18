@@ -4,8 +4,8 @@ logo: book.png
 email: feibilanceon@gmail.com
 description: Discountry's DEV Blog
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://discountry.github.io" # the base hostname & protocol for your site
-imageurl: "https://discountry.github.io/images/"
+url: "https://yubolun.com" # the base hostname & protocol for your site
+imageurl: "https://yubolun.com/images/"
 twitter_username: discountifu
 weibo_id: 2056725322
 github_username:  discountry
