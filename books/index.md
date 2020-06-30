@@ -7,7 +7,7 @@ order: 0
 Here are my free opensource e-books:
 
 * [ES6 for React](https://discountry.gitbooks.io/es6-for-react/content/)
-* [Learn React from scratch](https://discountry.gitbooks.io/learn-react-from-scratch/content/)
+* [Learn React from scratch](https://discountry.gitbook.io/learn-react-from-scratch/)
 
 You can find all of them on my [Gitbook](https://www.gitbook.com/@discountry/).
 
