@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "前端开发者转行挖矿的特别技巧"
+title: "LIFE HACKING"
 date: "2021-01-01 00:00"
 categories: ['diary']
 tags: ['life', 'hack']
