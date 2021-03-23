@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "前端开发者转行挖矿的特别技巧"
+title: "判断比特币泡沫的 6 条标准"
 date: "2021-02-23 00:23"
 categories: ['analysis']
 tags: ['cryptocurrency', 'btc']
