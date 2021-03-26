@@ -1,8 +1,8 @@
 # Site settings
-title: Discountry
+title: Yubolun
 logo: book.png
 email: feibilanceon@gmail.com
-description: Discountry's DEV Blog
+description: Yubolun's DEV Blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://yubolun.com" # the base hostname & protocol for your site
 imageurl: "https://yubolun.com/images/"
