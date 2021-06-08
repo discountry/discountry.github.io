@@ -58,15 +58,15 @@ published: True
 
 市面上充斥着大量的高级JS工程师，然而却鲜能见到高级CSS工程师，毕竟 JS 只是一个语言，而 CSS 却是一个世界。
 
-[MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
-[Google Web developer](https://web.dev/learn/)
+* [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
+* [Google Web developer](https://web.dev/learn/)
 
 
 ## JavaScript
 
 **基础**
 
-在学习任何编程语言之前，你首先应该对计算机程序的相关概念有一个基本的了解：[CS50](https://open.163.com/newview/movie/courseintro%3Fnewurl%3D%252Fspecial%252Fopencourse%252Fcs50.html)
+在学习任何编程语言之前，你首先应该对计算机程序的相关概念有一个基本的了解：[CS50](https://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fcs50.html)
 
 * [算法](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
 * 数据结构
