@@ -4,6 +4,10 @@ title: Books & Courses
 order: 0
 ---
 
+Here are the books I've translated:
+
+* [JavaScript面向对象编程指南 第3版](https://item.jd.com/13534670.html)
+
 Here are my free opensource e-books:
 
 * [ES6 for React](https://discountry.gitbook.io/es6-for-react/)
