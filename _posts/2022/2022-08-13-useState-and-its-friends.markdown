@@ -31,7 +31,7 @@ export function useReducer<S, I, A>(
 }
 ```
 
-But during the `mount` and `update` phases, react calls same functions beneath the surface:
+But during the `mount` and `update` phases, react calls the same functions beneath the surface:
 
 ```js
 function updateState<S>(
@@ -75,4 +75,4 @@ function useRef(initialValue) {
 
 When you are coding with react, `useRef` is the kind of function that is called "Escape Hatches".
 
-So, if we do not replace the state with `setState` method, the information inside would always be there during renders.
+So, if we do not replace the state with the `setState` method, the information inside would always be there during renders.
