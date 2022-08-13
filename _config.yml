@@ -12,6 +12,8 @@ github_username:  discountry
 codepen_username:  discountry
 # wordpress_site: "https://yubolun.com"
 
+timezone: Asia/Shanghai
+
 # Build settings
 excerpt_separator: <!--more-->
 permalink: pretty
