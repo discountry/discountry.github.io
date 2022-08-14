@@ -27,7 +27,7 @@ layout: none
         </itunes:category> 
         <itunes:explicit>no</itunes:explicit>
 		
-{% for post in site.posts %}
+{% for post in site.categories.frontend %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
             <itunes:author>{{ site.author }}</itunes:author>
