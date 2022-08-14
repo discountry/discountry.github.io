@@ -16,7 +16,11 @@ layout: default
 
 {{ content }}
 
-{% include audio.html src='{{ page.file }}' %}
+{% capture audio_url %}
+{{ page.file }}
+{% endcapture %}
+
+{% include audio.html src=audio_url %}
 
 <h4 class="ui horizontal divider header">Do Not Remain Silent</h4>
 
