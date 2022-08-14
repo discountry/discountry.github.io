@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: podcast
 title: "播客试音"
 date: "2022-08-14 21:37:00"
 categories: ['podcast']
@@ -20,11 +20,6 @@ voices: "yubolun"
 
 这是我的第一条播客试音～
 
-<!--more-->
-
-<div>
-<audio src={{page.file}} type="audio/x-m4a" controls autoplay></audio> 
-</div>
 
 
   
