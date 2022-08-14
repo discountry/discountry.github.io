@@ -22,6 +22,6 @@ voices: "yubolun"
 
 <!--more-->
 
-<audio src={{post.file}} type="audio/x-m4a" controls autoplay></audio> 
+<audio src={{page.file}} type="audio/x-m4a" controls autoplay></audio> 
   
 
