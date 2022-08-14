@@ -20,7 +20,7 @@ layout: none
       </itunes:owner>
       <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/itunes.png" />
       <itunes:category text="Technology" />
-      <itunes:category text="Society &amp; Culture" />
+      <itunes:category text="Business"> <itunes:category text="Investing" /></itunes:category>
       <itunes:category text="Education" />
       <itunes:explicit>no</itunes:explicit>
       {% for post in site.categories.podcast %}
@@ -30,6 +30,7 @@ layout: none
          <itunes:subtitle>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</itunes:subtitle>
          <itunes:summary>{{ post.summary | xml_escape }}</itunes:summary>
          <itunes:image href="{{ site.url }}/images/itunes.png" />
+         <link>href="{{ post.url | prepend: site.url }}</link>
          <enclosure url="{{ post.file }}" length="{{ post.length }}" type="audio/mp3" />
          <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
