@@ -22,6 +22,10 @@ voices: "yubolun"
 
 <!--more-->
 
+<div>
 <audio src={{page.file}} type="audio/x-m4a" controls autoplay></audio> 
+</div>
+
+
   
 
