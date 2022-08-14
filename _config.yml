@@ -23,3 +23,8 @@ highlighter: rouge
 #Pagination
 paginate: 6
 
+#Podcast
+lang: zh-Hans
+subtitle: Dev Blog
+author: yubolun
+
