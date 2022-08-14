@@ -18,4 +18,6 @@ voices: "yubolun"
 
 ### Podcast Test
 
+<audio src={{post.file}} type="audio/x-m4a" controls autoplay /> 
+  
 这是我的第一条播客试音～
