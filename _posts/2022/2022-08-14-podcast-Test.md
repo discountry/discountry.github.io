@@ -11,14 +11,14 @@ description: "这里是我的第一条播客试音。"
 duration: "1:19" 
 length: "684507"
 explicit: "no" 
-keywords: "Podcast,test "
+keywords: "Podcast,test"
 block: "no" 
 voices: "yubolun"
 ---
 
 ### Podcast Test
 
-这是我的第一条播客试音～
+这是我的第一条播客试音，希望能找到一种更合适的内容沉淀的方式。
 
 
 
