@@ -1,26 +1,21 @@
 ---
 layout: post
-title: "Will Netflix kill TV?"
+title: "播客试音"
 date: "2022-08-14 21:37:00"
 categories: ['podcast']
-tags: ['tv', 'netflix']
+tags: ['test']
 published: True
-file: http://link-rot.s3.amazonaws.com/Episode-3.mp3
-summary: "Episode 3 - We ask the question - will Netflix kill TV?"
-description: "The power of TV has been dwindling over recent years. So will the experience of Netflix kill off TV?"
-duration: "37:25" 
-length: "35944039"
-explicit: "yes" 
-keywords: "TV, Netflix, television, experience, advertising, "
+file: https://podcast.yubolun.com/podcast/First-podcast.m4a
+summary: "Episode 1 - Yubolun first podcast test audio"
+description: "这里是我的第一条播客试音。"
+duration: "1:19" 
+length: "684507"
+explicit: "no" 
+keywords: "Podcast,test "
 block: "no" 
-voices: "Tim Klapdor, Ben Atkinson and Adam Webster"
+voices: "yubolun"
 ---
 
-### Will Netflix kill TV?
+### Podcast Test
 
-The power of TV has been dwindling over recent years. It is no longer something that unites a nation, it’s not something we do as a collective anymore. Timeshifting, VCRs, DVRs and streaming make watching on demand possible and, by handing us the remote, perhaps a more desirable experience. Netflix’s arrival to Australian shores has had a massive effect on our viewing habits - and the experience of Netflix is fundamentally different to TV. It’s on demand, all available, ad free and cheap - so will it kill TV?
-
-
-### Links: 
-
-- [Agro's Cartoon Connection](https://youtu.be/hPD_RHVFlys)
+这是我的第一条播客试音～
