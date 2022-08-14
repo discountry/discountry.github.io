@@ -17,6 +17,10 @@
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
           <i class="rss icon"></i> RSS
         </a>
+        <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item">
+          <i class="podcast icon"></i> Podcast
+        </a>
+          
       </div>
       <div class="mobile right floated ui dropdown icon item">
         <i class="content icon"></i>
@@ -31,6 +35,9 @@
           {% endfor %}
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
           RSS <i class="rss icon"></i>
+        </a>
+            <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item">
+          <i class="podcast icon"></i> Podcast
         </a>
         </div>
       </div>
