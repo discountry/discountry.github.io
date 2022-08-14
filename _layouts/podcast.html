@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1 class="ui header">
+	{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+</h1>
+
+<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
+	{% if page.image %}
+<p>
+	<img class="ui fluid image" src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}">
+</p>
+	{% else %}
+{% endif %}
+
+{{ content }}
+
+{% include audio.html src={{page.file}} %}
+
+<h4 class="ui horizontal divider header">Do Not Remain Silent</h4>
+
+<a class="backToTop" href="#">
+	<p style="text-align: right;">
+		<i class="chevron up icon"></i>Back To Top</p>
+</a>
