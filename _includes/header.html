@@ -6,7 +6,7 @@
       </a>
       <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
       <div class="right menu">
-        <a class="item" href="https://zh-hans.reactjs.org/" target="_blank">React 中文文档</a>
+        <a class="item" href="https://zh-hans.reactjs.org/"  target="_blank" rel="noreferrer">React 中文文档</a>
         <!-- <a class="item" href="/webui-aria2" target="_blank">Aria2 UI 本地版</a> -->
         {% assign sorted_pages = (site.pages | sort: 'order') %}
         {% for page in sorted_pages %}
@@ -14,10 +14,10 @@
           <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
           <i class="rss icon"></i> RSS
         </a>
-        <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item">
+        <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
           <i class="podcast icon"></i> Podcast
         </a>
           
@@ -25,7 +25,7 @@
       <div class="mobile right floated ui dropdown icon item">
         <i class="content icon"></i>
         <div class="menu">
-          <a class="item" href="https://zh-hans.reactjs.org/" target="_blank">React 中文文档</a>
+          <a class="item" href="https://zh-hans.reactjs.org/" target="_blank" rel="noreferrer">React 中文文档</a>
           <!-- <a class="item" href="/webui-aria2" target="_blank">Aria2 UI 本地版</a> -->
           {% assign sorted_pages = (site.pages | sort: 'order') %}
           {% for page in sorted_pages %}
@@ -33,10 +33,10 @@
               <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
             {% endif %}
           {% endfor %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item">
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
           RSS <i class="rss icon"></i>
         </a>
-            <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item">
+            <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
           <i class="podcast icon"></i> Podcast
         </a>
         </div>
