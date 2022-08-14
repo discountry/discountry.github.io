@@ -23,7 +23,7 @@ layout: none
 		<itunes:category text="Technology" />
 		<itunes:category text="Society &amp; Culture" />
         <itunes:category text="Education">
-            <itunes:category text="Educational Technology" />
+            
         </itunes:category> 
         <itunes:explicit>no</itunes:explicit>
 		
