@@ -1,9 +1,8 @@
 <!-- Html Elements for Search -->
 <div id="search-container">
   <div class="ui fluid search selection dropdown">
-    <input type="hidden">
+    <input type="hidden" id="search-input">
     <i class="dropdown icon"></i>
-    <input class="search"  id="search-input">
     <div class="default text">Search...</div>
     <div class="menu" id="results-container">
     </div>
@@ -18,7 +17,7 @@
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  searchResultTemplate: '<div class="item"><a href="{url}">{title}</a></div>',
+  searchResultTemplate: '<div class="item" style="display: block;"><a href="{url}">{title}</a></div>',
   json: '/search.json'
 })
 </script>
