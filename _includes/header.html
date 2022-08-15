@@ -50,14 +50,3 @@
       </div>
     </div>
   </div>
-<script>
-window.onload = function () {
-    $.getJSON('/search.json', function (data) {
-        $('.ui.search')
-            .search({
-                type: 'category',
-                source: data
-            });
-    });
-}
-</script>
