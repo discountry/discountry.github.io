@@ -2,7 +2,7 @@
 layout: "post"
 title: "How to use CircleCI for GitHub Pages Continuous Deployment"
 date: "2017-12-19 13:25"
-categories: ['tutorial']
+categories: ['tutorials']
 tags: ['github', 'ci']
 published: True
 ---
