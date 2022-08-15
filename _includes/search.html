@@ -1,47 +1,18 @@
-<!-- Html Elements for Search -->
-<div id="search-container">
-  <div class="ui fluid search selection dropdown">
-    <input type="hidden" name="article">
-    <i class="search icon"></i>
-    <input class="search" id="search-input">
-    <div class="default text">Search...</div>
-    <div class="menu" id="results-container">
-    </div>
-  </div>
-</div>
-
-<!-- Script pointing to search-script.js -->
-<script src="/js/search.js" type="text/javascript"></script>
-
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  searchResultTemplate: '<div class="item" style="display: block !important"><a href="{url}">{title}</a></div>',
-  noResultsText: '',
-  json: '/search.json'
-})
-</script>
-
 <div class="ui category search">
-  <div class="ui icon input">
-    <input class="prompt" type="text" placeholder="Search articles...">
-    <i class="search icon"></i>
-  </div>
-  <div class="results"></div>
+   <div class="ui icon input">
+      <input class="prompt" type="text" placeholder="Search articles...">
+      <i class="search icon"></i>
+   </div>
+   <div class="results"></div>
 </div>
-
 <script>
-  window.onload = function () {
-  $.getJSON('/search.json', function(data) {
-    $('.ui.search')
-  .search({
-    type: 'category',
-    source: data
-  })
-;
-});
-  }
-  
+window.onload = function () {
+    $.getJSON('/search.json', function (data) {
+        $('.ui.search')
+            .search({
+                type: 'category',
+                source: data
+            });
+    });
+}
 </script>
