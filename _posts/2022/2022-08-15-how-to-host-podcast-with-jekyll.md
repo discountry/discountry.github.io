@@ -18,6 +18,7 @@ jekyll 是 Github 默认的博客站点生成系统，提供了功能非常完�
 这个 XML 文件也就是我们的播客需要订阅生成的 RSS Feed 文件，你只需要拷贝这个模版到你 jekyll 站点的根目录：
 
 ```xml
+{% raw %}
 ---
 layout: none
 ---
@@ -63,6 +64,7 @@ layout: none
       {% endfor %}
    </channel>
 </rss>
+{% endraw %}
 ```
 
 确保你站点的 `_config.yaml` 文件当中有定义上述相应的变量，例如 `author` `subtitle` 等。
