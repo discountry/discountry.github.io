@@ -2,7 +2,7 @@
 layout: post
 title: jQuery like AngularJS $HTTP Functions
 published: True
-categories: ['snipptes']
+categories: ['snippets']
 tags: ['AngularJS']
 ---
 <!--more-->
