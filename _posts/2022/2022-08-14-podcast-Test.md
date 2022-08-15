@@ -8,8 +8,8 @@ published: True
 file: https://podcast.yubolun.com/podcast/ep0.mp3
 summary: "Episode 1 - Yubolun first podcast test audio"
 description: "这里是我的第一条播客试音。"
-duration: "1:19" 
-length: "684507"
+duration: "1:35" 
+length: "2285527"
 explicit: "no" 
 keywords: "Podcast,test"
 block: "no" 
