@@ -18,7 +18,27 @@ voices: "yubolun"
 
 ### Podcast Test
 
-这是我的第一条播客试音，希望能找到一种更合适的内容沉淀的方式。
+> 这是我的第一条播客试音，希望能找到一种更合适的内容沉淀的方式。
+
+欢迎关注 [我的博客](https://yubolun.com)。
+
+**本期主播：** yubolun
+
+* 00:15 打招呼
+* 00:30 为什么做播客
+* 00:45 内容计划
+
+#### 背景音乐
+
+* Test Background music
+
+#### 订阅地址
+
+```
+https://yubolun.com/podcast.xml
+```
+
+
 
 
 
