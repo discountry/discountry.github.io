@@ -1,11 +1,12 @@
 <!-- Html Elements for Search -->
 <div id="search-container">
-  <div class="ui fluid icon input">
-    <input type="text" id="search-input" placeholder="search...">
-  <i class="search icon"></i>
-</div>
-
-<div class="ui list" id="results-container"></div>
+  <div class="ui fluid search selection dropdown">
+    <i class="dropdown icon"></i>
+    <input class="search" id="search-input">
+    <div class="default text">Search...</div>
+    <div class="menu" id="results-container">
+    </div>
+  </div>
 </div>
 
 <!-- Script pointing to search-script.js -->
@@ -16,7 +17,7 @@
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  searchResultTemplate: '<a class="item" href="{url}">{title}</a>',
+  searchResultTemplate: '<div class="item"><a href="{url}">{title}</a></div>',
   json: '/search.json'
 })
 </script>
