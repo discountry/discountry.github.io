@@ -71,7 +71,8 @@ layout: none
 
 接下来你只需要在撰写新的 `post` 时添加相关的头部描述：
 
-```
+```md
+---
 layout: post
 title: "Title Goes Here"
 date: Publishing date and time
@@ -85,6 +86,7 @@ explicit: "do we swear"
 keywords: "keyword tags"
 block: "hold back publishing it" 
 voices: "who did the talking"
+---
 ```
 
 注意分类要填写我们模版当中定义的 `podcast` 分类，当然你也可以通过 `jekyll collection` 等方式区分发布的播客类型页面。
