@@ -18,7 +18,7 @@ layout: none
          <itunes:name>{{ site.author }}</itunes:name>
          <itunes:email>{{ site.email }}</itunes:email>
       </itunes:owner>
-      <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/itunes.png?v=1" />
+      <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/cover.png" />
       <itunes:category text="Technology" />
       <itunes:category text="Business"> <itunes:category text="Investing" /></itunes:category>
       <itunes:category text="Education" />
