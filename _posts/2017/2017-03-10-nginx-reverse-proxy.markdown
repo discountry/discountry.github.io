@@ -2,7 +2,7 @@
 layout: "post"
 title: "How to set up Nginx reverse proxy for Blocked Websites"
 date: "2017-03-10 23:55"
-categories: ['tutorial']
+categories: ['tutorials']
 tags: ['linux', 'nginx']
 published: True
 ---
