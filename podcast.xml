@@ -31,7 +31,7 @@ layout: none
          <itunes:summary>{{ post.summary | xml_escape }}</itunes:summary>
          <itunes:image href="{{ site.url }}/images/itunes.png" />
          <link>{{ post.url | prepend: site.url }}</link>
-         <enclosure url="{{ post.file }}" length="{{ post.length }}" type="audio/x-m4a" />
+         <enclosure url="{{ post.file }}" length="{{ post.length }}" type="audio/mpeg" />
          <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
          <itunes:duration>{{ post.duration }}</itunes:duration>
