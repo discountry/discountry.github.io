@@ -20,6 +20,8 @@ voices: "yubolun"
 
 > 这是我的第一条播客试音，希望能找到一种更合适的内容沉淀的方式。
 
+<!--more-->
+
 欢迎关注 [我的博客](https://yubolun.com)。
 
 **本期主播：** yubolun
