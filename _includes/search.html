@@ -23,3 +23,22 @@ SimpleJekyllSearch({
   json: '/search.json'
 })
 </script>
+
+<div class="ui category search">
+  <div class="ui icon input">
+    <input class="prompt" type="text" placeholder="Search articles...">
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
+</div>
+
+<script>
+  $.getJSON('/search.json', function(data) {
+    $('.ui.search')
+  .search({
+    type: 'category',
+    source: data
+  })
+;
+});
+</script>
