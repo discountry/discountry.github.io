@@ -4,6 +4,13 @@
         <img class="logo" src="{{ site.logo | prepend: site.imageurl }}">
         {{ site.title }}
       </a>
+      <div class="ui category search item">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" placeholder="Search articles...">
+          <i class="search link icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
       <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
       <div class="right menu">
         <a class="item" href="https://zh-hans.reactjs.org/"  target="_blank" rel="noreferrer">React 中文文档</a>
