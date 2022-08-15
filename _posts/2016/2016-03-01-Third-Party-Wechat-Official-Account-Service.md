@@ -3,7 +3,7 @@ layout: post
 title: How to set up a third party Wechat Official Account Service
 image: wechat-dev.jpg
 published: True
-categories: ['tutorial']
+categories: ['tutorials']
 tags: ['php','wechat']
 ---
 
