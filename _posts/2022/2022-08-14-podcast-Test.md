@@ -5,7 +5,7 @@ date: "2022-08-14 21:37:00"
 categories: ['podcast']
 tags: ['test']
 published: True
-file: https://podcast.yubolun.com/podcast/First-podcast.m4a
+file: https://podcast.yubolun.com/podcast/ep0.mp3
 summary: "Episode 1 - Yubolun first podcast test audio"
 description: "这里是我的第一条播客试音。"
 duration: "1:19" 
