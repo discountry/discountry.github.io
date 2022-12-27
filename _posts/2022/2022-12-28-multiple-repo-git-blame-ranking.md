@@ -22,7 +22,7 @@ Change `PROJECTS_LIST` to match your own projects dir list.
 Run the bash command and magic happens.
 
 ```bash
-rankNumber=5
+rankNumber=10
 
 PROJECTS_LIST=('~/project1' '~/project12')
 
@@ -33,6 +33,23 @@ do
 done
 
 cat ~/rank.txt | sort -k2 -gr | awk "NR<$rankNumber+1"
+rm ~/rank.txt
+```
+
+Use this one if your team has same developers in different projects:
+
+```bash
+rankNumber=10
+
+PROJECTS_LIST=('~/project1' '~/project12')
+
+for project in "${PROJECTS_LIST[@]}"
+do
+  cd $project
+  git ls-files | while read f; do git blame -w --line-porcelain -- "$f" | grep -I '^author '; done >> ~/rank.txt
+done
+
+cat ~/rank.txt | sort -f | uniq -ic | sort -k2 -gr | awk "NR<$rankNumber+1"
 rm ~/rank.txt
 ```
 
