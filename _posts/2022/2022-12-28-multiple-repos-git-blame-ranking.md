@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Multiple git repo contributors lines of code ranking"
+title: "Multiple git repos contributors lines of code ranking"
 date: "2022-12-28 00:00"
 categories: ['snippets']
 tags: ['bash']
