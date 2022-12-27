@@ -11,6 +11,10 @@ Multiple git repos contributors lines of code ranking sort by desc.
 
 <!--more-->
 
+#### Screenshot
+
+![github-ranking]({{ site.url }}/images/github-ranking.png)
+
 #### Usage
 
 Make sure you have all the repos in your home dir. or change `~/` to your git repos location.
