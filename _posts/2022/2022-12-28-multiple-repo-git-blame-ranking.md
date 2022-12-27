@@ -1,13 +1,13 @@
 ---
 layout: "post"
-title: "Multiple git repo contributors code lines ranking"
+title: "Multiple git repo contributors lines of code ranking"
 date: "2022-12-28 00:00"
 categories: ['snippets']
 tags: ['bash']
 published: True
 ---
 
-Multiple git repos contributors code lines ranking sort by desc.
+Multiple git repos contributors lines of code ranking sort by desc.
 
 <!--more-->
 
