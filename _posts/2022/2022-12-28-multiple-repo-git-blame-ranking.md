@@ -1,0 +1,38 @@
+---
+layout: "post"
+title: "Multiple git repo contributors code line ranking"
+date: "2022-12-28 00:00"
+categories: ['snippets']
+tags: ['bash']
+published: True
+---
+
+Multiple git repos contributors code line ranking sort by desc.
+
+<!--more-->
+
+#### Usage
+
+Make sure you have all the repos in your home dir. or change `~/` to your git repos location.
+
+Change `rankNumber` to get top 5 or top 10 contributors.
+
+Change `PROJECTS_LIST` to match your own projects dir list.
+
+Run the bash command and magic happens.
+
+```bash
+rankNumber=5
+
+PROJECTS_LIST=('~/project1' '~/project12')
+
+for project in "${PROJECTS_LIST[@]}"
+do
+  cd $project
+  git ls-files | while read f; do git blame -w --line-porcelain -- "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -k2 -gr >> ~/rank.txt
+done
+
+cat ~/rank.txt | sort -k2 -gr | awk "NR<$rankNumber+1"
+rm ~/rank.txt
+```
+
