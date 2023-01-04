@@ -33,7 +33,7 @@ PROJECTS_LIST=('~/project1' '~/project12')
 for project in "${PROJECTS_LIST[@]}"
 do
   cd $project
-  git ls-files | while read f; do git blame -w --line-porcelain -- "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -k2 -gr >> ~/rank.txt
+  git ls-files | while read f; do git blame -w --line-porcelain -- "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -k1 -gr >> ~/rank.txt
 done
 
 cat ~/rank.txt | sort -k2 -gr | awk "NR<$rankNumber+1"
@@ -53,7 +53,7 @@ do
   git ls-files | while read f; do git blame -w --line-porcelain -- "$f" | grep -I '^author '; done >> ~/rank.txt
 done
 
-cat ~/rank.txt | sort -f | uniq -ic | sort -k2 -gr | awk "NR<$rankNumber+1"
+cat ~/rank.txt | sort -f | uniq -ic | sort -k1 -gr | awk "NR<$rankNumber+1"
 rm ~/rank.txt
 ```
 
