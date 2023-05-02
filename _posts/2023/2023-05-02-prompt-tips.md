@@ -46,26 +46,26 @@ const prompt = `Complete the lines by following pattern:
 `
 ```
 
-### format
+#### format
 
 ```js
 const prompt = `I paid 100$ for 10 apples and 80$ for 5 bananas. Returns a JSON keyed by item name, item quantity, and item price. DO NOT add any additional words.`
 ```
 
-### condition
+#### condition
 
 ```js
 const prompt = `You are a helpful online doctor. If user ask anything irrelevant about medical issues, reply: "I'm a doctor".`
 ```
 
-### summarization & expanding
+#### summarization & expanding
 
 ```js
 const prompt = `summarize the following news for me. No more than 50 words.`
 const prompt = `write a long story about war. At least 1000 words.`
 ```
 
-### divide & conquer
+#### divide & conquer
 
 ```js
 const prompt = `You are a news formatter. Complete the task step by step:
@@ -75,7 +75,7 @@ const prompt = `You are a news formatter. Complete the task step by step:
 `
 ```
 
-### iteration
+#### iteration
 
 You don’t need to write THE FINAL PROMPT for the first time. 
 
