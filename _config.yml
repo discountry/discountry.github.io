@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://yubolun.com" # the base hostname & protocol for your site
 imageurl: "https://yubolun.com/images/"
 twitter_username: discountifu
-weibo_id: 2056725322
+# weibo_id: 2056725322
 github_username:  discountry
 codepen_username:  discountry
 # wordpress_site: "https://yubolun.com"
