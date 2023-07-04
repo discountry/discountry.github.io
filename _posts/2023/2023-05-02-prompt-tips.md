@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "ChatGPT prompt engineer tips"
-date: "2022-12-28 00:00"
+date: "2023-05-02 00:00"
 categories: ['snippets']
 tags: ['chatgpt']
 published: True
