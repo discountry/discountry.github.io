@@ -4,12 +4,12 @@ title: About
 order: 1
 ---
 
-## This is discountry's personal Dev blog. Powered by [Jekyll](https://jekyllrb.com/).
+### Selected projects of mine:
 
-### Theme Dependencies
-
-* [Semantic UI](http://www.semantic-ui.com/)
-* [fancybox](https://github.com/fancyapps/fancybox)
+* [blofin-ui](https://yubolun.com/blofin-ui/)
+* [tradingview-okx](https://github.com/discountry/tradingview-okx)
+* [openai-telegram-bot](https://github.com/discountry/openai-telegram-bot)
+* [React/Redux/react-router Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets)
 
 ### Other websites I've made:
 
