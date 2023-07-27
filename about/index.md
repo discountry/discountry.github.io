@@ -13,7 +13,6 @@ order: 1
 
 ### Other websites I've made:
 
-* [Blofin](https://blofin.com/)
 * [SigniFi](https://signifi.life)
 * [RitMEX](https://ritmex.one)
 * [RitMEX-Trade](https://trade.ritmex.one/)
