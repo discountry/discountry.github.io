@@ -23,5 +23,7 @@ published: True
 #### ETH2.0 CEX staking
 
 * [Binance loan](https://www.binance.com/loan) (1.6%~2%)
+* [Binance ETH2.0](https://www.binance.com/eth2)
 * [OKX loan](https://www.okx.com/loan) (1%)
+* [OKX ETH2.0](https://www.okx.com/earn/eth2)
 
