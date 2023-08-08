@@ -15,5 +15,13 @@ published: True
 * [GMX LP](https://app.gmx.io/#/earn)
 * [Uniswap USDC/WETH LP](https://app.uniswap.org/#/add/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/500?chain=mainnet)
 
+#### Defi staking strategies
 
+* [ETH2.0 Leveraged staking](https://app.defisaver.com/recipes/leveraged-staking)
+* [GLP/Binance hedging staking](https://app.solv.finance/earn/open-fund/detail/2)
+
+#### ETH2.0 CEX staking
+
+* [Binance loan](https://www.binance.com/loan) (1.6%~2%)
+* [OKX loan](https://www.okx.com/loan) (1%)
 
