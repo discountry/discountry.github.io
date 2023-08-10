@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Select Yield Rankings"
+title: "Selected Yield Rankings"
 date: "2023-08-02 00:00"
 categories: ['defi']
 tags: ['yield']
