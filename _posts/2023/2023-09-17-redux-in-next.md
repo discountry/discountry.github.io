@@ -2,8 +2,8 @@
 layout: "post"
 title: "Redux in Next.js"
 date: "2023-09-17 00:00"
-categories: ['react']
-tags: ['redux']
+categories: ['redux']
+tags: ['react']
 published: True
 ---
 
