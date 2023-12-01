@@ -55,7 +55,7 @@ published: True
 
 ### 投资逻辑
 
-买入同类、同板块代币中被低估的代币、卖出被高估的代币，即买入同赛道、同级别项目中总市值较低的，例如 ARB 和 OP 之间要选 OP
+买入同类、同板块代币中被低估的代币、卖出被高估的代币，即买入同赛道、同级别项目中总市值较低的，例如 [ARB 和 OP](https://www.coinpare.io/compare?coins=arb-arbitrum_op-optimism) 之间要选 OP
 
 市值相近、赛道接近的币种，选择锁仓量更高的，而不是已经完全去中心化的（反面教材 MATIC UNI EOS）
 
