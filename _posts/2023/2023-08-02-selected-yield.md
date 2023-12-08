@@ -27,3 +27,7 @@ published: True
 * [OKX loan](https://www.okx.com/loan) (1%)
 * [OKX ETH2.0](https://www.okx.com/earn/eth2)
 
+#### Airdrop
+
+* [Tokenless protocols that may airdrop](https://defillama.com/airdrops?hideForks=true&chain=Ethereum&chain=BSC&chain=Arbitrum&chain=Solana&chain=Polygon&chain=Optimism&chain=Base&chain=zkSync+Era&chain=Linea&chain=Scroll)
+
