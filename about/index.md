@@ -4,7 +4,7 @@ title: About
 order: 1
 ---
 
-As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Next.js, and React Native. I have over 5 years of experience both in working teamed-up & independently.
+As a Full Stack Engineer, I have successfully guided multiple products from inception to launch. I effectively lead teams, fostering an environment that enables everyone to perform at their best. Currently, my work primarily involves TypeScript, React, Next.js, and React Native. I possess over five years of experience working both collaboratively and independently.
 
 ### Work Experience
 
