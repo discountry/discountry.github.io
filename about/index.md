@@ -4,7 +4,7 @@ title: About
 order: 1
 ---
 
-> As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Next.js, and React Native. I have over 5 years of experience both in working teamed-up & independently.
+As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Next.js, and React Native. I have over 5 years of experience both in working teamed-up & independently.
 
 ### Work Experience
 
@@ -28,7 +28,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 
 ### Selected projects of mine:
 
-* [blofin-ui](https://yubolun.com/blofin-ui/)
+* [exchange-ui](https://github.com/discountry/exchange-ui)
 * [tradingview-okx](https://github.com/discountry/tradingview-okx)
 * [openai-telegram-bot](https://github.com/discountry/openai-telegram-bot)
 * [React/Redux/react-router Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets)
