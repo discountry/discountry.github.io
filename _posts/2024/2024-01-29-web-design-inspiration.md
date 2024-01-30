@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Web Design Inspiration"
-date: "2024-01-28 00:00"
+date: "2024-01-29 00:00"
 categories: ['web']
 tags: ['design']
 published: True
