@@ -26,6 +26,7 @@ Web Design Inspiration list:
 * [wappalyzer](https://www.wappalyzer.com/)
 * [rayst](https://ray.st/)
 * [ossinsight](https://ossinsight.io/)
+* [bestofjs](https://bestofjs.org/)
 * [stackshare](https://stackshare.io/)
 * [stateofjs](https://stateofjs.com/)
 * [stackoverflow survey](https://insights.stackoverflow.com/survey/)
