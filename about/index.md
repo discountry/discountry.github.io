@@ -34,10 +34,10 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 
 ### Selected projects of mine:
 
+* [React/Redux/react-router Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets) (240k installs)
 * [exchange-ui](https://github.com/discountry/exchange-ui)
 * [tradingview-okx](https://github.com/discountry/tradingview-okx)
 * [openai-telegram-bot](https://github.com/discountry/openai-telegram-bot)
-* [React/Redux/react-router Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets)
 
 ### Websites I've made:
 
