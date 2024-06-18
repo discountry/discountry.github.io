@@ -14,7 +14,7 @@ As a Full Stack Engineer, I have successfully guided multiple products from ince
 
 **Senior Frontend Developer**
 
-Implemented new features, code refactor, worked on improving the way developers ship the code. Responsible for recruitment. Technologies: React, TypeScript, React Native.
+Implemented new features, code refactor, worked on improving the way developers ship the code. Responsible for recruitment. Technologies: **React**, **TypeScript**, **React Native**.
 
 <h4 style="display: flex; justify-content: space-between; align-items: baseline;">
   <span>TokenInsight</span> <span>2022-2023</span>
@@ -22,7 +22,7 @@ Implemented new features, code refactor, worked on improving the way developers 
 
 **Lead Frontend Developer**
 
-Created an advanced trading platform from skeleton. Leading the squad in implementing new frameworks. Technologies: React, TypeScript, Next.js, Tailwind CSS and more.
+Created an advanced trading platform from skeleton. Leading the squad in implementing new frameworks. Technologies: **React**, **TypeScript**, **Next.js**, **Tailwind CSS** and more.
 
 <h4 style="display: flex; justify-content: space-between; align-items: baseline;">
   <span>Komiko Tech.</span> <span>2019-2022</span>
