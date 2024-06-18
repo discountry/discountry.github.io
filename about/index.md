@@ -41,6 +41,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 
 ### Websites I've made:
 
+* [SeaStar](https://seastar.club)
 * [SigniFi](https://signifi.life)
 * [RitMEX](https://ritmex.one)
 * [RitMEX-Trade](https://trade.ritmex.one/)
