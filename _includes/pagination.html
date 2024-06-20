@@ -15,10 +15,10 @@
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-    <span class="active item">{{ page }}</span>
-    {% elsif page == 1 %}
+      <span class="active item">{{ page }}</span>
+    {% elsif page == 1 and paginator.page <= 3 %}
       <a class="item" href="{{ '/' | relative_url }}">{{ page }}</a>
-    {% elsif page == paginator.total_pages %}
+    {% elsif page == paginator.total_pages and paginator.page >= paginator.total_pages - 2 %}
       <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% elsif page >= paginator.page - 2 and page <= paginator.page + 2 %}
       <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
