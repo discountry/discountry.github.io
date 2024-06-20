@@ -1,39 +1,14 @@
-{% if paginator.total_pages > 1 %}
-<div class="ui fluid pagination menu">
+<!-- Pagination links -->
+<div class="ui fluid three item pagination menu">
   {% if paginator.previous_page %}
-    <a class="item" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous item">Previous</a>
   {% else %}
-    <span class="disabled item">&laquo; Prev</span>
+    <span class="disabled item">Previous</span>
   {% endif %}
-
-  {% if paginator.page > 3 %}
-    <a class="item" href="{{ '/' | relative_url }}">1</a>
-    {% if paginator.page > 4 %}
-      <span class="disabled item">...</span>
-    {% endif %}
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page > paginator.page - 3 and page < paginator.page + 3 %}
-      {% if page == paginator.page %}
-        <span class="active item">{{ page }}</span>
-      {% else %}
-        <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.page < paginator.total_pages - 2 %}
-    {% if paginator.page < paginator.total_pages - 3 %}
-      <span class="disabled item">...</span>
-    {% endif %}
-    <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
-  {% endif %}
-
+  <span class="page_number item">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a class="item" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path }}" class="next item">Next</a>
   {% else %}
-    <span class="disabled item">Next &raquo;</span>
+    <span class="disabled item">Next</span>
   {% endif %}
 </div>
-{% endif %}
