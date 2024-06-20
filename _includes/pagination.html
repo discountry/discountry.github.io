@@ -6,13 +6,15 @@
     <span class="disabled item">&laquo; Prev</span>
   {% endif %}
 
-  {% if paginator.page > 4 %}
+  {% if paginator.page > 3 %}
     <a class="item" href="{{ '/' | relative_url }}">1</a>
-    <span class="disabled item">...</span>
+    {% if paginator.page > 4 %}
+      <span class="disabled item">...</span>
+    {% endif %}
   {% endif %}
 
-  {% for page in (paginator.page - 2..paginator.page + 2) %}
-    {% if page > 0 and page <= paginator.total_pages %}
+  {% for page in (1..paginator.total_pages) %}
+    {% if page > paginator.page - 3 and page < paginator.page + 3 %}
       {% if page == paginator.page %}
         <span class="active item">{{ page }}</span>
       {% else %}
@@ -21,8 +23,10 @@
     {% endif %}
   {% endfor %}
 
-  {% if paginator.page < paginator.total_pages - 3 %}
-    <span class="disabled item">...</span>
+  {% if paginator.page < paginator.total_pages - 2 %}
+    {% if paginator.page < paginator.total_pages - 3 %}
+      <span class="disabled item">...</span>
+    {% endif %}
     <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
   {% endif %}
 
