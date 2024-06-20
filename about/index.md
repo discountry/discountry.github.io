@@ -34,6 +34,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 
 ### Selected projects of mine:
 
+* [React Chinese Doc](https://github.com/discountry/react) (1.3k stars)
 * [React Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets) (240k installs)
 * [exchange-ui](https://github.com/discountry/exchange-ui)
 * [tradingview-okx](https://github.com/discountry/tradingview-okx)
@@ -48,3 +49,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 * [Altfolio](https://altfolio.ritmex.one/)
 * [SummerX](https://summmerx.com/)
 * [Chatgpt-toolbox](https://chatgpt.yubolun.com)
+
+### Publications
+
+* [Object-Oriented JavaScript 3rd Edition](https://book.douban.com/subject/35692269/)
