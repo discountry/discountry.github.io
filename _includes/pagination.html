@@ -6,15 +6,31 @@
     <span>&laquo; Prev</span>
   {% endif %}
 
+  {% if paginator.page > 3 %}
+    <a href="{{ '/' | relative_url }}">1</a>
+    {% if paginator.page > 4 %}
+      <span>...</span>
+    {% endif %}
+  {% endif %}
+
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% elsif page == 1 %}
       <a href="{{ '/' | relative_url }}">{{ page }}</a>
-    {% else if {{page - paginator.page | abs}} < 3 %}
+    {% elsif page == paginator.total_pages %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% elsif page >= paginator.page - 2 and page <= paginator.page + 2 %}
       <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
+
+  {% if paginator.page < paginator.total_pages - 2 %}
+    {% if paginator.page < paginator.total_pages - 3 %}
+      <span>...</span>
+    {% endif %}
+    <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
+  {% endif %}
 
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
