@@ -1,41 +1,41 @@
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<div class="ui fluid pagination menu">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    <a class="item" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span class="disabled item">&laquo; Prev</span>
   {% endif %}
 
   {% if paginator.page > 3 %}
-    <a href="{{ '/' | relative_url }}">1</a>
+    <a class="item" href="{{ '/' | relative_url }}">1</a>
     {% if paginator.page > 4 %}
-      <span>...</span>
+      <span class="disabled item">...</span>
     {% endif %}
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+    <span class="active item">{{ page }}</span>
     {% elsif page == 1 %}
-      <a href="{{ '/' | relative_url }}">{{ page }}</a>
+      <a class="item" href="{{ '/' | relative_url }}">{{ page }}</a>
     {% elsif page == paginator.total_pages %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% elsif page >= paginator.page - 2 and page <= paginator.page + 2 %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
   {% if paginator.page < paginator.total_pages - 2 %}
     {% if paginator.page < paginator.total_pages - 3 %}
-      <span>...</span>
+      <span class="disabled item">...</span>
     {% endif %}
-    <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
+    <a class="item" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
   {% endif %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    <a class="item" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span class="disabled item">Next &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
