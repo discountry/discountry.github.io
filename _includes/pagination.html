@@ -1,11 +1,38 @@
 <!-- Pagination links -->
-<div class="ui fluid three item pagination menu">
+<div class="ui fluid pagination menu">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous item">Previous</a>
   {% else %}
     <span class="disabled item">Previous</span>
   {% endif %}
-  <span class="page_number item">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  <!-- First page link -->
+  {% if paginator.page > 3 %}
+    <a href="{{ paginator.page_path | replace: ':num', 1 }}" class="item">1</a>
+    {% if paginator.page > 4 %}
+      <span class="item">...</span>
+    {% endif %}
+  {% endif %}
+
+  <!-- Page links around the current page -->
+  {% for page in (paginator.page-2..paginator.page+2) %}
+    {% if page > 0 and page <= paginator.total_pages %}
+      {% if page == paginator.page %}
+        <span class="active item">{{ page }}</span>
+      {% else %}
+        <a href="{{ paginator.page_path | replace: ':num', page }}" class="item">{{ page }}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  <!-- Last page link -->
+  {% if paginator.page < paginator.total_pages - 2 %}
+    {% if paginator.page < paginator.total_pages - 3 %}
+      <span class="item">...</span>
+    {% endif %}
+    <a href="{{ paginator.page_path | replace: ':num', paginator.total_pages }}" class="item">{{ paginator.total_pages }}</a>
+  {% endif %}
+
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next item">Next</a>
   {% else %}
