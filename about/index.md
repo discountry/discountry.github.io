@@ -47,7 +47,6 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 * [RitMEX](https://ritmex.one)
 * [RitMEX-Trade](https://trade.ritmex.one/)
 * [Altfolio](https://altfolio.ritmex.one/)
-* [SummerX](https://summmerx.com/)
 * [Chatgpt-toolbox](https://chatgpt.yubolun.com)
 
 ### Publications
