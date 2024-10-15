@@ -32,7 +32,7 @@ Created an advanced trading platform from skeleton. Leading the squad in impleme
 
 Co-founded a technology company specialized in the WeChat ecosystem, overseeing both front-end and back-end technical implementation, product iteration, and team recruitment.
 
-### Selected projects of mine:
+### Selected Projects
 
 * [React Chinese Doc](https://github.com/discountry/react) (1.3k stars)
 * [React Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets) (240k installs)
@@ -40,7 +40,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 * [tradingview-okx](https://github.com/discountry/tradingview-okx)
 * [openai-telegram-bot](https://github.com/discountry/openai-telegram-bot)
 
-### Websites I've made:
+### My Websites
 
 * [SigniFi](https://signifi.life) (10k+ users)
 * [SeaStar](https://seastar.club)
@@ -52,3 +52,9 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 ### Publications
 
 * [Object-Oriented JavaScript 3rd Edition](https://book.douban.com/subject/35692269/)
+
+### Open Source Contributions
+
+* [freeCodeCamp](https://www.freecodecamp.org/)
+* [React](https://react.dev/)
+* [ccxt](https://github.com/ccxt/ccxt)
