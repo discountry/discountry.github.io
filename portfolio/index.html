@@ -7,7 +7,7 @@ permalink: /portfolio/
 <div class="portfolio-container">
   <div class="portfolio-grid">
     {% for website in site.websites %}
-      <a href="{{ website.url }}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+      <a href="{{ website.link }}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
         <div class="portfolio-item">
           <div class="portfolio-image-container">
             <img src="{{ site.imageurl }}{{ website.cover | prepend: '/websites/' }}" alt="{{ website.title }}" class="portfolio-image">

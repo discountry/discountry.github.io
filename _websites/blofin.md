@@ -4,7 +4,7 @@ title: Blofin
 published: True
 categories: ['Websites']
 tags: ['Crypto', 'Trading']
-url: https://blofin.com
+link: https://blofin.com
 cover: blofin.png
 ---
 

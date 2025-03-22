@@ -4,7 +4,7 @@ title: RitMEX
 published: True
 categories: ['Websites']
 tags: ['Crypto', 'Trading']
-url: https://ritmex.one
+link: https://ritmex.one
 cover: ritmex.png
 ---
 
