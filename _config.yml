@@ -33,4 +33,3 @@ collections:
   websites:
     output: true
     permalink: /websites/:path/
-    source: collection/_websites
