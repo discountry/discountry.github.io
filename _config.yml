@@ -28,3 +28,9 @@ lang: zh-Hans
 subtitle: Dev Blog
 author: yubolun
 
+#Collections
+collections:
+  websites:
+    output: true
+    permalink: /websites/:path/
+    source: collection/_websites
