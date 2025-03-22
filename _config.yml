@@ -32,4 +32,5 @@ author: yubolun
 collections:
   websites:
     output: true
+    sort_by: date
     permalink: /websites/:path/
