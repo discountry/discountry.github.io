@@ -13,7 +13,7 @@ permalink: /portfolio/
       <a href="{{ website.url }}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
         <div class="portfolio-item">
           <div class="portfolio-image-container">
-            <img src="{{ site.imageurl }}{{ website.cover }}" alt="{{ website.title }}" class="portfolio-image">
+            <img src="{{ site.imageurl }}{{ website.cover | prepend: '/websites/' }}" alt="{{ website.title }}" class="portfolio-image">
           </div>
           <div class="portfolio-content">
             <h2 class="portfolio-name">{{ website.title }}</h2>
