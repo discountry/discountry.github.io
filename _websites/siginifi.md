@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Siginifi
+title: Signifi
 published: True
-categories: ['Project']
-tags: ['Websites', 'Tarot', 'AI']
-url: https://siginifi.life
-cover: siginifi.png
+categories: ['Websites']
+tags: ['Tarot', 'AI']
+url: https://signifi.life
+cover: signifi.png
 ---
 
-Siginifi is an AI Tarot fortune teller platform.
+Signifi is an AI Tarot fortune teller platform.

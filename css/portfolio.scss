@@ -7,19 +7,9 @@
   padding: 2rem 1rem;
 }
 
-.portfolio-description {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -33,21 +23,21 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    
-    .portfolio-image {
-      transform: scale(1.05);
-    }
-  }
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
 }
 
 .portfolio-image-container {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%; // 16:9 aspect ratio
+  padding-top: 66.67%; /* 3:2 aspect ratio for larger images */
 }
 
 .portfolio-image {
@@ -61,35 +51,46 @@
 }
 
 .portfolio-content {
-  padding: 1.5rem;
+  padding: 1.2rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .portfolio-name {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
   color: #333;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .portfolio-description {
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   flex-grow: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 3.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
 }
 
 .portfolio-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .portfolio-tag {
-  font-size: 0.8rem;
-  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 20px;
   background-color: #f0f0f0;
   color: #666;
@@ -100,20 +101,14 @@
   text-decoration: none;
   color: inherit;
   height: 100%;
-  
-  &:hover, &:focus {
-    text-decoration: none;
-    color: inherit;
-  }
+}
+
+.portfolio-link:hover, .portfolio-link:focus {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }

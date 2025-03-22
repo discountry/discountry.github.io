@@ -2,8 +2,8 @@
 layout: post
 title: Blofin
 published: True
-categories: ['Project']
-tags: ['Websites', 'Crypto', 'Trading']
+categories: ['Websites']
+tags: ['Crypto', 'Trading']
 url: https://blofin.com
 cover: blofin.png
 ---
