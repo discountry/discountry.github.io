@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blofin
+date: "2022-03-22 00:00"
 published: True
 categories: ['Websites']
 tags: ['Crypto', 'Trading']

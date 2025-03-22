@@ -7,6 +7,14 @@
   padding: 2rem 1rem;
 }
 
+.portfolio-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
