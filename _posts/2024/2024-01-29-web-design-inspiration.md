@@ -9,9 +9,7 @@ published: True
 
 Web Design Inspiration list:
 
-<!--more-->
-
-## Design reference
+### Design reference
 
 * [dribbble](https://dribbble.com/search/)
 * [awwwards](https://www.awwwards.com/inspiration_search/)
@@ -20,6 +18,8 @@ Web Design Inspiration list:
 * [screenlane](https://screenlane.com/)
 * [godly](https://godly.website/)
 * [siteinspire](https://www.siteinspire.com/)
+
+<!--more-->
 
 ### Web Stack
 
