@@ -21,7 +21,7 @@ markdown: kramdown
 highlighter: rouge
 
 #Pagination
-paginate: 10
+paginate: 20
 
 #Podcast
 lang: zh-Hans
