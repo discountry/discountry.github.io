@@ -112,6 +112,72 @@ sudo swapoff /swapfile
 
 ---
 
+在 Ubuntu 中，如果系统自带了 swap 文件，你可以通过以下方法查看其大小：
+
+### 1. **查看当前 swap 文件的大小**
+
+执行以下命令：
+
+```bash
+sudo swapon --show
+```
+
+该命令会显示所有活跃的 swap 分区或文件，并包含它们的大小信息。
+
+示例输出：
+
+```
+NAME      TYPE      SIZE  USED PRIO
+/swapfile file      1G   0B   -2
+```
+
+在这个例子中，`/swapfile` 的大小是 1GB。
+
+### 2. **查看 `/swapfile` 的实际大小**
+
+如果你想查看 swap 文件本身的大小，可以使用：
+
+```bash
+ls -lh /swapfile
+```
+
+这会显示 `swapfile` 的大小，例如：
+
+```
+-rw------- 1 root root 1.0G Jun 10 12:34 /swapfile
+```
+
+这里显示的是 1GB 大小的 swap 文件。
+
+---
+
+如果你发现默认的 swap 文件太小，可以通过以下步骤调整其大小：
+
+1. **关闭 swap**
+
+   ```bash
+   sudo swapoff /swapfile
+   ```
+
+2. **修改 swap 文件大小**
+
+   ```bash
+   sudo fallocate -l 2G /swapfile  # 例如，修改为 2GB
+   ```
+
+3. **重新格式化并启用 swap**
+
+   ```bash
+   sudo mkswap /swapfile
+   sudo swapon /swapfile
+   ```
+
+4. **验证**
+
+   ```bash
+   sudo swapon --show
+   ```
+
 ## 🏁 总结
 
 在低配 VPS 上编译大型工具并非不可能，只需合理使用虚拟内存（swap），就能绕过 RAM 限制。通过本文提供的步骤，我成功在一台只有 **512MB 内存的 VPS** 上完成了 `cmake` 的安装。希望对你也有所帮助！
