@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Hysteria2 拯救 AWS lightsail 极速上网冲浪"
+title: "Hysteria2 拯救 AWS lightsail 极速科学上网"
 date: "2025-06-12 00:00"
 categories: ["tutorial"]
 tags: ["vps"]
