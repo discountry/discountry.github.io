@@ -9,7 +9,7 @@ As a Full Stack Engineer, I have successfully guided multiple products from ince
 ### Work Experience
 
 <h4 style="display: flex; justify-content: space-between; align-items: baseline;">
-  <span>Meituan</span> <span>2023-Now</span>
+  <span>Meituan</span> <span>2023-2025</span>
 </h4>
 
 **Senior Frontend Developer**
