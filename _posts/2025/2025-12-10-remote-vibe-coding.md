@@ -37,7 +37,7 @@ npm install -g @openai/codex
 codex
 ```
 
-3. **手机端用 Termius / Blink 等 SSH App 登录 VPS。**
+3. **手机端用 Termius 等 SSH App 登录 VPS。**
    进入终端后就能直接使用 CLI，在手机上写代码、跑 agent。
 
 特点：
