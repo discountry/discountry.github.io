@@ -40,13 +40,13 @@ Codex CLI 的命令行交互较为原始，沙箱环境存在不少 bug，执行
 ### 一条命令完成添加（用户作用域）
 
 ```bash
-claude mcp add codex -s user -- codex -m gpt-5.1-codex-max -c model_reasoning_effort="high" mcp-server
+claude mcp add codex -s user -- codex -m gpt-5.3-codex -c model_reasoning_effort="high" mcp-server
 ```
 
 **参数说明：**
 - `-s user`：将服务器写入用户全局配置，所有项目可用且不会改动仓库文件
 - `--`：分隔 Claude MCP 参数与实际服务器启动命令
-- `codex -m gpt-5.1-codex-max`：指定要暴露的 Codex 模型
+- `codex -m gpt-5.3-codex-max`：指定要暴露的 Codex 模型
 - `-c model_reasoning_effort="high"`：为 Codex 进程设置高推理强度
 - `mcp-server`：启动 Codex 的 MCP 服务器模式
 
@@ -68,7 +68,7 @@ claude mcp get codex
 
 1. 打开 Claude Code，在对话中输入 `/mcp` 命令
 2. 选择 `codex` 服务器
-3. 直接在对话中调用 Codex 暴露的工具；如需指定模型，可在提示中写明 `gpt-5.1-codex-max`
+3. 直接在对话中调用 Codex 暴露的工具；如需指定模型，可在提示中写明 `gpt-5.3-codex`
 
 现在你可以在 Claude Code 的完善环境中使用 Codex 的能力，同时享受更好的交互体验和工具集成。
 
