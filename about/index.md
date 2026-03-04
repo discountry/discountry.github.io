@@ -43,7 +43,7 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 ### My Websites
 
 * [SigniFi](https://tarot.suansuan.app/) (10k+ users)
-* [SeaStar](https://seastar.club)
+* [Starea](https://www.starea.xyz/)
 * [RitMEX](https://ritmex.one)
 * [RitMEX-Trade](https://trade.ritmex.one/)
 * [Altfolio](https://altfolio.ritmex.one/)
