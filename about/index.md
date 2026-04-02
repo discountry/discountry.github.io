@@ -35,19 +35,16 @@ Co-founded a technology company specialized in the WeChat ecosystem, overseeing 
 ### Selected Projects
 
 * [React Chinese Doc](https://github.com/discountry/react) (1.3k stars)
-* [React Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets) (240k installs)
-* [exchange-ui](https://github.com/discountry/exchange-ui)
-* [tradingview-okx](https://github.com/discountry/tradingview-okx)
-* [openai-telegram-bot](https://github.com/discountry/openai-telegram-bot)
+* [React Snippets](https://marketplace.visualstudio.com/items?itemName=discountry.react-redux-react-router-snippets) (280k installs)
+* [ritmex-bot](https://github.com/discountry/ritmex-bot) (1B Trading Volume)
+* [pi-safe-coder](https://github.com/discountry/safe-coder) (Minimum AI Coding Agent)
 
 ### My Websites
 
 * [SigniFi](https://tarot.suansuan.app/) (10k+ users)
+* [RitMEX](https://ritmex.one) ($10k revenue)
+* [Suansuan](https://www.suansuan.app/)
 * [Starea](https://www.starea.xyz/)
-* [RitMEX](https://ritmex.one)
-* [RitMEX-Trade](https://trade.ritmex.one/)
-* [Altfolio](https://altfolio.ritmex.one/)
-* [Chatgpt-toolbox](https://chatgpt.yubolun.com)
 
 ### Publications
 
