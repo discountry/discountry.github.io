@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:og="http://ogp.me/ns#">
+<html lang="zh-CN" xmlns:og="http://ogp.me/ns#">
 
 {% include head.html %}
 
@@ -7,11 +7,15 @@
 
   {% include header.html %}
 
-  <div class="ui main text container">
-    {% include ads.html %}
-    
-    {{ content }}
+  <div class="ad-banner">
+    <div class="ad-banner-inner">
+      {% include ads.html %}
+    </div>
   </div>
+
+  <main class="page{% if page.wide %} wide{% endif %}">
+    {{ content }}
+  </main>
 
   {% include footer.html %}
 

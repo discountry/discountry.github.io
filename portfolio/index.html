@@ -1,29 +1,29 @@
 ---
-layout: page
+layout: default
 title: Portfolio
 permalink: /portfolio/
+order: 2
+wide: true
 ---
 
-<div class="portfolio-container">
-  <p class="portfolio-subtitle">Here are websites I have created.</p>
-  <div class="portfolio-grid">
-    {% for website in site.websites | sort_by: 'date' | reverse %}
-      <a href="{{ website.link }}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-        <div class="portfolio-item">
-          <div class="portfolio-image-container">
-            <img src="{{ site.imageurl }}{{ website.cover | prepend: '/websites/' }}" alt="{{ website.title }}" class="portfolio-image">
-          </div>
-          <div class="portfolio-content">
-            <h2 class="portfolio-name">{{ website.title }}</h2>
-            <div class="portfolio-description">{{ website.content }}</div>
-            <div class="portfolio-tags">
-              {% for tag in website.tags %}
-                <span class="portfolio-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </a>
-    {% endfor %}
-  </div>
+<p class="kicker">Portfolio</p>
+<h1 class="page-title">做过的网站</h1>
+<p class="page-desc">Here are websites I have created.</p>
+
+<div class="work-grid">
+  {% assign sorted_websites = site.websites | sort: 'date' | reverse %}
+  {% for website in sorted_websites %}
+  <a class="work-card" href="{{ website.link }}" target="_blank" rel="noopener noreferrer">
+    <div class="work-shot">
+      <img src="{{ site.imageurl }}{{ website.cover | prepend: '/websites/' }}" alt="{{ website.title }}" loading="lazy">
+    </div>
+    <div class="work-body">
+      <h2>{{ website.title }} <span class="arrow">↗</span></h2>
+      <div class="work-desc">{{ website.content }}</div>
+      <div class="work-tags">
+        {% for tag in website.tags %}<span>{{ tag | downcase }}</span>{% endfor %}
+      </div>
+    </div>
+  </a>
+  {% endfor %}
 </div>

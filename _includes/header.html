@@ -1,52 +1,20 @@
-<div class="ui fixed inverted menu">
-    <div class="ui container">
-      <a href="{{ site.baseurl }}/" class="header item">
-        <img class="logo" src="{{ site.logo | prepend: site.imageurl }}">
-        {{ site.title }}
-      </a>
-      <div class="ui category search item">
-        <div class="ui inverted transparent icon input">
-          <input class="prompt" type="text" placeholder="Search...">
-          <i class="search link icon"></i>
-        </div>
-        <div class="results"></div>
-      </div>
-      <!-- <a href="{{ site.baseurl }}/" class="item">Home</a> -->
-      <div class="right menu">
-        <a class="item" href="https://zh-hans.react.dev/"  target="_blank" rel="noreferrer">React 中文文档</a>
-        <!-- <a class="item" href="/webui-aria2" target="_blank">Aria2 UI 本地版</a> -->
-        {% assign sorted_pages = (site.pages | sort: 'order') %}
-        {% for page in sorted_pages %}
-          {% if page.title %}
-          <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
-          <i class="rss icon"></i> RSS
-        </a>
-        <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
-          <i class="podcast icon"></i> Podcast
-        </a>
-          
-      </div>
-      <div class="mobile right floated ui dropdown icon item">
-        <i class="content icon"></i>
-        <div class="menu">
-          <a class="item" href="https://zh-hans.react.dev/" target="_blank" rel="noreferrer">React 中文文档</a>
-          <!-- <a class="item" href="/webui-aria2" target="_blank">Aria2 UI 本地版</a> -->
-          {% assign sorted_pages = (site.pages | sort: 'order') %}
-          {% for page in sorted_pages %}
-            {% if page.title %}
-              <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            {% endif %}
-          {% endfor %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
-          RSS <i class="rss icon"></i>
-        </a>
-            <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" class="item" target="_blank" rel="noreferrer">
-          Podcast <i class="podcast icon"></i>
-        </a>
-        </div>
-      </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="{{ site.baseurl }}/"><span class="brand-mark"></span>{{ site.title }}</a>
+    <nav class="site-nav">
+      <a href="https://zh-hans.react.dev/" target="_blank" rel="noreferrer">React 中文文档</a>
+      {% assign sorted_pages = site.pages | sort: 'order' %}
+      {% for p in sorted_pages %}
+        {% if p.title %}
+        <a href="{{ p.url | prepend: site.baseurl }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
+        {% endif %}
+      {% endfor %}
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" rel="noreferrer">RSS</a>
+      <a href="{{ "/podcast.xml" | prepend: site.baseurl }}" target="_blank" rel="noreferrer">Podcast</a>
+    </nav>
+    <div class="nav-search">
+      <input type="search" placeholder="搜索文章" aria-label="搜索文章" data-home="{{ site.baseurl }}/">
+      <kbd>/</kbd>
     </div>
   </div>
+</header>

@@ -2,23 +2,41 @@
 layout: default
 ---
 
-<h1 class="ui header">
-	{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-</h1>
+<div class="read-progress"></div>
 
-<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
-	{% if page.image %}
-<p>
-	<img class="ui fluid image" src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}">
-</p>
-	{% else %}
-{% endif %}
+<header class="post-header">
+  <p class="kicker">Post</p>
+  <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </div>
+</header>
 
-{{ content }}
+<article class="prose">
+  {% if page.image %}
+  <p><img src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}"></p>
+  {% endif %}
 
-<h4 class="ui horizontal divider header">Do Not Remain Silent</h4>
+  {{ content }}
+</article>
 
-<a class="backToTop" href="#">
-	<p style="text-align: right;">
-		<i class="chevron up icon"></i>Back To Top</p>
-</a>
+<footer class="post-footer">
+  <p class="motto">Do Not Remain Silent</p>
+  {% if page.previous or page.next %}
+  <nav class="post-nav">
+    {% if page.previous %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
+      <span class="dir">← 上一篇</span>
+      <span class="nt">{{ page.previous.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="next">
+      <span class="dir">下一篇 →</span>
+      <span class="nt">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</footer>

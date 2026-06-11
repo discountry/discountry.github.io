@@ -1,61 +1,23 @@
-<footer class="ui inverted vertical footer segment">
-  <div class="ui center aligned container">
-      <div class="ui horizontal inverted small link list">
-          {% if site.github_username %}
-          <div class="item">
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noreferrer">
-              <i class="big inverted icon github"></i>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.twitter_username %}
-          <div class="item">
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noreferrer">
-              <i class="big inverted blue icon twitter"></i>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.weibo_id %}
-          <div class="item">
-            <a href="https://weibo.com/u/{{ site.weibo_id }}" target="_blank" rel="noreferrer">
-              <i class="big red icon weibo"></i>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.wordpress_site %}
-          <div class="item">
-            <a href="{{ site.wordpress_site }}" target="_blank" rel="noreferrer">
-              <i class="big inverted grey icon wordpress"></i>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.codepen_username %}
-          <div class="item">
-            <a href="https://codepen.io/{{ site.codepen_username }}" target="_blank" rel="noreferrer">
-              <i class="big purple icon codepen"></i>
-            </a>
-          </div>
-          {% endif %}
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-links">
+      {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noreferrer">github</a>
+      {% endif %}
+      {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noreferrer">twitter</a>
+      {% endif %}
+      {% if site.codepen_username %}
+      <a href="https://codepen.io/{{ site.codepen_username }}" target="_blank" rel="noreferrer">codepen</a>
+      {% endif %}
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" rel="noreferrer">rss</a>
     </div>
-    <div class="ui inverted section divider"></div>
-    <p>&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.description }}</p>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear());</script> {{ site.description }}</p>
   </div>
 </footer>
 
-<script src="{{ "/js/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/semantic.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/jquery.fancybox.min.js" | prepend: site.baseurl }}"></script>
+<button class="to-top" type="button" aria-label="返回顶部">↑</button>
 
-<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
-
-<script>
-$.getJSON('/search.json', function (data) {
-    $('.ui.search')
-        .search({
-//             type: 'category',
-            source: data
-        });
-});
-</script>
+<script src="{{ "/js/blog.js" | prepend: site.baseurl }}"></script>
 
 {% include analyze.html %}

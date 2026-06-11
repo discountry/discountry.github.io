@@ -15,13 +15,13 @@ codepen_username:  discountry
 timezone: Asia/Shanghai
 
 # Build settings
+exclude:
+  - new-design
+  - CLAUDE.md
 excerpt_separator: <!--more-->
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
-
-#Pagination
-paginate: 20
 
 #Podcast
 lang: zh-Hans

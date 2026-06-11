@@ -2,14 +2,15 @@
 layout: single
 ---
 
-<h1 class="ui header">
-    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-</h1>
+<p class="kicker">About</p>
+<h1 class="page-title">{{ page.title }}</h1>
 
-<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1rem;">
-    <img style="border-radius: 150px; width: 72px; height: 72px;" src="{{ site.imageurl }}avatar.png" alt="avatar">
+<div class="about-avatar">
+    <img src="{{ site.imageurl }}avatar.png" alt="avatar">
 </div>
 
 {% include reputation.html %}
 
-{{ content }}
+<div class="prose">
+  {{ content }}
+</div>

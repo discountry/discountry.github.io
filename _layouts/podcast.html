@@ -2,29 +2,28 @@
 layout: default
 ---
 
-<h1 class="ui header">
-	{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-</h1>
+<div class="read-progress"></div>
 
-<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
-	{% if page.image %}
-<p>
-	<img class="ui fluid image" src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}">
-</p>
-	{% else %}
-{% endif %}
+<header class="post-header">
+  <p class="kicker">Podcast</p>
+  <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </div>
+</header>
 
-{{ content }}
+<article class="prose">
+  {% if page.image %}
+  <p><img src="{{ page.image | prepend: site.imageurl }}" alt="{{ page.image }}"></p>
+  {% endif %}
 
-{% capture audio_url %}
-{{ page.file }}
-{% endcapture %}
+  {{ content }}
 
-{% include audio.html src=audio_url %}
+  {% capture audio_url %}{{ page.file }}{% endcapture %}
+  {% include audio.html src=audio_url %}
+</article>
 
-<h4 class="ui horizontal divider header">Do Not Remain Silent</h4>
-
-<a class="backToTop" href="#">
-	<p style="text-align: right;">
-		<i class="chevron up icon"></i>Back To Top</p>
-</a>
+<footer class="post-footer">
+  <p class="motto">Do Not Remain Silent</p>
+</footer>

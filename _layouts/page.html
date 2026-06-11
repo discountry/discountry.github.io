@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<h1 class="ui header">
-    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-</h1>
+<p class="kicker">{{ page.title }}</p>
+{% if page.heading %}<h1 class="page-title">{{ page.heading }}</h1>{% else %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+{% if page.description %}<p class="page-desc">{{ page.description }}</p>{% endif %}
 
-{{ content }}
+<div class="prose">
+  {{ content }}
+</div>

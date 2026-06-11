@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:og="http://ogp.me/ns#">
+<html lang="zh-CN" xmlns:og="http://ogp.me/ns#">
 
 {% include head.html %}
 
@@ -7,9 +7,9 @@
 
   {% include header.html %}
 
-  <div class="ui main text container">
+  <main class="page{% if page.wide %} wide{% endif %}">
     {{ content }}
-  </div>
+  </main>
 
   {% include footer.html %}
 
