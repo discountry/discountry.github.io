@@ -52,16 +52,6 @@ a { color: inherit; text-decoration: none; }
 
 ::selection { background: rgba(47, 158, 68, 0.16); }
 
-/* ---------- 顶部广告位（Google AdSense） ---------- */
-
-.ad-banner { margin-top: 1.5rem; }
-
-.ad-banner-inner {
-  max-width: var(--w-wide);
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-}
-
 /* ---------- 顶部导航 ---------- */
 
 .site-header {
