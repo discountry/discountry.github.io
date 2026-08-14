@@ -14,35 +14,35 @@ tags: ['tutorial']
 
 DaoCloud has an community plan for free. It's an convenient choice for developers who cannot afford an expansive server to deploy a blog.
 
-![daocloud1]({{ site.url }}/images/daocloud1.png)
+![daocloud1]({{ site.url }}/images/daocloud1.webp)
 
-![daocloud2]({{ site.url }}/images/daocloud2.png)
+![daocloud2]({{ site.url }}/images/daocloud2.webp)
 
 ### 2.Create your MySQL service.
 
 Just click some buttons in `Service Integration` and choose the MySQL service.
 
-![daocloud3]({{ site.url }}/images/daocloud3.png)
+![daocloud3]({{ site.url }}/images/daocloud3.webp)
 
 ### 3.Create your volume
 
 Create a new volume in `Volume` and name it as you like.
 
-![daocloud7]({{ site.url }}/images/daocloud7.png)
+![daocloud7]({{ site.url }}/images/daocloud7.webp)
 
 ### 4.Set up Wordpress docker image.
 
 In the App Market you can choose the Wordpress image and click `set up now` then follow the steps.
 
-![daocloud4]({{ site.url }}/images/daocloud4.png)
+![daocloud4]({{ site.url }}/images/daocloud4.webp)
 
 During the settings,you need to bind MySQL & Volume services to your blog App.
 
-![daocloud5]({{ site.url }}/images/daocloud5.png)
+![daocloud5]({{ site.url }}/images/daocloud5.webp)
 
 It is recommended to choose 512MB RAM. In order to make your app persistent,you need to set the volume path to `/var/www/html` (otherwise if you redeploy your app you may lost your data).
 
-![daocloud6]({{ site.url }}/images/daocloud6.png)
+![daocloud6]({{ site.url }}/images/daocloud6.webp)
 
 ### 5.Finally install your Wordpress in the old way.
 

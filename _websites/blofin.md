@@ -6,7 +6,7 @@ published: True
 categories: ['Websites']
 tags: ['Crypto', 'Trading']
 link: https://blofin.com
-cover: blofin.png
+cover: blofin.webp
 ---
 
 Blofin is a crypto trading platform.

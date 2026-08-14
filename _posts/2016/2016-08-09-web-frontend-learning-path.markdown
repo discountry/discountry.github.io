@@ -8,7 +8,7 @@ tags: ['frontend','list']
 
 ### What is a frontend developer?
 
-![what-is-front-end-dev]({{ site.url }}/images/what-is-front-end-dev.png)
+![what-is-front-end-dev]({{ site.url }}/images/what-is-front-end-dev.webp)
 
 > 总而言之前端工程师就是运用HTML/CSS/JavaScript等Web技术，在工作中配合设计师实现用户界面，和后端工程师进行数据对接，完成Web应用开发。
 

@@ -6,7 +6,7 @@ published: True
 categories: ['Websites']
 tags: ['Bazi', 'AI']
 link: https://suansuan.app
-cover: suansuan.png
+cover: suansuan.webp
 ---
 
 Suansuan is an AI Bazi fortune teller platform.

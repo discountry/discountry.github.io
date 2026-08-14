@@ -6,7 +6,7 @@ published: True
 categories: ['Websites']
 tags: ['Crypto', 'Trading']
 link: https://ritmex.one
-cover: ritmex.png
+cover: ritmex.webp
 ---
 
 RitMEX is a crypto data analytics platform.

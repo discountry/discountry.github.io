@@ -12,37 +12,37 @@ tags: ['shadowsocks']
 
 <!--more-->
 
-![ss-1]({{ site.url }}/images/ss-1.png)
+![ss-1]({{ site.url }}/images/ss-1.webp)
 
 #### 2.打开[购买链接](https://bandwagonhost.com/aff.php?aff=10472)之后选择合适的付款方案并根据流程操作
 
-![ss-2]({{ site.url }}/images/ss-2.png)
+![ss-2]({{ site.url }}/images/ss-2.webp)
 
-![ss-3]({{ site.url }}/images/ss-3.png)
+![ss-3]({{ site.url }}/images/ss-3.webp)
 
-![ss-4]({{ site.url }}/images/ss-4.png)
+![ss-4]({{ site.url }}/images/ss-4.webp)
 
 假如你之前没有注册过`bandwagonhost`的话，这一步需要创建帐户，很简单正常标准的注册表单，地址电话随便填就可以。
 
-![ss-5]({{ site.url }}/images/ss-5.png)
+![ss-5]({{ site.url }}/images/ss-5.webp)
 
-![ss-6]({{ site.url }}/images/ss-6.png)
+![ss-6]({{ site.url }}/images/ss-6.webp)
 
 `bandwagonhost`支持支付宝付款，对中国用户非常友好，打开你的手机支付宝扫码就可以完成付款了，扫完码之后不要关闭页面，等待网页自动跳转。
 
-![ss-7]({{ site.url }}/images/ss-7.jpg)
+![ss-7]({{ site.url }}/images/ss-7.webp)
 
 #### 3.在[服务页面](https://bwh1.net/clientarea.php?action=products)你可以看到自己刚刚购买的VPS主机，点击进入控制面板根据流程操作。
 
-![ss-8]({{ site.url }}/images/ss-8.png)
+![ss-8]({{ site.url }}/images/ss-8.webp)
 
-![ss-9]({{ site.url }}/images/ss-9.png)
+![ss-9]({{ site.url }}/images/ss-9.webp)
 
-![ss-10]({{ site.url }}/images/ss-10.png)
+![ss-10]({{ site.url }}/images/ss-10.webp)
 
 到这一步Shadowsocks的服务器就部署完毕了，接下来是下载客户端并填写配置，然后你就可以无拘无束地畅游互联网啦！
 
-![ss-11]({{ site.url }}/images/ss-11.jpg)
+![ss-11]({{ site.url }}/images/ss-11.webp)
 
 你可以直接点击[这个链接](http://pan.baidu.com/s/1miFbopU)下载Windows上Shadowsocks的最新版本。你也可以阅读更加详细的[使用说明](https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)。
 

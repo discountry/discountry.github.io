@@ -6,7 +6,7 @@ published: True
 categories: ['Websites']
 tags: ['Tarot', 'AI']
 link: https://tarot.suansuan.app
-cover: signifi.png
+cover: signifi.webp
 ---
 
 Signifi is an AI Tarot fortune teller platform.

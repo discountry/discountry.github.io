@@ -13,7 +13,7 @@ Multiple git repos contributors lines of code ranking sort by desc.
 
 #### Screenshot
 
-![github-ranking]({{ site.url }}/images/github-ranking.png)
+![github-ranking]({{ site.url }}/images/github-ranking.webp)
 
 #### Usage
 

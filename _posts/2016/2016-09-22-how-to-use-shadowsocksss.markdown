@@ -17,7 +17,7 @@ Remember these four things:
 * Port number (8388 or some numbers)
 * Password
 
-![ss-info]({{ site.url }}/images/ss-info.png)
+![ss-info]({{ site.url }}/images/ss-info.webp)
 
 
 <!--more-->
@@ -27,14 +27,14 @@ Remember these four things:
 
 Just type the four things we'd mentioned above into your mobile App or Desktop Software.
 
-![shadowsocks]({{ site.url }}/images/shadowsocks.png)
+![shadowsocks]({{ site.url }}/images/shadowsocks.webp)
 
 3.Setup your client.
 
 Click the `Start` or `Open` button or something like that on your client software.
 And now you are free to go anywhere on the Internet.
 
-![open-ss]({{ site.url }}/images/open-ss.png)
+![open-ss]({{ site.url }}/images/open-ss.webp)
 
 ## Tutorials
 
